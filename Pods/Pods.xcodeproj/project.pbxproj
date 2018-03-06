@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3986BC716E154B451D352F6E689FD5AD /* Pods-Epitech-Eisenhower-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4046893762B7EF8AC76370E16112EA19 /* Pods-Epitech-Eisenhower-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B5A9D7D75FB0E8F22E27A2A22605FB7 /* Pods-Epitech-Eisenhower-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD000DC0655320B31BDCEB2BFD4BD05D /* Pods-Epitech-Eisenhower-dummy.m */; };
+		5F9995BEE4AB945C9E96660494F2C5EA /* Pods-Epitech-EisenhowerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 261FDD51EF6B39A2DA4DBBEFCCB6671F /* Pods-Epitech-EisenhowerTests-dummy.m */; };
+		64C740D48C0265F2BFB716511EC3AF5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		65A3756E410ED8D3EAE1190C14AAE9E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		76A6F9B260B23937A0685C85528B0154 /* Pods-Epitech-EisenhowerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C0893ED94D29256420A7533F228291 /* Pods-Epitech-EisenhowerUITests-dummy.m */; };
+		7945CFBF3BF44CAE2A1144831DBB3A74 /* Pods-Epitech-EisenhowerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A131B93EBC3F3913735B9D44B1403C /* Pods-Epitech-EisenhowerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		926FF78448FA071D5CC8666CB6B728E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		BB5AE67202E77FE6649C940E9170D6C5 /* Pods-Epitech-EisenhowerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAE895DF3E992EB1CB6C4E23243DADF4 /* Pods-Epitech-EisenhowerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04ED2EBE4D8D3A9D4F968A0357621192 /* Pods-Epitech-EisenhowerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Epitech-EisenhowerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		198BD39DE245A3D68A849F98C0B28F16 /* Pods-Epitech-Eisenhower-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Epitech-Eisenhower-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1E4859AC1527755B9707EC382F4E7F31 /* Pods-Epitech-Eisenhower-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-Eisenhower-resources.sh"; sourceTree = "<group>"; };
+		237C6B721864101BA4B8790D644584BE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-EisenhowerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		261FDD51EF6B39A2DA4DBBEFCCB6671F /* Pods-Epitech-EisenhowerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Epitech-EisenhowerTests-dummy.m"; sourceTree = "<group>"; };
+		3BDE5E401F8AF86D8E1D411277409611 /* Pods-Epitech-EisenhowerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Epitech-EisenhowerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3C25FBCFF8F84619E809FA674BF1B0E0 /* Pods_Epitech_Eisenhower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Epitech_Eisenhower.framework; path = "Pods-Epitech-Eisenhower.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4046893762B7EF8AC76370E16112EA19 /* Pods-Epitech-Eisenhower-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Epitech-Eisenhower-umbrella.h"; sourceTree = "<group>"; };
+		42A0C1E5F55B40A086BEEE511391EA69 /* Pods-Epitech-EisenhowerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-EisenhowerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		50A131B93EBC3F3913735B9D44B1403C /* Pods-Epitech-EisenhowerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Epitech-EisenhowerUITests-umbrella.h"; sourceTree = "<group>"; };
+		512413E4E25C7EEA701C4FCD577D9574 /* Pods-Epitech-EisenhowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-EisenhowerTests.release.xcconfig"; sourceTree = "<group>"; };
+		51845962B4BA464246A83C7A636F79FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59C8D36252BF54E61CDD0999344B8EFA /* Pods_Epitech_EisenhowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Epitech_EisenhowerTests.framework; path = "Pods-Epitech-EisenhowerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ED82FF77EE31BA1F56FCE99DCEDA90B /* Pods-Epitech-EisenhowerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Epitech-EisenhowerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6236EEB18BA0E7E1513294D815C0ED87 /* Pods-Epitech-EisenhowerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-EisenhowerUITests-resources.sh"; sourceTree = "<group>"; };
+		656343D944D40F4C77AC065FD76C20FD /* Pods-Epitech-Eisenhower-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Epitech-Eisenhower-acknowledgements.plist"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C553007173958AF94F658743E66C9B9 /* Pods-Epitech-Eisenhower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-Eisenhower.debug.xcconfig"; sourceTree = "<group>"; };
+		6FCA71C878DE6388C8D0A2A29D7DD25F /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-EisenhowerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70B9CD74E590F77B822AECCB167FA833 /* Pods-Epitech-Eisenhower.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Epitech-Eisenhower.modulemap"; sourceTree = "<group>"; };
+		86AD6D66C8890B6B95AD5FE702F8E8DD /* Pods-Epitech-EisenhowerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-EisenhowerTests-resources.sh"; sourceTree = "<group>"; };
+		926F71BC3768CF6676F2D5D654A880FD /* Pods-Epitech-EisenhowerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-EisenhowerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92C0893ED94D29256420A7533F228291 /* Pods-Epitech-EisenhowerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Epitech-EisenhowerUITests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F8D1A6E8100CC738C3D22AB3B9F651C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC774119ED1634F118CC0F3BA4E2F9B /* Pods-Epitech-Eisenhower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Epitech-Eisenhower.release.xcconfig"; sourceTree = "<group>"; };
+		A0CA963A6BFFF7C7002F42AF7508FE66 /* Pods-Epitech-Eisenhower-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-Eisenhower-frameworks.sh"; sourceTree = "<group>"; };
+		AD000DC0655320B31BDCEB2BFD4BD05D /* Pods-Epitech-Eisenhower-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Epitech-Eisenhower-dummy.m"; sourceTree = "<group>"; };
+		AD48C4F634B4849FB50060081A0E58FE /* Pods-Epitech-EisenhowerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Epitech-EisenhowerUITests.modulemap"; sourceTree = "<group>"; };
+		BAE895DF3E992EB1CB6C4E23243DADF4 /* Pods-Epitech-EisenhowerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Epitech-EisenhowerTests-umbrella.h"; sourceTree = "<group>"; };
+		C9156C6210F9241FDD5402484D185BD1 /* Pods-Epitech-EisenhowerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Epitech-EisenhowerTests-frameworks.sh"; sourceTree = "<group>"; };
+		D56E3B628E3B78A29123091A360CFE58 /* Pods-Epitech-EisenhowerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Epitech-EisenhowerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E079FB09780F66180702F924D61D18ED /* Pods-Epitech-EisenhowerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Epitech-EisenhowerTests.modulemap"; sourceTree = "<group>"; };
+		E452FC9951E70D715D5B662C82C7199A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E584D50D763E800D95918CA3BD993655 /* Pods_Epitech_EisenhowerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Epitech_EisenhowerUITests.framework; path = "Pods-Epitech-EisenhowerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D5CFEC2275F6F38291F05B9056F7CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926FF78448FA071D5CC8666CB6B728E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		221A69E2BCDAB4481777029216F25CA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C740D48C0265F2BFB716511EC3AF5D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		788D99ED1C91F4433CFF6E5FEE00D58E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A3756E410ED8D3EAE1190C14AAE9E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D21BBD4F7B1631DDC9163B8DCC0AB2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C25FBCFF8F84619E809FA674BF1B0E0 /* Pods_Epitech_Eisenhower.framework */,
+				59C8D36252BF54E61CDD0999344B8EFA /* Pods_Epitech_EisenhowerTests.framework */,
+				E584D50D763E800D95918CA3BD993655 /* Pods_Epitech_EisenhowerUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43F1DB4BC1F70283682E3DDF7A0A997A /* Pods-Epitech-EisenhowerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E452FC9951E70D715D5B662C82C7199A /* Info.plist */,
+				AD48C4F634B4849FB50060081A0E58FE /* Pods-Epitech-EisenhowerUITests.modulemap */,
+				D56E3B628E3B78A29123091A360CFE58 /* Pods-Epitech-EisenhowerUITests-acknowledgements.markdown */,
+				5ED82FF77EE31BA1F56FCE99DCEDA90B /* Pods-Epitech-EisenhowerUITests-acknowledgements.plist */,
+				92C0893ED94D29256420A7533F228291 /* Pods-Epitech-EisenhowerUITests-dummy.m */,
+				42A0C1E5F55B40A086BEEE511391EA69 /* Pods-Epitech-EisenhowerUITests-frameworks.sh */,
+				6236EEB18BA0E7E1513294D815C0ED87 /* Pods-Epitech-EisenhowerUITests-resources.sh */,
+				50A131B93EBC3F3913735B9D44B1403C /* Pods-Epitech-EisenhowerUITests-umbrella.h */,
+				6FCA71C878DE6388C8D0A2A29D7DD25F /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */,
+				926F71BC3768CF6676F2D5D654A880FD /* Pods-Epitech-EisenhowerUITests.release.xcconfig */,
+			);
+			name = "Pods-Epitech-EisenhowerUITests";
+			path = "Target Support Files/Pods-Epitech-EisenhowerUITests";
+			sourceTree = "<group>";
+		};
+		7366EAECB3AC47AEE3D86B063D417F67 /* Pods-Epitech-Eisenhower */ = {
+			isa = PBXGroup;
+			children = (
+				51845962B4BA464246A83C7A636F79FD /* Info.plist */,
+				70B9CD74E590F77B822AECCB167FA833 /* Pods-Epitech-Eisenhower.modulemap */,
+				198BD39DE245A3D68A849F98C0B28F16 /* Pods-Epitech-Eisenhower-acknowledgements.markdown */,
+				656343D944D40F4C77AC065FD76C20FD /* Pods-Epitech-Eisenhower-acknowledgements.plist */,
+				AD000DC0655320B31BDCEB2BFD4BD05D /* Pods-Epitech-Eisenhower-dummy.m */,
+				A0CA963A6BFFF7C7002F42AF7508FE66 /* Pods-Epitech-Eisenhower-frameworks.sh */,
+				1E4859AC1527755B9707EC382F4E7F31 /* Pods-Epitech-Eisenhower-resources.sh */,
+				4046893762B7EF8AC76370E16112EA19 /* Pods-Epitech-Eisenhower-umbrella.h */,
+				6C553007173958AF94F658743E66C9B9 /* Pods-Epitech-Eisenhower.debug.xcconfig */,
+				9FC774119ED1634F118CC0F3BA4E2F9B /* Pods-Epitech-Eisenhower.release.xcconfig */,
+			);
+			name = "Pods-Epitech-Eisenhower";
+			path = "Target Support Files/Pods-Epitech-Eisenhower";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1D21BBD4F7B1631DDC9163B8DCC0AB2E /* Products */,
+				EC3A987A4B7D335C6B060BCCEF2A4D62 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EC3A987A4B7D335C6B060BCCEF2A4D62 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7366EAECB3AC47AEE3D86B063D417F67 /* Pods-Epitech-Eisenhower */,
+				FBDC40D614E597D0CB040441EEC1049F /* Pods-Epitech-EisenhowerTests */,
+				43F1DB4BC1F70283682E3DDF7A0A997A /* Pods-Epitech-EisenhowerUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FBDC40D614E597D0CB040441EEC1049F /* Pods-Epitech-EisenhowerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F8D1A6E8100CC738C3D22AB3B9F651C /* Info.plist */,
+				E079FB09780F66180702F924D61D18ED /* Pods-Epitech-EisenhowerTests.modulemap */,
+				04ED2EBE4D8D3A9D4F968A0357621192 /* Pods-Epitech-EisenhowerTests-acknowledgements.markdown */,
+				3BDE5E401F8AF86D8E1D411277409611 /* Pods-Epitech-EisenhowerTests-acknowledgements.plist */,
+				261FDD51EF6B39A2DA4DBBEFCCB6671F /* Pods-Epitech-EisenhowerTests-dummy.m */,
+				C9156C6210F9241FDD5402484D185BD1 /* Pods-Epitech-EisenhowerTests-frameworks.sh */,
+				86AD6D66C8890B6B95AD5FE702F8E8DD /* Pods-Epitech-EisenhowerTests-resources.sh */,
+				BAE895DF3E992EB1CB6C4E23243DADF4 /* Pods-Epitech-EisenhowerTests-umbrella.h */,
+				237C6B721864101BA4B8790D644584BE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */,
+				512413E4E25C7EEA701C4FCD577D9574 /* Pods-Epitech-EisenhowerTests.release.xcconfig */,
+			);
+			name = "Pods-Epitech-EisenhowerTests";
+			path = "Target Support Files/Pods-Epitech-EisenhowerTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E531D1B82182D3F6987009EBD2FDEA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5AE67202E77FE6649C940E9170D6C5 /* Pods-Epitech-EisenhowerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64E49E873D19815108944D724B1C9333 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3986BC716E154B451D352F6E689FD5AD /* Pods-Epitech-Eisenhower-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD1B86C2271AB0D800444B35B84A95A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7945CFBF3BF44CAE2A1144831DBB3A74 /* Pods-Epitech-EisenhowerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B14EA50A3E7D7238E4F65D2057EB629 /* Pods-Epitech-EisenhowerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189956C123429C44E857FF9FDD46428A /* Build configuration list for PBXNativeTarget "Pods-Epitech-EisenhowerUITests" */;
+			buildPhases = (
+				7A7BCFCAD28D914D6CC29A1DC946C471 /* Sources */,
+				788D99ED1C91F4433CFF6E5FEE00D58E /* Frameworks */,
+				DAD1B86C2271AB0D800444B35B84A95A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Epitech-EisenhowerUITests";
+			productName = "Pods-Epitech-EisenhowerUITests";
+			productReference = E584D50D763E800D95918CA3BD993655 /* Pods_Epitech_EisenhowerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65D2606916599000F2873B28DCF72C1D /* Pods-Epitech-EisenhowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A0EC214165A72E15D5FDCB43EB8440E /* Build configuration list for PBXNativeTarget "Pods-Epitech-EisenhowerTests" */;
+			buildPhases = (
+				880F540B5BBB8DFEE8C23AE90F883419 /* Sources */,
+				221A69E2BCDAB4481777029216F25CA9 /* Frameworks */,
+				1E531D1B82182D3F6987009EBD2FDEA8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Epitech-EisenhowerTests";
+			productName = "Pods-Epitech-EisenhowerTests";
+			productReference = 59C8D36252BF54E61CDD0999344B8EFA /* Pods_Epitech_EisenhowerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		86A117B7EF0260F0E543F73263F20C95 /* Pods-Epitech-Eisenhower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B50C07DDF798305EE20B393534EB7C0D /* Build configuration list for PBXNativeTarget "Pods-Epitech-Eisenhower" */;
+			buildPhases = (
+				0F17E1EAD1335DFA54D1D2E680921204 /* Sources */,
+				16D5CFEC2275F6F38291F05B9056F7CC /* Frameworks */,
+				64E49E873D19815108944D724B1C9333 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Epitech-Eisenhower";
+			productName = "Pods-Epitech-Eisenhower";
+			productReference = 3C25FBCFF8F84619E809FA674BF1B0E0 /* Pods_Epitech_Eisenhower.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1D21BBD4F7B1631DDC9163B8DCC0AB2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86A117B7EF0260F0E543F73263F20C95 /* Pods-Epitech-Eisenhower */,
+				65D2606916599000F2873B28DCF72C1D /* Pods-Epitech-EisenhowerTests */,
+				0B14EA50A3E7D7238E4F65D2057EB629 /* Pods-Epitech-EisenhowerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F17E1EAD1335DFA54D1D2E680921204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5A9D7D75FB0E8F22E27A2A22605FB7 /* Pods-Epitech-Eisenhower-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A7BCFCAD28D914D6CC29A1DC946C471 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A6F9B260B23937A0685C85528B0154 /* Pods-Epitech-EisenhowerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		880F540B5BBB8DFEE8C23AE90F883419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9995BEE4AB945C9E96660494F2C5EA /* Pods-Epitech-EisenhowerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3053BEA206603EB9EC17E7CCD91D21DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FCA71C878DE6388C8D0A2A29D7DD25F /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-EisenhowerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_EisenhowerUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BA9501D7C445C7047EDF1AC34CA592C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C553007173958AF94F658743E66C9B9 /* Pods-Epitech-Eisenhower.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-Eisenhower/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_Eisenhower;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69030C9AD4BED98DF4C91D93E6838036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 512413E4E25C7EEA701C4FCD577D9574 /* Pods-Epitech-EisenhowerTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-EisenhowerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_EisenhowerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A046F831DC1008AB23275EE59F21C94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC774119ED1634F118CC0F3BA4E2F9B /* Pods-Epitech-Eisenhower.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-Eisenhower/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_Eisenhower;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ABC1C622E3A94D5EFA80B6DBB5E64193 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D72E489B59C3A70112D2342F402BD262 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DB25D16665DA89C5419DAA425771D40E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926F71BC3768CF6676F2D5D654A880FD /* Pods-Epitech-EisenhowerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-EisenhowerUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_EisenhowerUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4305B208D1062B5F6527C353C96A822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 237C6B721864101BA4B8790D644584BE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Epitech-EisenhowerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Epitech_EisenhowerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		189956C123429C44E857FF9FDD46428A /* Build configuration list for PBXNativeTarget "Pods-Epitech-EisenhowerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3053BEA206603EB9EC17E7CCD91D21DC /* Debug */,
+				DB25D16665DA89C5419DAA425771D40E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72E489B59C3A70112D2342F402BD262 /* Debug */,
+				ABC1C622E3A94D5EFA80B6DBB5E64193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A0EC214165A72E15D5FDCB43EB8440E /* Build configuration list for PBXNativeTarget "Pods-Epitech-EisenhowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4305B208D1062B5F6527C353C96A822 /* Debug */,
+				69030C9AD4BED98DF4C91D93E6838036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B50C07DDF798305EE20B393534EB7C0D /* Build configuration list for PBXNativeTarget "Pods-Epitech-Eisenhower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA9501D7C445C7047EDF1AC34CA592C /* Debug */,
+				A046F831DC1008AB23275EE59F21C94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,865 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29F582A14A5D0A56E99F2782 /* Pods_Epitech_EisenhowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */; };
+		8460002BA2FF59F041A35B08 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */; };
+		A64E4A02B7477F8036484B4B /* Pods_Epitech_Eisenhower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */; };
+		FA366D2E204E9A520019C725 /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D2D204E9A520019C725 /* TaskState.swift */; };
+		FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D30204E9CE10019C725 /* HomeViewController.swift */; };
+		FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D32204E9D060019C725 /* HomePresenter.swift */; };
+		FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D34204E9D140019C725 /* HomeInteractor.swift */; };
+		FA366D38204E9D460019C725 /* RestAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D37204E9D460019C725 /* RestAPIBase.swift */; };
+		FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D3A204E9E070019C725 /* Cancelable.swift */; };
+		FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1B120455422008F3F4D /* AppDelegate.swift */; };
+		FA59F1B420455422008F3F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1B320455422008F3F4D /* ViewController.swift */; };
+		FA59F1B720455422008F3F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B520455422008F3F4D /* Main.storyboard */; };
+		FA59F1B920455422008F3F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B820455422008F3F4D /* Assets.xcassets */; };
+		FA59F1BC20455422008F3F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1BA20455422008F3F4D /* LaunchScreen.storyboard */; };
+		FA59F1C720455422008F3F4D /* Epitech_EisenhowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1C620455422008F3F4D /* Epitech_EisenhowerTests.swift */; };
+		FA59F1D220455422008F3F4D /* Epitech_EisenhowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */; };
+		FA59F1E12045553B008F3F4D /* EisenhowerTaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */; };
+		FA59F1E420455787008F3F4D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E320455787008F3F4D /* Task.swift */; };
+		FA59F1E620455836008F3F4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E520455836008F3F4D /* User.swift */; };
+		FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E8204558E9008F3F4D /* Constants.swift */; };
+		FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1EB2045595D008F3F4D /* StringExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA59F1C320455422008F3F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA59F1A620455421008F3F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA59F1AD20455422008F3F4D;
+			remoteInfo = "Epitech-Eisenhower";
+		};
+		FA59F1CE20455422008F3F4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA59F1A620455421008F3F4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA59F1AD20455422008F3F4D;
+			remoteInfo = "Epitech-Eisenhower";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.debug.xcconfig"; sourceTree = "<group>"; };
+		7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.release.xcconfig"; sourceTree = "<group>"; };
+		C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_Eisenhower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA366D2D204E9A520019C725 /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
+		FA366D30204E9CE10019C725 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA366D32204E9D060019C725 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FA366D34204E9D140019C725 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FA366D37204E9D460019C725 /* RestAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIBase.swift; sourceTree = "<group>"; };
+		FA366D3A204E9E070019C725 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		FA59F1AE20455422008F3F4D /* Epitech-Eisenhower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Epitech-Eisenhower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA59F1B120455422008F3F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA59F1B320455422008F3F4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA59F1B620455422008F3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA59F1B820455422008F3F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA59F1BB20455422008F3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA59F1BD20455422008F3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA59F1C220455422008F3F4D /* Epitech-EisenhowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Epitech-EisenhowerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA59F1C620455422008F3F4D /* Epitech_EisenhowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epitech_EisenhowerTests.swift; sourceTree = "<group>"; };
+		FA59F1C820455422008F3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA59F1CD20455422008F3F4D /* Epitech-EisenhowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Epitech-EisenhowerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epitech_EisenhowerUITests.swift; sourceTree = "<group>"; };
+		FA59F1D320455422008F3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EisenhowerTaskStatus.swift; sourceTree = "<group>"; };
+		FA59F1E320455787008F3F4D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		FA59F1E520455836008F3F4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA59F1E8204558E9008F3F4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA59F1EB2045595D008F3F4D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA59F1AB20455422008F3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E4A02B7477F8036484B4B /* Pods_Epitech_Eisenhower.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1BF20455422008F3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F582A14A5D0A56E99F2782 /* Pods_Epitech_EisenhowerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1CA20455422008F3F4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8460002BA2FF59F041A35B08 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		508F192F7EFCEE5A1161B21F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */,
+				7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */,
+				7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77F6E4813458770E335AF344 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */,
+				9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */,
+				51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */,
+				DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */,
+				CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */,
+				C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA366D2F204E9CCF0019C725 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA366D30204E9CE10019C725 /* HomeViewController.swift */,
+				FA366D32204E9D060019C725 /* HomePresenter.swift */,
+				FA366D34204E9D140019C725 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA366D36204E9D340019C725 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA366D37204E9D460019C725 /* RestAPIBase.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA366D39204E9DD30019C725 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA366D3A204E9E070019C725 /* Cancelable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA59F1A520455421008F3F4D = {
+			isa = PBXGroup;
+			children = (
+				FA59F1B020455422008F3F4D /* Epitech-Eisenhower */,
+				FA59F1C520455422008F3F4D /* Epitech-EisenhowerTests */,
+				FA59F1D020455422008F3F4D /* Epitech-EisenhowerUITests */,
+				FA59F1AF20455422008F3F4D /* Products */,
+				77F6E4813458770E335AF344 /* Pods */,
+				508F192F7EFCEE5A1161B21F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA59F1AF20455422008F3F4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1AE20455422008F3F4D /* Epitech-Eisenhower.app */,
+				FA59F1C220455422008F3F4D /* Epitech-EisenhowerTests.xctest */,
+				FA59F1CD20455422008F3F4D /* Epitech-EisenhowerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA59F1B020455422008F3F4D /* Epitech-Eisenhower */ = {
+			isa = PBXGroup;
+			children = (
+				FA366D39204E9DD30019C725 /* Protocols */,
+				FA366D36204E9D340019C725 /* Network */,
+				FA366D2F204E9CCF0019C725 /* Home */,
+				FA59F1EA20455949008F3F4D /* Extensions */,
+				FA59F1E7204558D7008F3F4D /* Constant */,
+				FA59F1E220455770008F3F4D /* Models */,
+				FA59F1DF204554FB008F3F4D /* Enum */,
+				FA59F1B120455422008F3F4D /* AppDelegate.swift */,
+				FA59F1B320455422008F3F4D /* ViewController.swift */,
+				FA59F1B520455422008F3F4D /* Main.storyboard */,
+				FA59F1B820455422008F3F4D /* Assets.xcassets */,
+				FA59F1BA20455422008F3F4D /* LaunchScreen.storyboard */,
+				FA59F1BD20455422008F3F4D /* Info.plist */,
+			);
+			path = "Epitech-Eisenhower";
+			sourceTree = "<group>";
+		};
+		FA59F1C520455422008F3F4D /* Epitech-EisenhowerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1C620455422008F3F4D /* Epitech_EisenhowerTests.swift */,
+				FA59F1C820455422008F3F4D /* Info.plist */,
+			);
+			path = "Epitech-EisenhowerTests";
+			sourceTree = "<group>";
+		};
+		FA59F1D020455422008F3F4D /* Epitech-EisenhowerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */,
+				FA59F1D320455422008F3F4D /* Info.plist */,
+			);
+			path = "Epitech-EisenhowerUITests";
+			sourceTree = "<group>";
+		};
+		FA59F1DF204554FB008F3F4D /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */,
+				FA366D2D204E9A520019C725 /* TaskState.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		FA59F1E220455770008F3F4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1E320455787008F3F4D /* Task.swift */,
+				FA59F1E520455836008F3F4D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA59F1E7204558D7008F3F4D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1E8204558E9008F3F4D /* Constants.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		FA59F1EA20455949008F3F4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA59F1EB2045595D008F3F4D /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA59F1AD20455422008F3F4D /* Epitech-Eisenhower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA59F1D620455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-Eisenhower" */;
+			buildPhases = (
+				DBE526478EB37313DF0D81B6 /* [CP] Check Pods Manifest.lock */,
+				FA59F1AA20455422008F3F4D /* Sources */,
+				FA59F1AB20455422008F3F4D /* Frameworks */,
+				FA59F1AC20455422008F3F4D /* Resources */,
+				094366417315BBA5D5AB45DA /* [CP] Embed Pods Frameworks */,
+				E179EACF3848F6FF3E4574D9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Epitech-Eisenhower";
+			productName = "Epitech-Eisenhower";
+			productReference = FA59F1AE20455422008F3F4D /* Epitech-Eisenhower.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA59F1C120455422008F3F4D /* Epitech-EisenhowerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA59F1D920455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerTests" */;
+			buildPhases = (
+				B84ED2DBDA0B73E487015F9A /* [CP] Check Pods Manifest.lock */,
+				FA59F1BE20455422008F3F4D /* Sources */,
+				FA59F1BF20455422008F3F4D /* Frameworks */,
+				FA59F1C020455422008F3F4D /* Resources */,
+				3198EA34B6E807377AC88C65 /* [CP] Embed Pods Frameworks */,
+				0E8230EEFE2E9F7AD898A042 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA59F1C420455422008F3F4D /* PBXTargetDependency */,
+			);
+			name = "Epitech-EisenhowerTests";
+			productName = "Epitech-EisenhowerTests";
+			productReference = FA59F1C220455422008F3F4D /* Epitech-EisenhowerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA59F1CC20455422008F3F4D /* Epitech-EisenhowerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA59F1DC20455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerUITests" */;
+			buildPhases = (
+				9FDABE0770D6ADCC81FB6D90 /* [CP] Check Pods Manifest.lock */,
+				FA59F1C920455422008F3F4D /* Sources */,
+				FA59F1CA20455422008F3F4D /* Frameworks */,
+				FA59F1CB20455422008F3F4D /* Resources */,
+				58398084CCD1D88387F8F544 /* [CP] Embed Pods Frameworks */,
+				DAD1A0DB4435DA75903340C9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA59F1CF20455422008F3F4D /* PBXTargetDependency */,
+			);
+			name = "Epitech-EisenhowerUITests";
+			productName = "Epitech-EisenhowerUITests";
+			productReference = FA59F1CD20455422008F3F4D /* Epitech-EisenhowerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA59F1A620455421008F3F4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Odet Alexandre";
+				TargetAttributes = {
+					FA59F1AD20455422008F3F4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FA59F1C120455422008F3F4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FA59F1AD20455422008F3F4D;
+					};
+					FA59F1CC20455422008F3F4D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FA59F1AD20455422008F3F4D;
+					};
+				};
+			};
+			buildConfigurationList = FA59F1A920455421008F3F4D /* Build configuration list for PBXProject "Epitech-Eisenhower" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA59F1A520455421008F3F4D;
+			productRefGroup = FA59F1AF20455422008F3F4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA59F1AD20455422008F3F4D /* Epitech-Eisenhower */,
+				FA59F1C120455422008F3F4D /* Epitech-EisenhowerTests */,
+				FA59F1CC20455422008F3F4D /* Epitech-EisenhowerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA59F1AC20455422008F3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA59F1BC20455422008F3F4D /* LaunchScreen.storyboard in Resources */,
+				FA59F1B920455422008F3F4D /* Assets.xcassets in Resources */,
+				FA59F1B720455422008F3F4D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1C020455422008F3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1CB20455422008F3F4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		094366417315BBA5D5AB45DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E8230EEFE2E9F7AD898A042 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3198EA34B6E807377AC88C65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58398084CCD1D88387F8F544 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FDABE0770D6ADCC81FB6D90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Epitech-EisenhowerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84ED2DBDA0B73E487015F9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Epitech-EisenhowerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD1A0DB4435DA75903340C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE526478EB37313DF0D81B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Epitech-Eisenhower-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E179EACF3848F6FF3E4574D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA59F1AA20455422008F3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA59F1E420455787008F3F4D /* Task.swift in Sources */,
+				FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */,
+				FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */,
+				FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */,
+				FA366D38204E9D460019C725 /* RestAPIBase.swift in Sources */,
+				FA59F1E12045553B008F3F4D /* EisenhowerTaskStatus.swift in Sources */,
+				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
+				FA59F1B420455422008F3F4D /* ViewController.swift in Sources */,
+				FA59F1E620455836008F3F4D /* User.swift in Sources */,
+				FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */,
+				FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */,
+				FA366D2E204E9A520019C725 /* TaskState.swift in Sources */,
+				FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1BE20455422008F3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA59F1C720455422008F3F4D /* Epitech_EisenhowerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA59F1C920455422008F3F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA59F1D220455422008F3F4D /* Epitech_EisenhowerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA59F1C420455422008F3F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA59F1AD20455422008F3F4D /* Epitech-Eisenhower */;
+			targetProxy = FA59F1C320455422008F3F4D /* PBXContainerItemProxy */;
+		};
+		FA59F1CF20455422008F3F4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA59F1AD20455422008F3F4D /* Epitech-Eisenhower */;
+			targetProxy = FA59F1CE20455422008F3F4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA59F1B520455422008F3F4D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA59F1B620455422008F3F4D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA59F1BA20455422008F3F4D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA59F1BB20455422008F3F4D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA59F1D420455422008F3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA59F1D520455422008F3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA59F1D720455422008F3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-Eisenhower/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-Eisenhower";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA59F1D820455422008F3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-Eisenhower/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-Eisenhower";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA59F1DA20455422008F3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-EisenhowerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-EisenhowerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epitech-Eisenhower.app/Epitech-Eisenhower";
+			};
+			name = Debug;
+		};
+		FA59F1DB20455422008F3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-EisenhowerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-EisenhowerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epitech-Eisenhower.app/Epitech-Eisenhower";
+			};
+			name = Release;
+		};
+		FA59F1DD20455422008F3F4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-EisenhowerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-EisenhowerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Epitech-Eisenhower";
+			};
+			name = Debug;
+		};
+		FA59F1DE20455422008F3F4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 245FL8M245;
+				INFOPLIST_FILE = "Epitech-EisenhowerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "odetAlexandre.Epitech-EisenhowerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Epitech-Eisenhower";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA59F1A920455421008F3F4D /* Build configuration list for PBXProject "Epitech-Eisenhower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA59F1D420455422008F3F4D /* Debug */,
+				FA59F1D520455422008F3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA59F1D620455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-Eisenhower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA59F1D720455422008F3F4D /* Debug */,
+				FA59F1D820455422008F3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA59F1D920455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA59F1DA20455422008F3F4D /* Debug */,
+				FA59F1DB20455422008F3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA59F1DC20455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA59F1DD20455422008F3F4D /* Debug */,
+				FA59F1DE20455422008F3F4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA59F1A620455421008F3F4D /* Project object */;
+}
