@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum TaskStatus {
-    case toDo
-    case toDelegate
-    case toPlan
-    case toRemove
+enum TaskType: String {
+    case toDo = "to_do"
+    case toDelegate = "to_delegate"
+    case toPlan = "to_plan"
+    case toRemove = "to_remove"
     
     init(isImportant: Bool, isUrgent: Bool) {
         switch (isImportant, isUrgent) {

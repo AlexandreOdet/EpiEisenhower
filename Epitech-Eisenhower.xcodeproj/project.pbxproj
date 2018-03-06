@@ -17,14 +17,14 @@
 		FA366D38204E9D460019C725 /* RestAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D37204E9D460019C725 /* RestAPIBase.swift */; };
 		FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D3A204E9E070019C725 /* Cancelable.swift */; };
 		FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */; };
+		FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */; };
 		FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1B120455422008F3F4D /* AppDelegate.swift */; };
-		FA59F1B420455422008F3F4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1B320455422008F3F4D /* ViewController.swift */; };
 		FA59F1B720455422008F3F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B520455422008F3F4D /* Main.storyboard */; };
 		FA59F1B920455422008F3F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B820455422008F3F4D /* Assets.xcassets */; };
 		FA59F1BC20455422008F3F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1BA20455422008F3F4D /* LaunchScreen.storyboard */; };
 		FA59F1C720455422008F3F4D /* Epitech_EisenhowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1C620455422008F3F4D /* Epitech_EisenhowerTests.swift */; };
 		FA59F1D220455422008F3F4D /* Epitech_EisenhowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */; };
-		FA59F1E12045553B008F3F4D /* EisenhowerTaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */; };
+		FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E02045553B008F3F4D /* TaskType.swift */; };
 		FA59F1E420455787008F3F4D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E320455787008F3F4D /* Task.swift */; };
 		FA59F1E620455836008F3F4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E520455836008F3F4D /* User.swift */; };
 		FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E8204558E9008F3F4D /* Constants.swift */; };
@@ -68,9 +68,9 @@
 		FA366D37204E9D460019C725 /* RestAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIBase.swift; sourceTree = "<group>"; };
 		FA366D3A204E9E070019C725 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
 		FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIAuthentication.swift; sourceTree = "<group>"; };
+		FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FA59F1AE20455422008F3F4D /* Epitech-Eisenhower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Epitech-Eisenhower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA59F1B120455422008F3F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA59F1B320455422008F3F4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA59F1B620455422008F3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA59F1B820455422008F3F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA59F1BB20455422008F3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		FA59F1CD20455422008F3F4D /* Epitech-EisenhowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Epitech-EisenhowerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epitech_EisenhowerUITests.swift; sourceTree = "<group>"; };
 		FA59F1D320455422008F3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EisenhowerTaskStatus.swift; sourceTree = "<group>"; };
+		FA59F1E02045553B008F3F4D /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		FA59F1E320455787008F3F4D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FA59F1E520455836008F3F4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA59F1E8204558E9008F3F4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -203,7 +203,6 @@
 				FA59F1E220455770008F3F4D /* Models */,
 				FA59F1DF204554FB008F3F4D /* Enum */,
 				FA59F1B120455422008F3F4D /* AppDelegate.swift */,
-				FA59F1B320455422008F3F4D /* ViewController.swift */,
 				FA59F1B520455422008F3F4D /* Main.storyboard */,
 				FA59F1B820455422008F3F4D /* Assets.xcassets */,
 				FA59F1BA20455422008F3F4D /* LaunchScreen.storyboard */,
@@ -233,7 +232,7 @@
 		FA59F1DF204554FB008F3F4D /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				FA59F1E02045553B008F3F4D /* EisenhowerTaskStatus.swift */,
+				FA59F1E02045553B008F3F4D /* TaskType.swift */,
 				FA366D2D204E9A520019C725 /* TaskState.swift */,
 			);
 			path = Enum;
@@ -260,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				FA59F1EB2045595D008F3F4D /* StringExtension.swift */,
+				FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -567,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */,
 				FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */,
 				FA59F1E420455787008F3F4D /* Task.swift in Sources */,
 				FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */,
@@ -575,9 +576,8 @@
 				FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */,
 				FA366D38204E9D460019C725 /* RestAPIBase.swift in Sources */,
 				FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */,
-				FA59F1E12045553B008F3F4D /* EisenhowerTaskStatus.swift in Sources */,
+				FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */,
 				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
-				FA59F1B420455422008F3F4D /* ViewController.swift in Sources */,
 				FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */,
 				FA59F1E620455836008F3F4D /* User.swift in Sources */,
 				FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */,
