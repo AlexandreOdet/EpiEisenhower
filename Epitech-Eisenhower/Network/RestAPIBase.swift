@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import Alamofire
+
+class RestAPIBase: Cancelable {
+    
+    var request: Alamofire.Request?
+    
+    func cancelRequest() {
+        request?.cancel()
+    }
+}
