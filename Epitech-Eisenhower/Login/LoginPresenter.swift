@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class LoginPresenter {
+    
+    var interactor: LoginInteractor?
+    
+    func didTapSignInButton() {
+        interactor?.signIn()
+    }
+    
+    func didTapSignUpButton() {
+        interactor?.signUp()
+    }
+}

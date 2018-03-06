@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+class LoginInteractor {
+    
+    deinit {
+        raAuthentication.cancelRequest()
+    }
+    
+    let raAuthentication = RestAPIAuthentication()
+    
+    func signIn() {
+        raAuthentication.signIn()
+    }
+    
+    func signUp() {
+        raAuthentication.signUp()
+    }
+}

@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+class LoginViewController: UIViewController {
+    
+    var presenter: LoginPresenter?
+    
+    @objc func didTapSignInButton() {
+        presenter?.didTapSignInButton()
+    }
+    
+    @objc func didTapSignUpButton() {
+        presenter?.didTapSignUpButton()
+    }
+    
+}
