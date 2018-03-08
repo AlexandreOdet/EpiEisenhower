@@ -29,6 +29,8 @@
 		FA59F1E620455836008F3F4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E520455836008F3F4D /* User.swift */; };
 		FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E8204558E9008F3F4D /* Constants.swift */; };
 		FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1EB2045595D008F3F4D /* StringExtension.swift */; };
+		FA728E7A2050159300F45D24 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA728E792050159300F45D24 /* Output.swift */; };
+		FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA728E7B2050166F00F45D24 /* Networkable.swift */; };
 		FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37531204EA5D2007BE02C /* LoginViewController.swift */; };
 		FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37533204EA5E6007BE02C /* LoginPresenter.swift */; };
 		FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37535204EA5F3007BE02C /* LoginInteractor.swift */; };
@@ -86,6 +88,8 @@
 		FA59F1E520455836008F3F4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA59F1E8204558E9008F3F4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA59F1EB2045595D008F3F4D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FA728E792050159300F45D24 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		FA728E7B2050166F00F45D24 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		FAB37531204EA5D2007BE02C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAB37533204EA5E6007BE02C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAB37535204EA5F3007BE02C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				FA366D3A204E9E070019C725 /* Cancelable.swift */,
+				FA728E792050159300F45D24 /* Output.swift */,
+				FA728E7B2050166F00F45D24 /* Networkable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -571,6 +577,8 @@
 				FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */,
 				FA59F1E420455787008F3F4D /* Task.swift in Sources */,
 				FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */,
+				FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */,
+				FA728E7A2050159300F45D24 /* Output.swift in Sources */,
 				FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */,
 				FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */,
 				FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */,

@@ -37,4 +37,8 @@ extension UIColor {
     public var taskBlue: UIColor {
         return UIColor(red: 13/255, green: 160/255, blue: 178/255, alpha: 0.8)
     }
+    
+    public var fontGray: UIColor {
+        return UIColor(red: 74/255, green: 74/255, blue: 74/255, alpha: 1)
+    }
 }

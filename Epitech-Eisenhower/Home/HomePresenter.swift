@@ -9,4 +9,14 @@
 import Foundation
 
 class HomePresenter {
+    
+    var interactor: HomeInteractor?
+    
+    func viewDidLoad() {
+        //interactor?.fetchData()
+    }
+    
+    func didSelectItem(at index: IndexPath) {
+        
+    }
 }
