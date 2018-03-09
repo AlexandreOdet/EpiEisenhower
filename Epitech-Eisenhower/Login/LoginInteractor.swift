@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 class LoginInteractor {
     
     var ouput: LoginPresenter?
+    
+    private lazy var disposeBag = DisposeBag()
     
     deinit {
         raAuthentication.cancelRequest()
@@ -19,18 +22,20 @@ class LoginInteractor {
     let raAuthentication = RestAPIAuthentication()
     
     func signIn() {
-////        raAuthentication.signIn().onNext({ response in
-//        //            output?.didFetch(result: response)
-//        //        }).onError({ error in
-        //                    output?.didFail(with: error)
-//    // })
+        raAuthentication.signIn().subscribe(
+            onNext: { user in
+            self.ouput?.didFetch(result: user)
+        }, onError: { error in
+            self.ouput?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
     
     func signUp() {
-        ////        raAuthentication.signUp().onNext({ response in
-        //        //            output?.didFetch(result: response)
-        //        //        }).onError({ error in
-        //                    output?.didFail(with: error)
-        //    // })
+        raAuthentication.signUp().subscribe(
+            onNext: { user in
+            self.ouput?.didFetch(result: user)
+        }, onError: { error in
+            self.ouput?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
 }

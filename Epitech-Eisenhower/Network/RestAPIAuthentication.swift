@@ -8,14 +8,23 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class RestAPIAuthentication: RestAPIBase {
     
-    func signIn() {
-        
+    func signIn() -> Observable<User> {
+        let user = User()
+        return Observable<User>.create({ observer -> Disposable in
+            observer.onNext(user)
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
     
-    func signUp() {
-        
+    func signUp() -> Observable<User> {
+        let user = User()
+        return Observable<User>.create({ observer -> Disposable in
+            observer.onNext(user)
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
 }

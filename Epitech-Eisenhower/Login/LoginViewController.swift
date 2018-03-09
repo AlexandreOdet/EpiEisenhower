@@ -23,17 +23,9 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: Networkable  {
-//    func displayAlertOnError() {
-//        let alert = UIAlertController(title: "Erreur", message: "Oups, quelque chose s'est mal passé...", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        present(alert, animated: true, completion: nil)
-//    }
-    
+    typealias Object = User
+
     func displayDataOnResponse(data: User) {
         //DisplayData if needed
     }
-    
-    typealias Object = User
-    
-    
 }
