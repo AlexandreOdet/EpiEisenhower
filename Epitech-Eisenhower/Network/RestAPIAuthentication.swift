@@ -16,6 +16,7 @@ class RestAPIAuthentication: RestAPIBase {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
             observer.onNext(user)
+            observer.onCompleted()
             return Disposables.create(with: { self.cancelRequest() })
         })
     }
@@ -24,6 +25,7 @@ class RestAPIAuthentication: RestAPIBase {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
             observer.onNext(user)
+            observer.onCompleted()
             return Disposables.create(with: { self.cancelRequest() })
         })
     }
