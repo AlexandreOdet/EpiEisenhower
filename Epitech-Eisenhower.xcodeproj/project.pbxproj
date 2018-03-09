@@ -10,6 +10,8 @@
 		29F582A14A5D0A56E99F2782 /* Pods_Epitech_EisenhowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */; };
 		8460002BA2FF59F041A35B08 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */; };
 		A64E4A02B7477F8036484B4B /* Pods_Epitech_Eisenhower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */; };
+		FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC432052D11700DAD993 /* LoginRouter.swift */; };
+		FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC452052D39300DAD993 /* RestAPITask.swift */; };
 		FA366D2E204E9A520019C725 /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D2D204E9A520019C725 /* TaskState.swift */; };
 		FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D30204E9CE10019C725 /* HomeViewController.swift */; };
 		FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D32204E9D060019C725 /* HomePresenter.swift */; };
@@ -63,6 +65,8 @@
 		C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_Eisenhower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA11BC432052D11700DAD993 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FA11BC452052D39300DAD993 /* RestAPITask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPITask.swift; sourceTree = "<group>"; };
 		FA366D2D204E9A520019C725 /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
 		FA366D30204E9CE10019C725 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA366D32204E9D060019C725 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			children = (
 				FA366D37204E9D460019C725 /* RestAPIBase.swift */,
 				FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */,
+				FA11BC452052D39300DAD993 /* RestAPITask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				FAB37531204EA5D2007BE02C /* LoginViewController.swift */,
 				FAB37533204EA5E6007BE02C /* LoginPresenter.swift */,
 				FAB37535204EA5F3007BE02C /* LoginInteractor.swift */,
+				FA11BC432052D11700DAD993 /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -427,10 +433,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,6 +599,8 @@
 				FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */,
 				FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */,
 				FA366D2E204E9A520019C725 /* TaskState.swift in Sources */,
+				FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */,
+				FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */,
 				FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

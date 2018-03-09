@@ -12,11 +12,25 @@ class LoginPresenter {
     
     var interactor: LoginInteractor?
     
+    var view: LoginViewController?
+    
     func didTapSignInButton() {
         interactor?.signIn()
     }
     
     func didTapSignUpButton() {
         interactor?.signUp()
+    }
+}
+
+extension LoginPresenter: Output {
+    typealias Object = User
+    
+    func didFetch(result: User) {
+        view?.displayDataOnResponse(data: result)
+    }
+    
+    func didFail(with error: Error?) {
+        view?.displayAlertOnError()
     }
 }

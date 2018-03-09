@@ -11,12 +11,26 @@ import Foundation
 class HomePresenter {
     
     var interactor: HomeInteractor?
+    var view: HomeViewController?
     
     func viewDidLoad() {
-        //interactor?.fetchData()
+        interactor?.fetchData()
     }
     
     func didSelectItem(at index: IndexPath) {
         
     }
+}
+
+extension HomePresenter: Output {
+    typealias Object = Task
+    
+    func didFail(with error: Error?) {
+        view?.displayAlertOnError()
+    }
+    
+    func didFetch(result: Task) {
+        view?.displayDataOnResponse(data: result)
+    }
+    
 }

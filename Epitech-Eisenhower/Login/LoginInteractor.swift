@@ -10,6 +10,8 @@ import Foundation
 
 class LoginInteractor {
     
+    var ouput: LoginPresenter?
+    
     deinit {
         raAuthentication.cancelRequest()
     }
@@ -17,10 +19,18 @@ class LoginInteractor {
     let raAuthentication = RestAPIAuthentication()
     
     func signIn() {
-        raAuthentication.signIn()
+////        raAuthentication.signIn().onNext({ response in
+//        //            output?.didFetch(result: response)
+//        //        }).onError({ error in
+        //                    output?.didFail(with: error)
+//    // })
     }
     
     func signUp() {
-        raAuthentication.signUp()
+        ////        raAuthentication.signUp().onNext({ response in
+        //        //            output?.didFetch(result: response)
+        //        //        }).onError({ error in
+        //                    output?.didFail(with: error)
+        //    // })
     }
 }

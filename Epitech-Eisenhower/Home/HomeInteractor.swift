@@ -9,4 +9,20 @@
 import Foundation
 
 class HomeInteractor {
+    
+    deinit {
+        restApiTask.cancelRequest()
+    }
+    
+    var output: HomePresenter?
+    var restApiTask = RestAPITask()
+    
+    func fetchData() {
+        /*restApiTask.fetchData()
+         .onNext({ tasks in
+            output?.didFetch(result: tasks)
+         }).onError({ error in
+            output?.didFail(with: error)
+         })*/
+    }
 }

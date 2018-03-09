@@ -8,10 +8,9 @@
 
 import Foundation
 
-@objc protocol Output {
+protocol Output {
     associatedtype Object
     
-    func dataFetched(result: Object)
-    optional func dataFeteched(results: [Object])
-    func errorOnRequest(error: Error?)
+    func didFetch(result: Object)
+    func didFail(with error: Error?)
 }
