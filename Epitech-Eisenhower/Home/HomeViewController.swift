@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var collectionView: UICollectionView!
+    
 }
 
 extension HomeViewController: Networkable {
@@ -18,5 +21,11 @@ extension HomeViewController: Networkable {
     
     func displayDataOnResponse(data: Task) {
         //To-Do
+        //collectionView.reloadData()
     }
 }
+
+//extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+//
+//}
+

@@ -14,6 +14,8 @@ class LoginPresenter {
     
     var view: LoginViewController?
     
+    var router: LoginRouter?
+    
     func didTapSignInButton() {
         interactor?.signIn()
     }
