@@ -150,6 +150,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA245A922056AB8600D3874C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FA245A942056ABA600D3874C /* ProfileDetail */,
+				FA245A932056AB9E00D3874C /* TaskDetail */,
+				FA366D2F204E9CCF0019C725 /* Home */,
+				FAB37530204EA5C0007BE02C /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FA245A932056AB9E00D3874C /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TaskDetail;
+			sourceTree = "<group>";
+		};
+		FA245A942056ABA600D3874C /* ProfileDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileDetail;
+			sourceTree = "<group>";
+		};
 		FA366D2F204E9CCF0019C725 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +230,9 @@
 		FA59F1B020455422008F3F4D /* Epitech-Eisenhower */ = {
 			isa = PBXGroup;
 			children = (
-				FAB37530204EA5C0007BE02C /* Login */,
+				FA245A922056AB8600D3874C /* Modules */,
 				FA366D39204E9DD30019C725 /* Protocols */,
 				FA366D36204E9D340019C725 /* Network */,
-				FA366D2F204E9CCF0019C725 /* Home */,
 				FA59F1EA20455949008F3F4D /* Extensions */,
 				FA59F1E7204558D7008F3F4D /* Constant */,
 				FA59F1E220455770008F3F4D /* Models */,

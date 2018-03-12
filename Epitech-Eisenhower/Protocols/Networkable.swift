@@ -15,6 +15,8 @@ protocol Networkable {
     
     func displayAlertOnError()
     func displayDataOnResponse(data: Object)
+    func showLoadingView()
+    func hideLoadingView()
 }
 
 extension Networkable where Self: UIViewController {
@@ -22,5 +24,13 @@ extension Networkable where Self: UIViewController {
         let alert = UIAlertController(title: "Erreur", message: "Oups, quelque chose s'est mal passé...", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showLoadingView() {
+        
+    }
+    
+    func hideLoadingView() {
+        
     }
 }
