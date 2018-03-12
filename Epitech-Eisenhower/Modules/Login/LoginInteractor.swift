@@ -21,8 +21,8 @@ class LoginInteractor {
     
     let raAuthentication = RestAPIAuthentication()
     
-    func signIn() {
-        raAuthentication.signIn().subscribe(
+    func signIn(email: String, password: String) {
+        raAuthentication.signIn(email: email, password: password).subscribe(
             onNext: { user in
             self.ouput?.didFetch(result: user)
         }, onError: { error in
@@ -30,8 +30,8 @@ class LoginInteractor {
         }).disposed(by: disposeBag)
     }
     
-    func signUp() {
-        raAuthentication.signUp().subscribe(
+    func signUp(email: String, password: String) {
+        raAuthentication.signUp(email: email, password: password).subscribe(
             onNext: { user in
             self.ouput?.didFetch(result: user)
         }, onError: { error in

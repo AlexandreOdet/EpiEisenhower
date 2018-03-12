@@ -16,12 +16,12 @@ class LoginPresenter {
     
     var router: LoginRouter?
     
-    func didTapSignInButton() {
-        interactor?.signIn()
+    func didTapSignInButton(email: String, password: String) {
+        interactor?.signIn(email: email, password: password)
     }
     
-    func didTapSignUpButton() {
-        interactor?.signUp()
+    func didTapSignUpButton(email: String, password: String) {
+        interactor?.signUp(email: email, password: password)
     }
 }
 

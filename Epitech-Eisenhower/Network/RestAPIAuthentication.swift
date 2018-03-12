@@ -10,18 +10,27 @@ import Foundation
 import Alamofire
 import RxSwift
 
+enum LoginError: Error {
+    case invalidInput
+}
+
 class RestAPIAuthentication: RestAPIBase {
     
-    func signIn() -> Observable<User> {
+    func signIn(email: String, password: String) -> Observable<User> {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
-            observer.onNext(user)
-            observer.onCompleted()
+            if email != "test" && password != "test" {
+                observer.onError(LoginError.invalidInput)
+                observer.onCompleted()
+            } else {
+                observer.onNext(user)
+                observer.onCompleted()
+            }
             return Disposables.create(with: { self.cancelRequest() })
         })
     }
     
-    func signUp() -> Observable<User> {
+    func signUp(email: String, password: String) -> Observable<User> {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
             observer.onNext(user)

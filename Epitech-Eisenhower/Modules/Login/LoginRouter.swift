@@ -14,7 +14,7 @@ class LoginRouter {
     var view: LoginViewController?
     
     static func buildModule() -> UIViewController {
-        let viewController = LoginViewController()
+        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         let presenter = LoginPresenter()
         let interactor = LoginInteractor()
         let router = LoginRouter()
