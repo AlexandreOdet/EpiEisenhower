@@ -33,8 +33,13 @@ class RestAPIAuthentication: RestAPIBase {
     func signUp(email: String, password: String) -> Observable<User> {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
-            observer.onNext(user)
-            observer.onCompleted()
+            if email.isEmpty || password.isEmpty {
+                observer.onError(LoginError.invalidInput)
+                observer.onCompleted()
+            } else {
+                observer.onNext(user)
+                observer.onCompleted()
+            }
             return Disposables.create(with: { self.cancelRequest() })
         })
     }

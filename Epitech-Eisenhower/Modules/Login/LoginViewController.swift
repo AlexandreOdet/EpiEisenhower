@@ -16,13 +16,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField?
     @IBOutlet weak var passwordTextField: UITextField?
     @IBOutlet weak var loginButton: UIButton?
+    @IBOutlet weak var signUpButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.epiBackgroundColor
-        loginButton?.backgroundColor = UIColor.epiOrange
+//        view.backgroundColor = UIColor.epiBackgroundColor
+//        loginButton?.backgroundColor = UIColor.epiOrange
         loginButton?.roundCorner()
         loginButton?.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
+        
+        signUpButton?.roundCorner()
+        signUpButton?.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         title = "Login"
     }
     
