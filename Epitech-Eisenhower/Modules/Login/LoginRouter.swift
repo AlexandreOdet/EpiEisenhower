@@ -14,7 +14,7 @@ class LoginRouter {
     var view: LoginViewController?
     
     static func buildModule() -> UIViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.loginViewControllerIdentifier) as! LoginViewController
         let presenter = LoginPresenter()
         let interactor = LoginInteractor()
         let router = LoginRouter()
@@ -29,6 +29,10 @@ class LoginRouter {
         
         router.view = viewController
         return viewController
+    }
+    
+    func dismissLoginModule() {
+        view?.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -20,14 +20,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = UIColor.epiBackgroundColor
-//        loginButton?.backgroundColor = UIColor.epiOrange
         loginButton?.roundCorner()
         loginButton?.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         
         signUpButton?.roundCorner()
         signUpButton?.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
-        title = "Login"
+        title = Constants.titles.loginTitle
     }
     
     @objc func didTapSignInButton() {
@@ -47,9 +45,6 @@ extension LoginViewController: Networkable  {
     typealias Object = User
 
     func displayDataOnResponse(data: User) {
-        //DisplayData if needed
-        let alert = UIAlertController(title: "Tout va bien", message: "Tu t'es authentifié correctement", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        presenter?.loggedUser()
     }
 }

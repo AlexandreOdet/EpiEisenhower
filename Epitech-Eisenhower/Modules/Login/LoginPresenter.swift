@@ -23,6 +23,12 @@ class LoginPresenter {
     func didTapSignUpButton(email: String, password: String) {
         interactor?.signUp(email: email, password: password)
     }
+    
+    func loggedUser() {
+        UserDefaults.standard.set(true, forKey: Constants.keys.isLoggedKey)
+        UserDefaults.standard.synchronize()
+        router?.dismissLoginModule()
+    }
 }
 
 extension LoginPresenter: Output {

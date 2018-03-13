@@ -12,9 +12,14 @@ class HomePresenter {
     
     var interactor: HomeInteractor?
     var view: HomeViewController?
+    var router: HomeRouter?
     
     func viewDidLoad() {
-        interactor?.fetchData()
+        if UserDefaults.standard.bool(forKey: Constants.keys.isLoggedKey) {
+            interactor?.fetchData()
+        } else {
+            router?.presentLoginModule()
+        }
     }
     
     func didSelectItem(at index: IndexPath) {

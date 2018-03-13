@@ -11,8 +11,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var collectionView: UICollectionView!
+    //var collectionView: UICollectionView!
+    var presenter: HomePresenter?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = Constants.titles.homeTitle
+        presenter?.viewDidLoad()
+    }
 }
 
 extension HomeViewController: Networkable {
