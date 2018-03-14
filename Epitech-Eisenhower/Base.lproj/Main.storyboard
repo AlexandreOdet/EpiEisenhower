@@ -113,8 +113,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddTask" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-w5-6dO">
-                                                    <rect key="frame" x="0.5" y="0.0" width="131" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddTask" translatesAutoresizingMaskIntoConstraints="NO" id="XAC-w5-6dO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="70"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -125,11 +125,8 @@
                                             <constraint firstItem="XAC-w5-6dO" firstAttribute="centerY" secondItem="m8V-Xn-1Tu" secondAttribute="centerY" id="J6h-Y2-LlO"/>
                                             <constraint firstItem="XAC-w5-6dO" firstAttribute="centerX" secondItem="m8V-Xn-1Tu" secondAttribute="centerX" id="KBW-M4-btt"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="addImageView" destination="XAC-w5-6dO" id="PSi-gc-KPE"/>
-                                        </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCellIdentifier" id="nhw-R0-jg0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCellIdentifier" id="nhw-R0-jg0" customClass="TaskPreviewCollectionViewCell" customModule="Epitech_Eisenhower" customModuleProvider="target">
                                         <rect key="frame" x="225" y="20" width="130" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

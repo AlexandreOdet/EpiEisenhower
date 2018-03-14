@@ -47,6 +47,7 @@ class HomeRouter {
             fatalError("That shouldn't happen.")
         } else {
             //To-Do instantiate the TaskDetailModule, and then push it into the UINavigationController + set the taskId if taskId != -1
+            print("Router should go to TaskDetail with parameters: isEditing \(isEditing)||taskID: \(taskId)")
         }
     }
 }

@@ -34,8 +34,6 @@ class HomeViewController: UIViewController {
     }
     
     private func setUpCollectionView() {
-        collectionView?.register(AddTaskCollectionViewCell.self, forCellWithReuseIdentifier: Constants.identifiers.addCollectionViewCellIdentifier)
-        collectionView?.register(TaskPreviewCollectionViewCell.self, forCellWithReuseIdentifier: Constants.identifiers.taskCollectionViewCellIdentifier)
         collectionView?.backgroundColor = .clear
         collectionView?.delegate = self
         collectionView?.dataSource = self
@@ -76,13 +74,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.addCollectionViewCellIdentifier, for: indexPath) as! AddTaskCollectionViewCell
-            print("Add Collection View Cell OK")
-            for subview in cell.contentView.subviews {
-                if subview is UIImageView {
-                    print("UIImageView in cell")
-                }
-            }
-            cell.backgroundColor = .red
+            //cell.backgroundColor = .clear
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.taskCollectionViewCellIdentifier, for: indexPath) as! TaskPreviewCollectionViewCell

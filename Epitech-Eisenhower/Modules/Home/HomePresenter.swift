@@ -23,6 +23,9 @@ class HomePresenter {
     }
     
     func didSelectItem(at index: IndexPath) {
+        if index.row == 0 {
+            router?.goToTaskDetail(isEditing: false)
+        }
         //To-Do router?.goToTaskDetail(isEditing: true/false)
     }
     
