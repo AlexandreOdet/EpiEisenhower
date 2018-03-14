@@ -7,8 +7,13 @@
 //
 
 import Foundation
+//import ObjectMapper
+
+/*To-Do: Make Task conforms to Mappable Protocol*/
 
 final class Task {
     var title = ""
     var status: TaskType = .toRemove
+    var dueDate = ""
 }
+

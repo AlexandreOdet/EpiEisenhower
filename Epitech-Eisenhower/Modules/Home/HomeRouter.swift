@@ -37,4 +37,16 @@ class HomeRouter {
         let loginViewController = LoginRouter.buildModule()
         view?.present(loginViewController, animated: true, completion: nil)
     }
+    
+    func goToUserProfile(userID: Int) {
+        //To-Do: Instantiate the UserProfileModule, and then push it into the UINavigationController + set the UserId
+    }
+    
+    func goToTaskDetail(isEditing: Bool, taskId: Int = -1) {
+        if taskId != -1 && isEditing == true {
+            fatalError("That shouldn't happen.")
+        } else {
+            //To-Do instantiate the TaskDetailModule, and then push it into the UINavigationController + set the taskId if taskId != -1
+        }
+    }
 }

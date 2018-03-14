@@ -24,5 +24,13 @@ class HomeInteractor {
          }).onError({ error in
             output?.didFail(with: error)
          })*/
+        let taskList = TaskList()
+        for i in 0...4 {
+            var newTask = Task()
+            newTask.title = "Task \(i)"
+            newTask.status = (i % 2 == 0) ? TaskType.toDo : TaskType.toDelegate
+            taskList.tasks.append(newTask)
+        }
+        output?.didFetch(result: taskList)
     }
 }

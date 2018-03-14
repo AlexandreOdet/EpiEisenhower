@@ -6,6 +6,7 @@ target 'Epitech-Eisenhower' do
   use_frameworks!
   pod 'Alamofire'
   pod 'RxSwift'
+  pod 'R.swift'
   # Pods for Epitech-Eisenhower
 
   target 'Epitech-EisenhowerTests' do

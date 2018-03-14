@@ -14,24 +14,88 @@ class HomeViewController: UIViewController {
     //var collectionView: UICollectionView!
     var presenter: HomePresenter?
     
+    @IBOutlet weak var collectionView: UICollectionView?
+    
+    var taskList = [Task]() {
+        didSet {
+            collectionView?.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.titles.homeTitle
+        view.backgroundColor = UIColor.epiBackgroundColor
+        setUpCollectionView()
+        
         presenter?.viewDidLoad()
+        //setUpNavigationBarColor()
+        setUpNavigationBarItem()
+    }
+    
+    private func setUpCollectionView() {
+        collectionView?.register(AddTaskCollectionViewCell.self, forCellWithReuseIdentifier: Constants.identifiers.addCollectionViewCellIdentifier)
+        collectionView?.register(TaskPreviewCollectionViewCell.self, forCellWithReuseIdentifier: Constants.identifiers.taskCollectionViewCellIdentifier)
+        collectionView?.backgroundColor = .clear
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+    }
+    
+    private func setUpNavigationBarColor() {
+        
+    }
+    
+    private func setUpNavigationBarItem() {
+        let rightBarButtonItem = UIBarButtonItem(image: R.image.profileIcon(), style: .plain, target: self, action: #selector(didTapRightBarButtonItem))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    @objc func didTapRightBarButtonItem() {
+        presenter?.didTapRightBarButtonItem()
     }
 }
 
 extension HomeViewController: Networkable {
     
-    typealias Object = Task
+    typealias Object = TaskList
     
-    func displayDataOnResponse(data: Task) {
+    func displayDataOnResponse(data: TaskList) {
         //To-Do
-        //collectionView.reloadData()
+        taskList.removeAll()
+        if data.tasks.count > 0 {
+            taskList = data.tasks
+        }
     }
 }
 
-//extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//}
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return taskList.count + 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.addCollectionViewCellIdentifier, for: indexPath) as! AddTaskCollectionViewCell
+            print("Add Collection View Cell OK")
+            for subview in cell.contentView.subviews {
+                if subview is UIImageView {
+                    print("UIImageView in cell")
+                }
+            }
+            cell.backgroundColor = .red
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.taskCollectionViewCellIdentifier, for: indexPath) as! TaskPreviewCollectionViewCell
+            print("Task Preview Collection View Cell OK")
+            cell.backgroundColor = .green
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectItem(at: indexPath)
+    }
+    
+    
+}
 

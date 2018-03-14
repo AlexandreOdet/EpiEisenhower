@@ -23,6 +23,10 @@
 		FA3B29DD2057C7AB0041B207 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B29DC2057C7AB0041B207 /* ProfilePresenter.swift */; };
 		FA3B29DF2057C82C0041B207 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B29DE2057C82C0041B207 /* ProfileInteractor.swift */; };
 		FA3B29E12057C8490041B207 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B29E02057C8490041B207 /* ProfileRouter.swift */; };
+		FA3B29E42057CE1C0041B207 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B29E32057CE1C0041B207 /* R.generated.swift */; };
+		FA3DE4A92059546800D9DD28 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DE4A82059546800D9DD28 /* TaskList.swift */; };
+		FA3DE4AC205962FF00D9DD28 /* AddTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DE4AB205962FF00D9DD28 /* AddTaskCollectionViewCell.swift */; };
+		FA3DE4AE2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3DE4AD2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift */; };
 		FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */; };
 		FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */; };
 		FA50C5D92057C02E0040631F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C5D82057C02E0040631F /* HomeRouter.swift */; };
@@ -84,6 +88,10 @@
 		FA3B29DC2057C7AB0041B207 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		FA3B29DE2057C82C0041B207 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		FA3B29E02057C8490041B207 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		FA3B29E32057CE1C0041B207 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FA3DE4A82059546800D9DD28 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		FA3DE4AB205962FF00D9DD28 /* AddTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA3DE4AD2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIAuthentication.swift; sourceTree = "<group>"; };
 		FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FA50C5D82057C02E0040631F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -194,6 +202,7 @@
 		FA366D2F204E9CCF0019C725 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA3DE4AA20595B5700D9DD28 /* CustomCell */,
 				FA366D30204E9CE10019C725 /* HomeViewController.swift */,
 				FA366D32204E9D060019C725 /* HomePresenter.swift */,
 				FA366D34204E9D140019C725 /* HomeInteractor.swift */,
@@ -222,9 +231,19 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		FA3DE4AA20595B5700D9DD28 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3DE4AB205962FF00D9DD28 /* AddTaskCollectionViewCell.swift */,
+				FA3DE4AD2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		FA59F1A520455421008F3F4D = {
 			isa = PBXGroup;
 			children = (
+				FA3B29E32057CE1C0041B207 /* R.generated.swift */,
 				FA59F1B020455422008F3F4D /* Epitech-Eisenhower */,
 				FA59F1C520455422008F3F4D /* Epitech-EisenhowerTests */,
 				FA59F1D020455422008F3F4D /* Epitech-EisenhowerUITests */,
@@ -295,6 +314,7 @@
 			children = (
 				FA59F1E320455787008F3F4D /* Task.swift */,
 				FA59F1E520455836008F3F4D /* User.swift */,
+				FA3DE4A82059546800D9DD28 /* TaskList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +356,7 @@
 			buildConfigurationList = FA59F1D620455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-Eisenhower" */;
 			buildPhases = (
 				DBE526478EB37313DF0D81B6 /* [CP] Check Pods Manifest.lock */,
+				FA3B29E22057CDD80041B207 /* ShellScript */,
 				FA59F1AA20455422008F3F4D /* Sources */,
 				FA59F1AB20455422008F3F4D /* Frameworks */,
 				FA59F1AC20455422008F3F4D /* Resources */,
@@ -475,11 +496,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,6 +639,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA3B29E22057CDD80041B207 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -626,6 +662,7 @@
 				FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */,
 				FA1D650B2056CE7200436616 /* UIButtonExtension.swift in Sources */,
 				FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */,
+				FA3DE4AE2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift in Sources */,
 				FA59F1E420455787008F3F4D /* Task.swift in Sources */,
 				FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */,
 				FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */,
@@ -638,6 +675,7 @@
 				FA50C5D92057C02E0040631F /* HomeRouter.swift in Sources */,
 				FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */,
 				FA3B29DB2057C7580041B207 /* ProfileDetailViewController.swift in Sources */,
+				FA3B29E42057CE1C0041B207 /* R.generated.swift in Sources */,
 				FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */,
 				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
 				FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */,
@@ -649,7 +687,9 @@
 				FA366D2E204E9A520019C725 /* TaskState.swift in Sources */,
 				FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */,
 				FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */,
+				FA3DE4A92059546800D9DD28 /* TaskList.swift in Sources */,
 				FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */,
+				FA3DE4AC205962FF00D9DD28 /* AddTaskCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

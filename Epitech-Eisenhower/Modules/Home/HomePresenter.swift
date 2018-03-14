@@ -23,18 +23,23 @@ class HomePresenter {
     }
     
     func didSelectItem(at index: IndexPath) {
-        
+        //To-Do router?.goToTaskDetail(isEditing: true/false)
+    }
+    
+    func didTapRightBarButtonItem() {
+        //To-Do router?.goToUserProfile()
+        print("DidTapRightBarButtonItem")
     }
 }
 
 extension HomePresenter: Output {
-    typealias Object = Task
+    typealias Object = TaskList
     
     func didFail(with error: Error?) {
         view?.displayAlertOnError()
     }
     
-    func didFetch(result: Task) {
+    func didFetch(result: TaskList) {
         view?.displayDataOnResponse(data: result)
     }
     

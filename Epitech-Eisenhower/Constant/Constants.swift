@@ -16,6 +16,9 @@ final class Constants {
     final class identifiers {
         public class var loginViewControllerIdentifier: String { return "LoginViewController" }
         public class var homeViewControllerIdentifier: String { return "HomeViewController" }
+        
+        public class var taskCollectionViewCellIdentifier: String { return "HomeCollectionViewCellIdentifier" }
+        public class var addCollectionViewCellIdentifier: String { return "HomeAddCollectionViewCellIdentifier" }
     }
     
     final class keys {
