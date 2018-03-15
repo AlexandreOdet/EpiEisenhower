@@ -14,18 +14,9 @@ class AddTaskCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //commonInitializer()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //commonInitializer()
-    }
-    
-    private func commonInitializer() {
-        addImageView = UIImageView(frame: contentView.frame)
-        addImageView.image = R.image.addTask()
-        addImageView.contentMode = .scaleAspectFit
-        contentView.addSubview(addImageView)
     }
 }

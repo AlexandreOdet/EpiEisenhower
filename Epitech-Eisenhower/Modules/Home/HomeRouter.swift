@@ -47,8 +47,12 @@ class HomeRouter {
         if taskId == -1 && isEditing == true {
             fatalError("That shouldn't happen.")
         } else {
-            //To-Do instantiate the TaskDetailModule, and then push it into the UINavigationController + set the taskId if taskId != -1
-            print("Router should go to TaskDetail with parameters: isEditing \(isEditing)||taskID: \(taskId)")
+            let nextViewController = TaskRouter.buildModule() as! TaskDetailViewController
+            if isEditing {
+                nextViewController.isEditingTask = true
+                nextViewController.taskId = taskId
+            }
+            view?.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }

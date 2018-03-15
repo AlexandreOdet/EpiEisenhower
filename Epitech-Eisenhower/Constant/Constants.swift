@@ -35,6 +35,9 @@ final class Constants {
     final class titles {
         public class var loginTitle: String { return "Login" }
         public class var homeTitle: String { return "Home" }
+        public class var taskEditionTitle: String { return "Task Detail (Edit)" }
+        public class var taskCreationTitle: String { return "Task Detail (Create)" }
+        public class var userProfileTitle: String { return "Your Profile" }
     }
     
     final class network {
