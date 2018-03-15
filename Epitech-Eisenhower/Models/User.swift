@@ -9,6 +9,7 @@
 import Foundation
 
 final class User {
+    var id = 0
     var name = ""
     var description = ""
     var email = ""

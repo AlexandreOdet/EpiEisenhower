@@ -14,6 +14,8 @@ class HomePresenter {
     var view: HomeViewController?
     var router: HomeRouter?
     
+    var taskList = [Task]()
+    
     func viewDidLoad() {
         if UserDefaults.standard.bool(forKey: Constants.keys.isLoggedKey) {
             interactor?.fetchData()
@@ -23,10 +25,13 @@ class HomePresenter {
     }
     
     func didSelectItem(at index: IndexPath) {
+        print("index = ", index.row)
         if index.row == 0 {
             router?.goToTaskDetail(isEditing: false)
+        } else {
+            print(taskList[index.row - 1].id)
+            router?.goToTaskDetail(isEditing: true, taskId: taskList[index.row - 1].id)
         }
-        //To-Do router?.goToTaskDetail(isEditing: true/false)
     }
     
     func didTapRightBarButtonItem() {
@@ -43,6 +48,7 @@ extension HomePresenter: Output {
     }
     
     func didFetch(result: TaskList) {
+        taskList = result.tasks
         view?.displayDataOnResponse(data: result)
     }
     

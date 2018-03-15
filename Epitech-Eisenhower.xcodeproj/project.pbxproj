@@ -13,6 +13,7 @@
 		FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC432052D11700DAD993 /* LoginRouter.swift */; };
 		FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC452052D39300DAD993 /* RestAPITask.swift */; };
 		FA1D650B2056CE7200436616 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D650A2056CE7200436616 /* UIButtonExtension.swift */; };
+		FA2A79EE205A7AA700F8C742 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A79ED205A7AA700F8C742 /* DateExtension.swift */; };
 		FA366D2E204E9A520019C725 /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D2D204E9A520019C725 /* TaskState.swift */; };
 		FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D30204E9CE10019C725 /* HomeViewController.swift */; };
 		FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA366D32204E9D060019C725 /* HomePresenter.swift */; };
@@ -78,6 +79,7 @@
 		FA11BC432052D11700DAD993 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FA11BC452052D39300DAD993 /* RestAPITask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPITask.swift; sourceTree = "<group>"; };
 		FA1D650A2056CE7200436616 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		FA2A79ED205A7AA700F8C742 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		FA366D2D204E9A520019C725 /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
 		FA366D30204E9CE10019C725 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA366D32204E9D060019C725 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				FA59F1EB2045595D008F3F4D /* StringExtension.swift */,
 				FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */,
 				FA1D650A2056CE7200436616 /* UIButtonExtension.swift */,
+				FA2A79ED205A7AA700F8C742 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */,
 				FA728E7A2050159300F45D24 /* Output.swift in Sources */,
 				FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */,
+				FA2A79EE205A7AA700F8C742 /* DateExtension.swift in Sources */,
 				FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */,
 				FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */,
 				FA3B29DF2057C82C0041B207 /* ProfileInteractor.swift in Sources */,

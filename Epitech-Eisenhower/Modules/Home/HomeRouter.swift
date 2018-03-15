@@ -14,7 +14,7 @@ class HomeRouter {
     var view: HomeViewController?
     
     static func buildModule() -> UIViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.homeViewControllerIdentifier) as! HomeViewController
+        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.homeViewControllerIdentifier) as! HomeViewController
         let navigationController = UINavigationController(rootViewController: viewController)
         
         let presenter = HomePresenter()
@@ -44,7 +44,7 @@ class HomeRouter {
     }
     
     func goToTaskDetail(isEditing: Bool, taskId: Int = -1) {
-        if taskId != -1 && isEditing == true {
+        if taskId == -1 && isEditing == true {
             fatalError("That shouldn't happen.")
         } else {
             //To-Do instantiate the TaskDetailModule, and then push it into the UINavigationController + set the taskId if taskId != -1

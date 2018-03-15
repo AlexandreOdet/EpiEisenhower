@@ -73,13 +73,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.addCollectionViewCellIdentifier, for: indexPath) as! AddTaskCollectionViewCell
-            //cell.backgroundColor = .clear
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.customCells.addCollectionViewCellIdentifier, for: indexPath) as! AddTaskCollectionViewCell
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.taskCollectionViewCellIdentifier, for: indexPath) as! TaskPreviewCollectionViewCell
-            print("Task Preview Collection View Cell OK")
-            cell.backgroundColor = .green
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.customCells.taskCollectionViewCellIdentifier, for: indexPath) as! TaskPreviewCollectionViewCell
+            cell.buildCell(with: taskList[indexPath.row - 1])
+            cell.backgroundColor = .red
             return cell
         }
     }
