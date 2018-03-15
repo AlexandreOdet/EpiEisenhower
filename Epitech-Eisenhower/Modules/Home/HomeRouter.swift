@@ -39,6 +39,7 @@ class HomeRouter {
     }
     
     func goToUserProfile(userID: Int) {
+        ProfileRouter.buildModule()
         //To-Do: Instantiate the UserProfileModule, and then push it into the UINavigationController + set the UserId
     }
     

@@ -7,6 +7,7 @@ target 'Epitech-Eisenhower' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'R.swift'
+  pod 'SwiftOverlays'
   # Pods for Epitech-Eisenhower
 
   target 'Epitech-EisenhowerTests' do

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftOverlays
 
 protocol Networkable {
     
@@ -15,8 +16,8 @@ protocol Networkable {
     
     func displayAlertOnError()
     func displayDataOnResponse(data: Object)
-    func showLoadingView()
-    func hideLoadingView()
+    func showSpinner()
+    func hideSpinner()
 }
 
 extension Networkable where Self: UIViewController {
@@ -26,11 +27,11 @@ extension Networkable where Self: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func showLoadingView() {
-        
+    func showSpinner() {
+        showWaitOverlayWithText("\nChargement des données...")
     }
     
-    func hideLoadingView() {
-        
+    func hideSpinner() {
+        removeAllOverlays()
     }
 }

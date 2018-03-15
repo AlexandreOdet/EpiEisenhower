@@ -26,6 +26,12 @@ class LoginViewController: UIViewController {
         signUpButton?.roundCorner()
         signUpButton?.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         title = Constants.titles.loginTitle
+        
+        emailTextField?.tag = 0
+        passwordTextField?.tag = 1
+        
+        emailTextField?.delegate = self
+        passwordTextField?.delegate = self
     }
     
     @objc func didTapSignInButton() {
@@ -38,6 +44,20 @@ class LoginViewController: UIViewController {
         let email = emailTextField?.text ?? ""
         let password = passwordTextField?.text ?? ""
         presenter?.didTapSignUpButton(email: email, password: password)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField.tag == 0 {
+            let nextTextField = view.viewWithTag(textField.tag + 1)
+            nextTextField?.becomeFirstResponder()
+        }
+        if textField.tag == 1 {
+            view.endEditing(true)
+        }
+        return true
     }
 }
 

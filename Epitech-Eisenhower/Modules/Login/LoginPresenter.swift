@@ -17,10 +17,12 @@ class LoginPresenter {
     var router: LoginRouter?
     
     func didTapSignInButton(email: String, password: String) {
+        view?.showSpinner()
         interactor?.signIn(email: email, password: password)
     }
     
     func didTapSignUpButton(email: String, password: String) {
+        view?.showSpinner()
         interactor?.signUp(email: email, password: password)
     }
     
@@ -35,10 +37,12 @@ extension LoginPresenter: Output {
     typealias Object = User
     
     func didFetch(result: User) {
+        view?.hideSpinner()
         view?.displayDataOnResponse(data: result)
     }
     
     func didFail(with error: Error?) {
+        view?.hideSpinner()
         view?.displayAlertOnError()
     }
 }
