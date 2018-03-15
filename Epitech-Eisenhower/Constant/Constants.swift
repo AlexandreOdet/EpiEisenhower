@@ -37,4 +37,12 @@ final class Constants {
         public class var homeTitle: String { return "Home" }
     }
     
+    final class network {
+        public class var apiBaseURL: String { return "" }
+        public class var loginURL: String { return "" }
+        public class var signupURL: String { return "" }
+        public class var taskURL: String { return "" }
+        public class var profileURL: String { return "" }
+    }
+    
 }
