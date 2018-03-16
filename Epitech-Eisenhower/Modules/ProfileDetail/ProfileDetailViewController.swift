@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileDetailViewController: UIViewController {
-    
+    var presenter: ProfilePresenter?
 }
 
 extension ProfileDetailViewController: Networkable {

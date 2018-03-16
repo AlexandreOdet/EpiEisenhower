@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,6 +88,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="ZbL-L8-DgX">
+            <objects>
+                <viewController storyboardIdentifier="TaskDetailViewController" id="o7n-Jq-CeF" customClass="TaskDetailViewController" customModule="Epitech_Eisenhower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNr-cm-QL7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcN-CK-grQ">
+                                <rect key="frame" x="0.0" y="30" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vs-pq-Oda">
+                                <rect key="frame" x="0.0" y="617" width="188" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.72549019609999998" blue="0.2156862745" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QWf-xc-Qo1"/>
+                                </constraints>
+                                <state key="normal" title="Update task">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-Mo-LIV">
+                                <rect key="frame" x="188" y="617" width="187" height="50"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.90980392160000001" blue="0.10980392160000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete Task">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bi-8r-kjU">
+                                <rect key="frame" x="30" y="75" width="315" height="80"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.62745098040000002" blue="0.69803921570000005" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="hsN-Lq-RU6"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="done"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="leading" secondItem="7vs-pq-Oda" secondAttribute="trailing" id="0UU-cZ-Ir6"/>
+                            <constraint firstItem="bcN-CK-grQ" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" id="0hI-Sf-N8v"/>
+                            <constraint firstItem="9Bi-8r-kjU" firstAttribute="top" secondItem="bcN-CK-grQ" secondAttribute="bottom" constant="24" id="12L-7R-pfj"/>
+                            <constraint firstItem="7vs-pq-Oda" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="centerX" id="BvI-Qx-xCg"/>
+                            <constraint firstItem="9Bi-8r-kjU" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" constant="30" id="Pqd-gI-UfY"/>
+                            <constraint firstItem="bcN-CK-grQ" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" id="XDK-Qk-J9g"/>
+                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="height" secondItem="7vs-pq-Oda" secondAttribute="height" id="fol-yf-K84"/>
+                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" id="lqE-w8-VHr"/>
+                            <constraint firstItem="bhq-hJ-r07" firstAttribute="bottom" secondItem="7vs-pq-Oda" secondAttribute="bottom" id="oJf-rX-8YY"/>
+                            <constraint firstItem="7vs-pq-Oda" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" id="wR0-TU-iBY"/>
+                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="bottom" secondItem="7vs-pq-Oda" secondAttribute="bottom" id="xZd-G6-yaH"/>
+                            <constraint firstItem="bcN-CK-grQ" firstAttribute="top" secondItem="bhq-hJ-r07" secondAttribute="top" constant="10" id="ygz-EC-U1a"/>
+                            <constraint firstItem="9Bi-8r-kjU" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" constant="-30" id="zYi-eh-EV8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bhq-hJ-r07"/>
+                    </view>
+                    <connections>
+                        <outlet property="taskDescriptionTextView" destination="9Bi-8r-kjU" id="3HF-N0-2RE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RlO-ei-g3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="1019"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="yMb-TD-5KR">

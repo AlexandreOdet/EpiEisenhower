@@ -7,10 +7,33 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileRouter {
     
-    static func buildModule() {
+    var view: ProfileDetailViewController?
+    
+    
+    static func buildModule() -> UIViewController {
+        let router = ProfileRouter()
+        let presenter = ProfilePresenter()
+        let interactor = ProfileInteractor()
+        let view = ProfileDetailViewController()
         
+        router.view = view
+        
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        
+        interactor.output = presenter
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func popController() {
+        view?.navigationController?.popToRootViewController(animated: true)
     }
 }

@@ -14,9 +14,25 @@ class TaskDetailViewController: UIViewController {
     var isEditingTask: Bool = false
     var taskId: Int = -1
     
+    @IBOutlet weak var taskDescriptionTextView: UITextView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("TaskDetailViewController.viewDidLoad() with configuration: isEditingTask: \(isEditingTask)  with taskId: \(taskId)")
+        title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
+        setUpTextView()
+    }
+    
+    private func setUpTextView() {
+        taskDescriptionTextView?.textContainer.maximumNumberOfLines = 3
+        taskDescriptionTextView?.delegate = self
+    }
+    
+}
+
+extension TaskDetailViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        textView.centerTextVertically()
     }
 }
 

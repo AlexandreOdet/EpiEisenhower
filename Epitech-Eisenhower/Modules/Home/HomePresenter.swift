@@ -18,6 +18,7 @@ class HomePresenter {
     
     func viewDidLoad() {
         if UserDefaults.standard.bool(forKey: Constants.keys.isLoggedKey) {
+            view?.showSpinner()
             interactor?.fetchData()
         } else {
             router?.presentLoginModule()
@@ -25,11 +26,9 @@ class HomePresenter {
     }
     
     func didSelectItem(at index: IndexPath) {
-        print("index = ", index.row)
         if index.row == 0 {
             router?.goToTaskDetail(isEditing: false)
         } else {
-            print(taskList[index.row - 1].id)
             router?.goToTaskDetail(isEditing: true, taskId: taskList[index.row - 1].id)
         }
     }
@@ -44,10 +43,12 @@ extension HomePresenter: Output {
     typealias Object = TaskList
     
     func didFail(with error: Error?) {
+        view?.hideSpinner()
         view?.displayAlertOnError()
     }
     
     func didFetch(result: TaskList) {
+        view?.hideSpinner()
         taskList = result.tasks
         view?.displayDataOnResponse(data: result)
     }

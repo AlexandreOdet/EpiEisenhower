@@ -53,6 +53,7 @@
 		FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37531204EA5D2007BE02C /* LoginViewController.swift */; };
 		FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37533204EA5E6007BE02C /* LoginPresenter.swift */; };
 		FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37535204EA5F3007BE02C /* LoginInteractor.swift */; };
+		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		FAB37531204EA5D2007BE02C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAB37533204EA5E6007BE02C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAB37535204EA5F3007BE02C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +356,7 @@
 				FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */,
 				FA1D650A2056CE7200436616 /* UIButtonExtension.swift */,
 				FA2A79ED205A7AA700F8C742 /* DateExtension.swift */,
+				FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */,
 				FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */,
 				FA3DE4A92059546800D9DD28 /* TaskList.swift in Sources */,
+				FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */,
 				FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */,
 				FA3DE4AC205962FF00D9DD28 /* AddTaskCollectionViewCell.swift in Sources */,
 			);

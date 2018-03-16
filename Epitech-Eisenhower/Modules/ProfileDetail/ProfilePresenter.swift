@@ -9,19 +9,35 @@
 import Foundation
 
 class ProfilePresenter {
+    var interactor: ProfileInteractor?
+    var view: ProfileDetailViewController?
+    var router: ProfileRouter?
     
+    func viewDidLoad() {
+        view?.showSpinner()
+        interactor?.fetchData()
+    }
+    
+    
+    func didTapLogoutButton() {
+        
+    }
+    
+    func didTapUpdateProfileButton() {
+        
+    }
 }
 
 extension ProfilePresenter: Output {
+    typealias Object = User
+    
     func didFetch(result: User) {
-        //To-Do
+        view?.hideSpinner()
+        view?.displayDataOnResponse(data: result)
     }
     
     func didFail(with error: Error?) {
-        //To-Do
+        view?.hideSpinner()
+        view?.displayAlertOnError()
     }
-    
-    typealias Object = User
-    
-    
 }

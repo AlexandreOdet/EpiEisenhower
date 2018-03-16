@@ -9,5 +9,9 @@
 import Foundation
 
 class ProfileInteractor {
+    var output: ProfilePresenter?
     
+    func fetchData() {
+        
+    }
 }

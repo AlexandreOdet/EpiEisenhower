@@ -26,7 +26,7 @@ class HomeInteractor {
          })*/
         let taskList = TaskList()
         for i in 0...4 {
-            var newTask = Task()
+            let newTask = Task()
             newTask.id = i
             newTask.title = "Task \(i)"
             newTask.status = (i % 2 == 0) ? TaskType.toDo : TaskType.toDelegate
