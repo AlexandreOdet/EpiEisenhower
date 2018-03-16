@@ -34,8 +34,12 @@ class ProfileRouter {
         return view
     }
     
-    func popController(withCompletion completion: (() -> ())? = nil) {
-        view?.navigationController?.popToRootViewController(animated: true)
+    func popController(toRootController: Bool, withCompletion completion: (() -> ())? = nil) {
+        if toRootController {
+            view?.navigationController?.popToRootViewController(animated: true)
+        } else {
+            view?.navigationController?.popViewController(animated: true)
+        }
         if let completionHandler = completion {
             completionHandler()
         }

@@ -38,9 +38,11 @@ class HomeRouter {
         view?.present(loginViewController, animated: true, completion: nil)
     }
     
-    func goToUserProfile(userID: Int) {
+    func goToUserProfile(userID: Int, withDelegate delegate: Exitable) {
         //ProfileRouter.buildModule()
         //To-Do: Instantiate the UserProfileModule, and then push it into the UINavigationController + set the UserId
+        let nextViewController = ProfileRouter.buildModule(withDelegate: delegate)
+        view?.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     func goToTaskDetail(isEditing: Bool, taskId: Int = -1) {

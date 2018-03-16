@@ -22,7 +22,7 @@ class ProfilePresenter {
     
     
     func didTapLogoutButton() {
-        router?.popController(withCompletion: {
+        router?.popController(toRootController: true, withCompletion: {
             self.logoutDelegate?.didLogout()
         })
     }

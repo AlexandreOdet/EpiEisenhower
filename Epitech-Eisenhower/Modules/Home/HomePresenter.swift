@@ -34,8 +34,7 @@ class HomePresenter {
     }
     
     func didTapRightBarButtonItem() {
-        //To-Do router?.goToUserProfile()
-        print("DidTapRightBarButtonItem")
+        router?.goToUserProfile(userID: 1, withDelegate: self)
     }
 }
 
