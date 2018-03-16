@@ -53,6 +53,7 @@
 		FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37531204EA5D2007BE02C /* LoginViewController.swift */; };
 		FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37533204EA5E6007BE02C /* LoginPresenter.swift */; };
 		FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37535204EA5F3007BE02C /* LoginInteractor.swift */; };
+		FAC810DB205C10B400588A47 /* Exitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC810DA205C10B400588A47 /* Exitable.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		FAB37531204EA5D2007BE02C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAB37533204EA5E6007BE02C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAB37535204EA5F3007BE02C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FAC810DA205C10B400588A47 /* Exitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exitable.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 				FA366D3A204E9E070019C725 /* Cancelable.swift */,
 				FA728E792050159300F45D24 /* Output.swift */,
 				FA728E7B2050166F00F45D24 /* Networkable.swift */,
+				FAC810DA205C10B400588A47 /* Exitable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				FA3DE4AE2059657300D9DD28 /* TaskPreviewCollectionViewCell.swift in Sources */,
 				FA2A79F8205AB10000F8C742 /* TaskDetailViewController.swift in Sources */,
 				FA2A79F6205AB0BE00F8C742 /* TaskInteractor.swift in Sources */,
+				FAC810DB205C10B400588A47 /* Exitable.swift in Sources */,
 				FA59F1E420455787008F3F4D /* Task.swift in Sources */,
 				FA366D35204E9D140019C725 /* HomeInteractor.swift in Sources */,
 				FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */,

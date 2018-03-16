@@ -13,6 +13,8 @@ class ProfilePresenter {
     var view: ProfileDetailViewController?
     var router: ProfileRouter?
     
+    weak var logoutDelegate: Exitable?
+    
     func viewDidLoad() {
         view?.showSpinner()
         interactor?.fetchData()
@@ -20,7 +22,9 @@ class ProfilePresenter {
     
     
     func didTapLogoutButton() {
-        
+        router?.popController(withCompletion: {
+            self.logoutDelegate?.didLogout()
+        })
     }
     
     func didTapUpdateProfileButton() {

@@ -52,5 +52,10 @@ extension HomePresenter: Output {
         taskList = result.tasks
         view?.displayDataOnResponse(data: result)
     }
-    
+}
+
+extension HomePresenter: Exitable {
+    func didLogout() {
+        router?.presentLoginModule()
+    }
 }

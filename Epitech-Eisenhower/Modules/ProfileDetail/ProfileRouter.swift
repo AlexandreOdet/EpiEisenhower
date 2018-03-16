@@ -14,7 +14,7 @@ class ProfileRouter {
     var view: ProfileDetailViewController?
     
     
-    static func buildModule() -> UIViewController {
+    static func buildModule(withDelegate delegate: Exitable) -> UIViewController {
         let router = ProfileRouter()
         let presenter = ProfilePresenter()
         let interactor = ProfileInteractor()
@@ -25,6 +25,7 @@ class ProfileRouter {
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
+        presenter.logoutDelegate = delegate
         
         interactor.output = presenter
         
@@ -33,7 +34,10 @@ class ProfileRouter {
         return view
     }
     
-    func popController() {
+    func popController(withCompletion completion: (() -> ())? = nil) {
         view?.navigationController?.popToRootViewController(animated: true)
+        if let completionHandler = completion {
+            completionHandler()
+        }
     }
 }

@@ -7,7 +7,14 @@
 //
 
 import Foundation
+import Alamofire
 
 class RestAPIUser: RestAPIBase {
+    func getUserInfos() {
+        
+    }
     
+    func updateUserInfos() {
+        
+    }
 }

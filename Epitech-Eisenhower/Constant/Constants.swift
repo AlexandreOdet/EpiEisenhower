@@ -25,11 +25,14 @@ final class Constants {
         final class customCells {
             public class var taskCollectionViewCellIdentifier: String { return "HomeCollectionViewCellIdentifier" }
             public class var addCollectionViewCellIdentifier: String { return "HomeAddCollectionViewCellIdentifier" }
+            public class var taskMemberCollectionViewCellIdentifier: String { return "TaskDetailMemeberCollectionViewCellIdentifier" }
         }
     }
     
     final class keys {
         public class var isLoggedKey: String { return "isLogged" }
+        public class var authenticationTokenKey: String { return "token" }
+        public class var userIdKey: String { return "userId" }
     }
     
     final class titles {
