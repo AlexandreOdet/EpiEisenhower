@@ -43,6 +43,12 @@ final class Constants {
         public class var userProfileTitle: String { return "Your Profile" }
     }
     
+    final class placeholders {
+        public class var taskTitlePlaceholder: String { return "Please enter a title for you task..." }
+        public class var taskDescriptionPlaceholder: String { return "Please enter a description for your task..." }
+        public class var taskDueDateLabelPlaceholder: String { return "Please select a due date for your task..." }
+    }
+    
     final class network {
         public class var apiBaseURL: String { return "" }
         public class var loginURL: String { return "" }

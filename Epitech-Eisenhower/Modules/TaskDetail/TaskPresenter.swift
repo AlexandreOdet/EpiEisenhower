@@ -12,4 +12,12 @@ class TaskPresenter {
     var interactor: TaskInteractor?
     var view: TaskDetailViewController?
     var router: TaskRouter?
+    
+    func fetchData() {
+        //interactor?.fetchData()
+    }
+    
+    func didTapMoreImage() {
+        //router?.goToMemberList(withTaskId: Int)
+    }
 }

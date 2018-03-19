@@ -37,6 +37,7 @@
 		FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */; };
 		FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */; };
 		FA50C5D92057C02E0040631F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C5D82057C02E0040631F /* HomeRouter.swift */; };
+		FA53D8A0205FC112005C3C82 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53D89F205FC112005C3C82 /* UIImageView.swift */; };
 		FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1B120455422008F3F4D /* AppDelegate.swift */; };
 		FA59F1B720455422008F3F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B520455422008F3F4D /* Main.storyboard */; };
 		FA59F1B920455422008F3F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA59F1B820455422008F3F4D /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		FA4ADC05204EEBC2008A7306 /* RestAPIAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIAuthentication.swift; sourceTree = "<group>"; };
 		FA4ADC07204EF0AB008A7306 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FA50C5D82057C02E0040631F /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FA53D89F205FC112005C3C82 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		FA59F1AE20455422008F3F4D /* Epitech-Eisenhower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Epitech-Eisenhower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA59F1B120455422008F3F4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA59F1B620455422008F3F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				FA1D650A2056CE7200436616 /* UIButtonExtension.swift */,
 				FA2A79ED205A7AA700F8C742 /* DateExtension.swift */,
 				FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */,
+				FA53D89F205FC112005C3C82 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				FA3B29E42057CE1C0041B207 /* R.generated.swift in Sources */,
 				FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */,
 				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
+				FA53D8A0205FC112005C3C82 /* UIImageView.swift in Sources */,
 				FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */,
 				FA59F1E620455836008F3F4D /* User.swift in Sources */,
 				FA3B29DD2057C7AB0041B207 /* ProfilePresenter.swift in Sources */,

@@ -41,4 +41,8 @@ extension UIColor {
     public class var fontGray: UIColor {
         return UIColor(red: 74/255, green: 74/255, blue: 74/255, alpha: 1)
     }
+    
+    public class var veryLightGray: UIColor {
+        return UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1)
+    }
 }
