@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TaskDetailViewController: UIViewController {
+class TaskDetailViewController: UIViewController, Notifiable {
     var presenter: TaskPresenter?
     var isEditingTask: Bool = false
     var taskId: Int = -1
@@ -19,15 +19,18 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var taskDescriptionTextView: UITextView?
     @IBOutlet weak var taskDueDateTextField: UITextField?
     
+    @IBOutlet weak var taskUpdateOrCreationButton: UIButton?
+    
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("TaskDetailViewController.viewDidLoad() with configuration: isEditingTask: \(isEditingTask)  with taskId: \(taskId)")
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
+        startObservingKeyboard()
         setUpTextView()
         setUpImageView()
         setUpTextfieldInput()
+        setUpBottomButton()
     }
     
     private func setUpTextView() {
@@ -77,8 +80,24 @@ class TaskDetailViewController: UIViewController {
         taskDueDateTextField?.inputView = datePicker
     }
     
+    private func setUpBottomButton() {
+        taskUpdateOrCreationButton?.setTitleColor(.white, for: .normal)
+        if isEditingTask {
+            taskUpdateOrCreationButton?.backgroundColor = UIColor.epiOrange
+            taskUpdateOrCreationButton?.setTitle("Update Task".uppercased(), for: .normal)
+        } else {
+            taskUpdateOrCreationButton?.backgroundColor = UIColor.epiYellow
+            taskUpdateOrCreationButton?.setTitle("Create Task".uppercased(), for: .normal)
+        }
+    }
+    
     @objc func didTapDoneButtonInToolbar() {
-        print("Did Tap Done")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Constants.formatting.dateFormat
+        
+        let stringifiedDate = dateFormatter.string(from: datePicker.date)
+        taskDueDateTextField?.text = stringifiedDate
+        taskDueDateTextField?.resignFirstResponder()
     }
     
     @objc func didTapCancelButtonInToolbar() {
@@ -90,6 +109,24 @@ class TaskDetailViewController: UIViewController {
         presenter?.didTapMoreImage(ofTask: taskId)
     }
     
+//    @objc func keyboardDidShow(_ notification: Notification) {
+//        print("Keyboard Appears")
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if view.frame.origin.y == 0 {
+//                print("OK")
+//                view.frame.origin.y -= keyboardSize.height
+//            }
+//        }
+//    }
+//
+//    @objc func keyboardDidHide(_ notification: Notification) {
+//        print("Keyboard hides")
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if view.frame.origin.y != 0 {
+//                view.frame.origin.y += keyboardSize.height
+//            }
+//        }
+//    }
 }
 
 extension TaskDetailViewController: UITextViewDelegate {

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -104,19 +103,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vs-pq-Oda">
-                                <rect key="frame" x="0.0" y="528" width="160" height="40"/>
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.72549019609999998" blue="0.2156862745" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QWf-xc-Qo1"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Update task">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-Mo-LIV">
-                                <rect key="frame" x="160" y="528" width="160" height="40"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.90980392160000001" blue="0.10980392160000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Delete Task">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -209,27 +202,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="leading" secondItem="7vs-pq-Oda" secondAttribute="trailing" id="0UU-cZ-Ir6"/>
                             <constraint firstItem="bcN-CK-grQ" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" id="0hI-Sf-N8v"/>
                             <constraint firstItem="9Bi-8r-kjU" firstAttribute="top" secondItem="bcN-CK-grQ" secondAttribute="bottom" constant="20" id="12L-7R-pfj"/>
+                            <constraint firstItem="7vs-pq-Oda" firstAttribute="width" secondItem="PNr-cm-QL7" secondAttribute="width" id="3qR-2V-nlF"/>
                             <constraint firstItem="Pqi-fQ-hGE" firstAttribute="width" secondItem="eMM-x7-Eex" secondAttribute="width" id="5jP-aX-HW9"/>
-                            <constraint firstItem="7vs-pq-Oda" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="centerX" id="BvI-Qx-xCg"/>
                             <constraint firstItem="dRt-y7-3M7" firstAttribute="leading" secondItem="Pqi-fQ-hGE" secondAttribute="leading" id="EO6-fA-fgG"/>
                             <constraint firstItem="BjW-fU-jh2" firstAttribute="height" secondItem="9Bi-8r-kjU" secondAttribute="height" id="JYp-bm-UeL"/>
                             <constraint firstItem="BjW-fU-jh2" firstAttribute="top" secondItem="9Bi-8r-kjU" secondAttribute="bottom" constant="20" id="M2e-dP-8wb"/>
                             <constraint firstItem="9Bi-8r-kjU" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" constant="30" id="Pqd-gI-UfY"/>
+                            <constraint firstItem="7vs-pq-Oda" firstAttribute="centerX" secondItem="bhq-hJ-r07" secondAttribute="centerX" id="Qux-xJ-Qxd"/>
                             <constraint firstItem="BjW-fU-jh2" firstAttribute="width" secondItem="9Bi-8r-kjU" secondAttribute="width" id="R9O-wF-UDq"/>
                             <constraint firstItem="bcN-CK-grQ" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" id="XDK-Qk-J9g"/>
                             <constraint firstItem="Pqi-fQ-hGE" firstAttribute="centerX" secondItem="BjW-fU-jh2" secondAttribute="centerX" id="cze-sG-K6T"/>
-                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="height" secondItem="7vs-pq-Oda" secondAttribute="height" id="fol-yf-K84"/>
-                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" id="lqE-w8-VHr"/>
                             <constraint firstItem="bhq-hJ-r07" firstAttribute="bottom" secondItem="7vs-pq-Oda" secondAttribute="bottom" id="oJf-rX-8YY"/>
                             <constraint firstItem="BjW-fU-jh2" firstAttribute="centerX" secondItem="9Bi-8r-kjU" secondAttribute="centerX" id="sED-h8-hWF"/>
                             <constraint firstItem="Pqi-fQ-hGE" firstAttribute="top" secondItem="BjW-fU-jh2" secondAttribute="bottom" constant="20" id="uA2-u7-lyV"/>
-                            <constraint firstItem="7vs-pq-Oda" firstAttribute="leading" secondItem="bhq-hJ-r07" secondAttribute="leading" id="wR0-TU-iBY"/>
                             <constraint firstItem="dRt-y7-3M7" firstAttribute="trailing" secondItem="Pqi-fQ-hGE" secondAttribute="trailing" id="wkG-wS-sna"/>
                             <constraint firstItem="dRt-y7-3M7" firstAttribute="top" secondItem="Pqi-fQ-hGE" secondAttribute="bottom" constant="25" id="xZN-aS-9gc"/>
-                            <constraint firstItem="wh3-Mo-LIV" firstAttribute="bottom" secondItem="7vs-pq-Oda" secondAttribute="bottom" id="xZd-G6-yaH"/>
                             <constraint firstItem="bcN-CK-grQ" firstAttribute="top" secondItem="bhq-hJ-r07" secondAttribute="top" constant="10" id="ygz-EC-U1a"/>
                             <constraint firstItem="9Bi-8r-kjU" firstAttribute="trailing" secondItem="bhq-hJ-r07" secondAttribute="trailing" constant="-30" id="zYi-eh-EV8"/>
                         </constraints>
@@ -240,6 +229,7 @@
                         <outlet property="taskDescriptionTextView" destination="ET9-Y0-ONu" id="NjN-eg-f88"/>
                         <outlet property="taskDueDateTextField" destination="dRt-y7-3M7" id="6pt-0S-gFf"/>
                         <outlet property="taskTitleTextView" destination="9Bi-8r-kjU" id="VJF-xN-2jm"/>
+                        <outlet property="taskUpdateOrCreationButton" destination="7vs-pq-Oda" id="ZBL-fh-Oen"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlO-ei-g3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
