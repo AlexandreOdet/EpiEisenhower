@@ -13,7 +13,17 @@ class UserListInteractor {
     var output: UserListPresenter?
     
     func fetchData(forTask taskId: Int) {
-        
+        if taskId == -1 {
+            output?.didFetch(result: UserList())
+        } else {
+            let userList = UserList()
+            for i in 0 ... 6 {
+                let user = User()
+                user.name = "User \(i)"
+                userList.users.append(user)
+            }
+            output?.didFetch(result: userList)
+        }
     }
 
     func updateMembersOf(task taskId: Int, withMembers ids: [Int]) {

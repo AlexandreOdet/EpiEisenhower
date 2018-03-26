@@ -17,17 +17,17 @@ protocol Notifiable {
 extension Notifiable where Self: UIViewController {
     
     func startObservingKeyboard() {
-        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: .UITextFieldTextDidBeginEditing, object: nil, queue: nil) { [weak self] notification in
             self?.keyboardDidShow(notification)
         }
-        NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil) { [weak self] notification in
+        NotificationCenter.default.addObserver(forName: .UITextFieldTextDidEndEditing, object: nil, queue: nil) { [weak self] notification in
             self?.keyboardDidHide(notification)
         }
     }
     
     func stopObservingKeyboard() {
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UITextFieldTextDidBeginEditing, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UITextFieldTextDidEndEditing, object: nil)
     }
     
     func keyboardDidShow(_ notification: Notification) {

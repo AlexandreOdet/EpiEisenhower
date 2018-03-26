@@ -14,9 +14,32 @@ class UserListPresenter {
     var interactor: UserListInteractor?
     var router: UserListRouter?
     
+    var userList = UserList() {
+        didSet {
+            if userList.users.isEmpty {
+                view?.displayEmptyContentView()
+            } else {
+                view?.displayDataOnResponse(data: userList)
+            }
+        }
+    }
+    
     func fetchMembersFrom(task id: Int) {
         view?.showSpinner()
         interactor?.fetchData(forTask: id)
+    }
+    
+    func removeUserFromMemberList(at indexPath: IndexPath) {
+        userList.users.remove(at: indexPath.row)
+    }
+    
+    func updateMembers(ofTask taskId: Int, withMembers ids: [Int]) {
+        view?.showSpinner()
+        interactor?.updateMembersOf(task: taskId, withMembers: ids)
+    }
+    
+    func popBack() {
+        router?.popBack()
     }
 }
 
@@ -26,7 +49,7 @@ extension UserListPresenter: Output {
     
     func didFetch(result: UserList) {
         view?.hideSpinner()
-        view?.displayDataOnResponse(data: result)
+        userList = result
     }
     
     func didFail(with error: Error?) {

@@ -359,15 +359,42 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="NYL-98-wWA">
                                 <rect key="frame" x="0.0" y="10" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.62745098040000002" blue="0.69803921570000005" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskDetailMemeberTableViewCellIdentifier" id="gRI-DH-Adh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskDetailMemeberTableViewCellIdentifier" id="gRI-DH-Adh" customClass="UserListTableViewCell" customModule="Epitech_Eisenhower" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gRI-DH-Adh" id="hC3-3b-vc5">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="raa-xt-nhm">
+                                                    <rect key="frame" x="20" y="6.5" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Q1Z-jx-jTn"/>
+                                                        <constraint firstAttribute="width" constant="30" id="cl7-ap-R7U"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odet Alexandre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfC-3M-Etu">
+                                                    <rect key="frame" x="60" y="14" width="250" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="raa-xt-nhm" firstAttribute="centerY" secondItem="hC3-3b-vc5" secondAttribute="centerY" id="4pX-1F-foc"/>
+                                                <constraint firstItem="AfC-3M-Etu" firstAttribute="leading" secondItem="raa-xt-nhm" secondAttribute="trailing" constant="10" id="HL2-1U-MX3"/>
+                                                <constraint firstItem="AfC-3M-Etu" firstAttribute="centerY" secondItem="hC3-3b-vc5" secondAttribute="centerY" id="bIe-8G-lfl"/>
+                                                <constraint firstItem="raa-xt-nhm" firstAttribute="leading" secondItem="hC3-3b-vc5" secondAttribute="leading" constant="20" id="dR3-0d-BnC"/>
+                                                <constraint firstItem="AfC-3M-Etu" firstAttribute="trailing" secondItem="hC3-3b-vc5" secondAttribute="trailing" constant="-10" id="hxL-wY-xkf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="AfC-3M-Etu" id="hTr-00-jGm"/>
+                                            <outlet property="profileImage" destination="raa-xt-nhm" id="nLx-AC-C7u"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -392,6 +419,7 @@
     </scenes>
     <resources>
         <image name="AddTask" width="49" height="49"/>
+        <image name="ProfileIcon" width="31" height="31"/>
         <image name="right-arrow" width="64" height="64"/>
     </resources>
 </document>

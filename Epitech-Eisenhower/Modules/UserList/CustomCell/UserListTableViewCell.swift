@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class UserListTableViewCell: UITableViewCell {
+    @IBOutlet weak var profileImage: UIImageView?
+    @IBOutlet weak var nameLabel: UILabel?
+    
+    func buildCell(with user: User) {
+        nameLabel?.text = user.name
+    }
+}

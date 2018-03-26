@@ -35,4 +35,8 @@ class UserListRouter {
     func goToUserProfile(withId id: Int) {
         //To-Do
     }
+    
+    func popBack() {
+        view?.navigationController?.popViewController(animated: true)
+    }
 }
