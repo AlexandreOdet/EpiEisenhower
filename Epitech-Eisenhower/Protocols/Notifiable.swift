@@ -20,14 +20,12 @@ extension Notifiable where Self: UIViewController {
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { [weak self] notification in
             self?.keyboardDidShow(notification)
         }
-        //UIKeyboardWillHide
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil) { [weak self] notification in
             self?.keyboardDidHide(notification)
         }
     }
     
     func keyboardDidShow(_ notification: Notification) {
-        print("Keyboard Appears")
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
                 view.frame.origin.y -= keyboardSize.height
@@ -36,7 +34,6 @@ extension Notifiable where Self: UIViewController {
     }
     
     func keyboardDidHide(_ notification: Notification) {
-        print("Keyboard hides")
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
                 view.frame.origin.y += keyboardSize.height

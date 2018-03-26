@@ -10,4 +10,16 @@ import Foundation
 
 class TaskInteractor {
     var output: TaskPresenter?
+    
+    func fetchData(ofTask taskId: Int) {
+        
+    }
+    
+    func willUpdate(task: Task) {
+        
+    }
+    
+    func willCreate(task: Task) {
+        
+    }
 }
