@@ -25,12 +25,16 @@ class TaskDetailViewController: UIViewController, Notifiable {
     
     let datePicker = UIDatePicker()
     
+    deinit {
+        stopObservingKeyboard()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
-        if isEditingTask {
-            presenter?.fetchData(ofTask: taskId)
-        }
+//        if isEditingTask {
+//            presenter?.fetchData(ofTask: taskId)
+//        }
         startObservingKeyboard()
         setUpTextView()
         setUpImageView()

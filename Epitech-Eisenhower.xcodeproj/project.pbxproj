@@ -60,6 +60,8 @@
 		FACCA6342065359800B46EB0 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA6332065359800B46EB0 /* UserListPresenter.swift */; };
 		FACCA636206535A500B46EB0 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA635206535A500B46EB0 /* UserListInteractor.swift */; };
 		FACCA638206535B100B46EB0 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA637206535B100B46EB0 /* UserListViewController.swift */; };
+		FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA65892068FCFB0087AD34 /* UserList.swift */; };
+		FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +148,8 @@
 		FACCA6332065359800B46EB0 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		FACCA635206535A500B46EB0 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
 		FACCA637206535B100B46EB0 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		FAEA65892068FCFB0087AD34 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
+		FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,6 +358,7 @@
 				FA59F1E320455787008F3F4D /* Task.swift */,
 				FA59F1E520455836008F3F4D /* User.swift */,
 				FA3DE4A82059546800D9DD28 /* TaskList.swift */,
+				FAEA65892068FCFB0087AD34 /* UserList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,12 +398,21 @@
 		FACCA630206531BA00B46EB0 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				FAEA658B20691CFB0087AD34 /* CustomCell */,
 				FACCA6312065358B00B46EB0 /* UserListRouter.swift */,
 				FACCA6332065359800B46EB0 /* UserListPresenter.swift */,
 				FACCA635206535A500B46EB0 /* UserListInteractor.swift */,
 				FACCA637206535B100B46EB0 /* UserListViewController.swift */,
 			);
 			path = UserList;
+			sourceTree = "<group>";
+		};
+		FAEA658B20691CFB0087AD34 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,6 +732,7 @@
 				FACCA636206535A500B46EB0 /* UserListInteractor.swift in Sources */,
 				FA1D650B2056CE7200436616 /* UIButtonExtension.swift in Sources */,
 				FA2A79F0205AA5B400F8C742 /* RouteAPI.swift in Sources */,
+				FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */,
 				FACCA6322065358B00B46EB0 /* UserListRouter.swift in Sources */,
 				FACCA638206535B100B46EB0 /* UserListViewController.swift in Sources */,
 				FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */,
@@ -744,6 +759,7 @@
 				FA3B29DB2057C7580041B207 /* ProfileDetailViewController.swift in Sources */,
 				FA3B29E42057CE1C0041B207 /* R.generated.swift in Sources */,
 				FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */,
+				FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */,
 				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
 				FA53D8A0205FC112005C3C82 /* UIImageView.swift in Sources */,
 				FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */,

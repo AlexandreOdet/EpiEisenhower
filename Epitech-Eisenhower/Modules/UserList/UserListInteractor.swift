@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import RxSwift
+
+class UserListInteractor {
+    var output: UserListPresenter?
+    
+    func fetchData(forTask taskId: Int) {
+        
+    }
+
+    func updateMembersOf(task taskId: Int, withMembers ids: [Int]) {
+        
+    }
+    
+}

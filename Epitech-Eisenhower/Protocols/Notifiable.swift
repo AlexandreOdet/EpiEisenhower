@@ -25,6 +25,11 @@ extension Notifiable where Self: UIViewController {
         }
     }
     
+    func stopObservingKeyboard() {
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+    }
+    
     func keyboardDidShow(_ notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {

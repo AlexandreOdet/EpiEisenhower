@@ -20,12 +20,13 @@ final class Constants {
             public class var homeViewControllerIdentifier: String { return "HomeViewController" }
             public class var taskDetailViewControllerIdentifier: String { return "TaskDetailViewController" }
             public class var userProfileViewControllerIdentifier: String { return "UserProfileViewController" }
+            public class var userListViewControllerIdentifier: String { return "UserListViewController" }
         }
         
         final class customCells {
             public class var taskCollectionViewCellIdentifier: String { return "HomeCollectionViewCellIdentifier" }
             public class var addCollectionViewCellIdentifier: String { return "HomeAddCollectionViewCellIdentifier" }
-            public class var taskMemberCollectionViewCellIdentifier: String { return "TaskDetailMemeberCollectionViewCellIdentifier" }
+            public class var taskMemberTableViewCellIdentifier: String { return "TaskDetailMemeberTableViewCellIdentifier" }
         }
     }
     
