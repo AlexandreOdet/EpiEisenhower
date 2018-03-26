@@ -17,7 +17,7 @@ class TaskPresenter {
         //interactor?.fetchData()
     }
     
-    func didTapMoreImage() {
-        //router?.goToMemberList(withTaskId: Int)
+    func didTapMoreImage(ofTask taskId: Int) {
+        router?.goToMemberList(ofTask: taskId)
     }
 }

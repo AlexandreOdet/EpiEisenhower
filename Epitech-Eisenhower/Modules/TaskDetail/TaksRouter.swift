@@ -30,4 +30,8 @@ class TaskRouter {
         viewController.presenter = presenter
         return viewController
     }
+    
+    func goToMemberList(ofTask taskId: Int) {
+        
+    }
 }

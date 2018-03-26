@@ -16,7 +16,10 @@ class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var taskTitleTextView: UITextView?
     @IBOutlet weak var showTaskMemberImage: UIImageView?
+    @IBOutlet weak var taskDescriptionTextView: UITextView?
+    @IBOutlet weak var taskDueDateTextField: UITextField?
     
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +27,26 @@ class TaskDetailViewController: UIViewController {
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
         setUpTextView()
         setUpImageView()
+        setUpTextfieldInput()
     }
     
     private func setUpTextView() {
         taskTitleTextView?.textContainer.maximumNumberOfLines = 3
         taskTitleTextView?.textContainer.lineBreakMode = .byWordWrapping
         taskTitleTextView?.delegate = self
+        taskTitleTextView?.tag = 1
+        
+        taskDescriptionTextView?.textContainer.maximumNumberOfLines = 5
+        taskDescriptionTextView?.textContainer.lineBreakMode = .byWordWrapping
+        taskDescriptionTextView?.delegate = self
+        taskDescriptionTextView?.tag = 2
+        
         if !isEditingTask {
             taskTitleTextView?.text = Constants.placeholders.taskTitlePlaceholder
             taskTitleTextView?.textColor = UIColor.veryLightGray
+            
+            taskDescriptionTextView?.text = Constants.placeholders.taskDescriptionPlaceholder
+            taskDescriptionTextView?.textColor = UIColor.veryLightGray
         }
     }
     
@@ -46,25 +60,64 @@ class TaskDetailViewController: UIViewController {
         showTaskMemberImage?.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    private func setUpTextfieldInput() {
+        datePicker.datePickerMode = .date
+        datePicker.minimumDate = Date()
+        
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.sizeToFit()
+        
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(didTapCancelButtonInToolbar))
+        let leftSpacing = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(didTapDoneButtonInToolbar))
+        
+        toolbar.setItems([cancelButton, leftSpacing, doneButton], animated: true)
+        taskDueDateTextField?.inputAccessoryView = toolbar
+        taskDueDateTextField?.inputView = datePicker
+    }
+    
+    @objc func didTapDoneButtonInToolbar() {
+        print("Did Tap Done")
+    }
+    
+    @objc func didTapCancelButtonInToolbar() {
+        taskDueDateTextField?.resignFirstResponder()
+    }
+    
     @objc func didTapMoreImage() {
         print("DidTapMoreImage")
-        presenter?.didTapMoreImage()
+        presenter?.didTapMoreImage(ofTask: taskId)
     }
     
 }
 
 extension TaskDetailViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.veryLightGray && textView.text == Constants.placeholders.taskTitlePlaceholder {
-            textView.text = ""
-            textView.textColor = .white
+        if textView.tag == 1 {
+            if textView.textColor == UIColor.veryLightGray && textView.text == Constants.placeholders.taskTitlePlaceholder {
+                textView.text = ""
+                textView.textColor = .white
+            }
+        } else if textView.tag == 2 {
+            if textView.textColor == UIColor.veryLightGray && textView.text == Constants.placeholders.taskDescriptionPlaceholder {
+                textView.text = ""
+                textView.textColor = .white
+            }
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            taskTitleTextView?.text = Constants.placeholders.taskTitlePlaceholder
-            taskTitleTextView?.textColor = UIColor.veryLightGray
+        if textView.tag == 1 {
+            if textView.text.isEmpty {
+                taskTitleTextView?.text = Constants.placeholders.taskTitlePlaceholder
+                taskTitleTextView?.textColor = UIColor.veryLightGray
+            }
+        } else if textView.tag == 2 {
+            if textView.text.isEmpty {
+                taskTitleTextView?.text = Constants.placeholders.taskDescriptionPlaceholder
+                taskTitleTextView?.textColor = UIColor.veryLightGray
+            }
         }
     }
     
@@ -79,5 +132,6 @@ extension TaskDetailViewController: Networkable {
     func displayDataOnResponse(data: Task) {
         //To-Do
         taskTitleTextView?.text = data.title
+        taskDescriptionTextView?.text = "Mamène description du sale"
     }
 }
