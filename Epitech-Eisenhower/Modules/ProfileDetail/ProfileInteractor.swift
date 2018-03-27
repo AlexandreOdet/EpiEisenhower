@@ -11,7 +11,24 @@ import Foundation
 class ProfileInteractor {
     var output: ProfilePresenter?
     
+    let restApiUser = RestAPIUser()
+    
+    deinit {
+        restApiUser.cancelRequest()
+    }
+    
     func fetchData(forUser userId: Int) {
         
+    }
+    
+    func updateData(forUser userId: Int) {
+        
+    }
+    
+    func logout(user userId: Int) {
+        UserDefaults.standard.set(false, forKey: Constants.keys.isLoggedKey)
+        UserDefaults.standard.set(-1, forKey: Constants.keys.userIdKey)
+        UserDefaults.standard.synchronize()
+        output?.didReceiveLogoutResponse()
     }
 }

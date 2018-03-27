@@ -38,4 +38,10 @@ class LoginInteractor {
             self.ouput?.didFail(with: error)
         }).disposed(by: disposeBag)
     }
+    
+    func saveUserId() {
+        UserDefaults.standard.set(true, forKey: Constants.keys.isLoggedKey)
+        UserDefaults.standard.set(1, forKey: Constants.keys.userIdKey)
+        UserDefaults.standard.synchronize()
+    }
 }

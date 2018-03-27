@@ -27,8 +27,7 @@ class LoginPresenter {
     }
     
     func loggedUser() {
-        UserDefaults.standard.set(true, forKey: Constants.keys.isLoggedKey)
-        UserDefaults.standard.synchronize()
+        interactor?.saveUserId()
         router?.dismissLoginModule()
     }
 }

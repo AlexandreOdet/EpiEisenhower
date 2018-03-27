@@ -15,4 +15,9 @@ extension UITextView {
         let inset = max(0, deadSpace/2.0)
         contentInset = UIEdgeInsetsMake(inset, contentInset.left, inset, contentInset.right)
     }
+    
+    func roundCorner() {
+        layer.cornerRadius = 4
+        clipsToBounds = true
+    }
 }

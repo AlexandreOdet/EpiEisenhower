@@ -14,10 +14,11 @@ class ProfilePresenter {
     var router: ProfileRouter?
     var userId: Int = -1
     
-    weak var logoutDelegate: Exitable?
+    weak var logoutDelegate: Exitable? = nil
     
     func viewDidLoad() {
-        if UserDefaults.standard.integer(forKey: Constants.keys.userIdKey) == userId {
+        print(UserDefaults.standard.integer(forKey: Constants.keys.userIdKey), userId)
+        if UserDefaults.standard.integer(forKey: Constants.keys.userIdKey) == userId && logoutDelegate != nil {
             view?.isCurrentUser = true
         } else {
             view?.isCurrentUser = false
@@ -28,6 +29,10 @@ class ProfilePresenter {
     
     
     func didTapLogoutButton() {
+       interactor?.logout(user: userId)
+    }
+    
+    func didReceiveLogoutResponse() {
         router?.popController(toRootController: true, withCompletion: {
             self.logoutDelegate?.didLogout()
         })

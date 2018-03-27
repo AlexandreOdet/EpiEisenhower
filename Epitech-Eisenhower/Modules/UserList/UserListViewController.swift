@@ -32,6 +32,12 @@ class UserListViewController: UIViewController {
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.separatorInset = UIEdgeInsets.zero
+        setUpRightBarButtonItem()
+    }
+    
+    private func setUpRightBarButtonItem() {
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapRightBarButtonItem))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     override func willMove(toParentViewController parent: UIViewController?) {
@@ -57,6 +63,10 @@ class UserListViewController: UIViewController {
         emptyLabel.textAlignment = .center
         emptyLabel.sizeToFit()
     }
+    
+    @objc func didTapRightBarButtonItem() {
+        presenter?.didTapRightBarButtonItem()
+    }
 }
 
 extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,6 +80,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.identifiers.customCells.taskMemberTableViewCellIdentifier) as! UserListTableViewCell
+        cell.selectionStyle = .none
         cell.buildCell(with: users[indexPath.row])
         return cell
     }
@@ -80,6 +91,18 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Supprimer") { [weak self] action, index in
+            self?.presenter?.didRemove(userAt: index)
+        }
+        delete.backgroundColor = .red
+        return [delete]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelect(userAt: indexPath)
     }
 }
 
@@ -94,5 +117,11 @@ extension UserListViewController: Networkable {
         } else {
             users = data.users
         }
+    }
+}
+
+extension UserListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("textDidChange in SearchBar")
     }
 }

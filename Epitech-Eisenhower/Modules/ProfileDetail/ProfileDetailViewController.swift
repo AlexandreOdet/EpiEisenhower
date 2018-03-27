@@ -34,7 +34,9 @@ class ProfileDetailViewController: UIViewController {
         logoutButton?.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
         if isCurrentUser {
             setUpRightBarButtonItem()
+            title = Constants.titles.userProfileTitle
         }
+        descriptionTextView?.roundCorner()
     }
     
     private func setUpRightBarButtonItem() {
@@ -56,5 +58,11 @@ extension ProfileDetailViewController: Networkable {
     
     func displayDataOnResponse(data: User) {
         //To-Do
+        if !isCurrentUser {
+            title = data.name
+        }
+        nameTextfield?.text = data.name
+        emailTextfield?.text = data.email
+        descriptionTextView?.text = data.description
     }
 }

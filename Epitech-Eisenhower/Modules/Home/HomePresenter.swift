@@ -55,8 +55,6 @@ extension HomePresenter: Output {
 
 extension HomePresenter: Exitable {
     func didLogout() {
-        UserDefaults.standard.set(false, forKey: Constants.keys.isLoggedKey)
-        UserDefaults.standard.synchronize()
         router?.presentLoginModule()
     }
 }

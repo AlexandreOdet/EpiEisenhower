@@ -33,7 +33,20 @@ class UserListRouter {
     }
     
     func goToUserProfile(withId id: Int) {
-        //To-Do
+        let nextViewController = ProfileRouter.buildModule(withDelegate: nil, forUser: id)
+        view?.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    func presentSearchBar() {
+        let searchController = { () -> UISearchController in
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchBar.delegate = view
+            controller.dimsBackgroundDuringPresentation = false
+            controller.hidesNavigationBarDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            return controller
+        }()
+        view?.present(searchController, animated: false, completion: nil)
     }
     
     func popBack() {

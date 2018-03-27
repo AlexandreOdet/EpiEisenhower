@@ -20,6 +20,7 @@ class UserListInteractor {
             for i in 0 ... 6 {
                 let user = User()
                 user.name = "User \(i)"
+                user.id = i
                 userList.users.append(user)
             }
             output?.didFetch(result: userList)

@@ -31,9 +31,9 @@ class TaskDetailViewController: UIViewController, Notifiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
-        if isEditingTask {
-            presenter?.fetchData()
-        }
+//        if isEditingTask {
+//            presenter?.fetchData()
+//        }
         startObservingKeyboard()
         setUpTextView()
         setUpImageView()

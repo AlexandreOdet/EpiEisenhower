@@ -14,11 +14,13 @@ class ProfileRouter {
     var view: ProfileDetailViewController?
     
     
-    static func buildModule(withDelegate delegate: Exitable, forUser userId: Int) -> UIViewController {
+    static func buildModule(withDelegate delegate: Exitable? = nil, forUser userId: Int) -> UIViewController {
         let router = ProfileRouter()
         let presenter = ProfilePresenter()
         let interactor = ProfileInteractor()
         let view = R.storyboard.main().instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.userProfileViewControllerIdentifier) as! ProfileDetailViewController
+        
+        print("Delegate == nil", delegate == nil)
         
         router.view = view
         

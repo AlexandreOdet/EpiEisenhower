@@ -36,10 +36,32 @@ class UserListPresenter {
     func updateMembers(ofTask taskId: Int, withMembers ids: [Int]) {
         view?.showSpinner()
         interactor?.updateMembersOf(task: taskId, withMembers: ids)
+        view?.hideSpinner()
     }
     
     func popBack() {
         router?.popBack()
+    }
+    
+    func didRemove(userAt indexPath: IndexPath) {
+        userList.users.remove(at: indexPath.row)
+        if userList.users.isEmpty {
+            view?.displayEmptyContentView()
+        } else {
+            view?.displayDataOnResponse(data: userList)
+        }
+    }
+    
+    func didSelect(userAt indexPath: IndexPath) {
+        router?.goToUserProfile(withId: userList.users[indexPath.row].id)
+    }
+    
+    func didAddUserToMemberList() {
+        
+    }
+    
+    func didTapRightBarButtonItem() {
+        router?.presentSearchBar()
     }
 }
 
