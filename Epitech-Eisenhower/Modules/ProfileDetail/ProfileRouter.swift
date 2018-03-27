@@ -18,7 +18,7 @@ class ProfileRouter {
         let router = ProfileRouter()
         let presenter = ProfilePresenter()
         let interactor = ProfileInteractor()
-        let view = ProfileDetailViewController()
+        let view = R.storyboard.main().instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.userProfileViewControllerIdentifier) as! ProfileDetailViewController
         
         router.view = view
         

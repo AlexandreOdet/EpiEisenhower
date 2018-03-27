@@ -11,13 +11,24 @@ import UIKit
 
 class ProfileDetailViewController: UIViewController {
     var presenter: ProfilePresenter?
+    
+    @IBOutlet weak var logoutButton: UIButton?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        logoutButton?.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
+    }
+    
+    @objc func didTapLogoutButton() {
+        presenter?.didTapLogoutButton()
+    }
 }
 
 extension ProfileDetailViewController: Networkable {
+    typealias Object = User
+    
     func displayDataOnResponse(data: User) {
         //To-Do
     }
-    
-    typealias Object = User
-    
 }
