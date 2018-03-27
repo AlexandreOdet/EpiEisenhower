@@ -13,6 +13,10 @@ class ProfileDetailViewController: UIViewController {
     var presenter: ProfilePresenter?
     
     @IBOutlet weak var logoutButton: UIButton?
+    @IBOutlet weak var userProfileImage: UIImageView?
+    @IBOutlet weak var nameTextfield: UITextField?
+    @IBOutlet weak var emailTextfield: UITextField?
+    
     
     var isCurrentUser = true {
         didSet {
@@ -22,12 +26,25 @@ class ProfileDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userProfileImage?.round()
         presenter?.viewDidLoad()
         logoutButton?.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
+        if isCurrentUser {
+            setUpRightBarButtonItem()
+        }
+    }
+    
+    private func setUpRightBarButtonItem() {
+        let rightBarButtonItem = UIBarButtonItem(image: R.image.checked(), style: .plain, target: self, action: #selector(didTapRightBarButtonItem))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
     @objc func didTapLogoutButton() {
         presenter?.didTapLogoutButton()
+    }
+    
+    @objc func didTapRightBarButtonItem() {
+        presenter?.didTapUpdateProfileButton()
     }
 }
 

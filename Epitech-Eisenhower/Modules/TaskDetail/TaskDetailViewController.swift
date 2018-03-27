@@ -62,7 +62,7 @@ class TaskDetailViewController: UIViewController, Notifiable {
     }
     
     private func setUpImageView() {
-        showTaskMemberImage?.roundImage()
+        showTaskMemberImage?.round()
         showTaskMemberImage?.backgroundColor = .white
         showTaskMemberImage?.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapMoreImage))

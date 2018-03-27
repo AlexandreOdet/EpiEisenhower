@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -434,27 +435,63 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ZZq-2Q-v69">
+                                <rect key="frame" x="125" y="25" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="oud-O8-Cmp"/>
+                                    <constraint firstAttribute="height" constant="70" id="ySN-f6-KiK"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-ll-oAR">
+                                <rect key="frame" x="16" y="429" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre nom, prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-uC-PRM">
+                                <rect key="frame" x="16" y="137" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4LN-XM-NAc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.62745098040000002" blue="0.69803921570000005" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xTJ-RZ-IWh" firstAttribute="trailing" secondItem="tOT-tD-Lox" secondAttribute="trailing" id="ATQ-sQ-O68"/>
-                            <constraint firstItem="tOT-tD-Lox" firstAttribute="bottom" secondItem="xTJ-RZ-IWh" secondAttribute="bottom" id="NfB-B9-TG2"/>
+                            <constraint firstItem="TyK-ll-oAR" firstAttribute="centerX" secondItem="xTJ-RZ-IWh" secondAttribute="centerX" id="AWi-qT-9a8"/>
+                            <constraint firstItem="xLz-uC-PRM" firstAttribute="top" secondItem="ZZq-2Q-v69" secondAttribute="bottom" constant="42" id="BLf-1s-i8L"/>
+                            <constraint firstItem="xLz-uC-PRM" firstAttribute="leading" secondItem="TyK-ll-oAR" secondAttribute="leading" id="CpT-ec-KZk"/>
+                            <constraint firstItem="xTJ-RZ-IWh" firstAttribute="bottom" secondItem="tOT-tD-Lox" secondAttribute="bottom" id="NfB-B9-TG2"/>
+                            <constraint firstItem="ZZq-2Q-v69" firstAttribute="top" secondItem="tOT-tD-Lox" secondAttribute="top" constant="5" id="O5A-Uw-1TL"/>
+                            <constraint firstItem="xLz-uC-PRM" firstAttribute="trailing" secondItem="TyK-ll-oAR" secondAttribute="trailing" id="Rsl-jT-efv"/>
+                            <constraint firstItem="xTJ-RZ-IWh" firstAttribute="top" secondItem="TyK-ll-oAR" secondAttribute="bottom" constant="69" id="XgT-op-OgF"/>
                             <constraint firstItem="xTJ-RZ-IWh" firstAttribute="leading" secondItem="tOT-tD-Lox" secondAttribute="leading" id="knW-xy-gWo"/>
+                            <constraint firstItem="ZZq-2Q-v69" firstAttribute="centerX" secondItem="tOT-tD-Lox" secondAttribute="centerX" id="uWp-k0-lt2"/>
+                            <constraint firstItem="TyK-ll-oAR" firstAttribute="leading" secondItem="1tk-J7-K8C" secondAttribute="leadingMargin" id="v8h-7B-KVW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tOT-tD-Lox"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextfield" destination="TyK-ll-oAR" id="h7b-gi-fPv"/>
                         <outlet property="logoutButton" destination="xTJ-RZ-IWh" id="lYv-E7-h4B"/>
+                        <outlet property="nameTextfield" destination="xLz-uC-PRM" id="6hy-tB-ncO"/>
+                        <outlet property="userProfileImage" destination="ZZq-2Q-v69" id="n1P-lS-qkI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzf-FM-MoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3176" y="972"/>
+            <point key="canvasLocation" x="3174.375" y="971.83098591549299"/>
         </scene>
     </scenes>
     <resources>
         <image name="AddTask" width="49" height="49"/>
         <image name="ProfileIcon" width="31" height="31"/>
+        <image name="profile-placeholder" width="336" height="336"/>
         <image name="right-arrow" width="64" height="64"/>
     </resources>
 </document>

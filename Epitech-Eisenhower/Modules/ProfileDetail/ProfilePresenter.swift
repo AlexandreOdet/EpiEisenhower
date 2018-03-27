@@ -17,8 +17,14 @@ class ProfilePresenter {
     weak var logoutDelegate: Exitable?
     
     func viewDidLoad() {
-        view?.showSpinner()
-        interactor?.fetchData()
+        print(userId, UserDefaults.standard.integer(forKey: Constants.keys.userIdKey))
+        if UserDefaults.standard.integer(forKey: Constants.keys.userIdKey) == userId {
+            view?.isCurrentUser = true
+        } else {
+            view?.isCurrentUser = false
+        }
+//        view?.showSpinner()
+//        interactor?.fetchData()
     }
     
     
