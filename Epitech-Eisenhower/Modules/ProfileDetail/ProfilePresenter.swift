@@ -12,6 +12,7 @@ class ProfilePresenter {
     var interactor: ProfileInteractor?
     var view: ProfileDetailViewController?
     var router: ProfileRouter?
+    var userId: Int = -1
     
     weak var logoutDelegate: Exitable?
     

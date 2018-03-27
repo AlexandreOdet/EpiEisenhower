@@ -14,7 +14,7 @@ class ProfileRouter {
     var view: ProfileDetailViewController?
     
     
-    static func buildModule(withDelegate delegate: Exitable) -> UIViewController {
+    static func buildModule(withDelegate delegate: Exitable, forUser userId: Int) -> UIViewController {
         let router = ProfileRouter()
         let presenter = ProfilePresenter()
         let interactor = ProfileInteractor()
@@ -26,6 +26,7 @@ class ProfileRouter {
         presenter.router = router
         presenter.interactor = interactor
         presenter.logoutDelegate = delegate
+        presenter.userId = userId
         
         interactor.output = presenter
         

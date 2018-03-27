@@ -12,7 +12,6 @@ import UIKit
 class TaskDetailViewController: UIViewController, Notifiable {
     var presenter: TaskPresenter?
     var isEditingTask: Bool = false
-    var taskId: Int = -1
     
     var task = Task()
     
@@ -32,9 +31,9 @@ class TaskDetailViewController: UIViewController, Notifiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
-//        if isEditingTask {
-//            presenter?.fetchData(ofTask: taskId)
-//        }
+        if isEditingTask {
+            presenter?.fetchData()
+        }
         startObservingKeyboard()
         setUpTextView()
         setUpImageView()
@@ -117,7 +116,7 @@ class TaskDetailViewController: UIViewController, Notifiable {
     }
     
     @objc func didTapMoreImage() {
-        presenter?.didTapMoreImage(ofTask: taskId)
+        presenter?.didTapMoreImage()
     }
     
     @objc func didTapCreateButton() {

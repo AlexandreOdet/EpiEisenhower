@@ -14,9 +14,15 @@ class ProfileDetailViewController: UIViewController {
     
     @IBOutlet weak var logoutButton: UIButton?
     
+    var isCurrentUser = true {
+        didSet {
+            logoutButton?.isHidden = !isCurrentUser
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter?.viewDidLoad()
         logoutButton?.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
     }
     

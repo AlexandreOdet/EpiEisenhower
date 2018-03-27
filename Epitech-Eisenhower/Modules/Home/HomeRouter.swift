@@ -41,7 +41,7 @@ class HomeRouter {
     func goToUserProfile(userID: Int, withDelegate delegate: Exitable) {
         //ProfileRouter.buildModule()
         //To-Do: Instantiate the UserProfileModule, and then push it into the UINavigationController + set the UserId
-        let nextViewController = ProfileRouter.buildModule(withDelegate: delegate)
+        let nextViewController = ProfileRouter.buildModule(withDelegate: delegate, forUser: userID)
         view?.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
@@ -49,10 +49,9 @@ class HomeRouter {
         if taskId == -1 && isEditing == true {
             fatalError("That shouldn't happen.")
         } else {
-            let nextViewController = TaskRouter.buildModule() as! TaskDetailViewController
+            let nextViewController = TaskRouter.buildModule(forTask: taskId) as! TaskDetailViewController
             if isEditing {
                 nextViewController.isEditingTask = true
-                nextViewController.taskId = taskId
             }
             view?.navigationController?.pushViewController(nextViewController, animated: true)
         }

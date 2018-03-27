@@ -52,10 +52,11 @@ final class Constants {
     
     final class network {
         public class var apiBaseURL: String { return "https://eisenhower-ios.herokuapp.com/" }
-        public class var loginURL: String { return "" }
-        public class var signupURL: String { return "" }
-        public class var taskURL: String { return "" }
+        public class var loginURL: String { return "auth/login" }
+        public class var signupURL: String { return "auth/register" }
+        public class var taskURL: String { return "task/" }
         public class var profileURL: String { return "" }
+        public class var logoutURL: String { return "auth/logout" }
     }
     
 }

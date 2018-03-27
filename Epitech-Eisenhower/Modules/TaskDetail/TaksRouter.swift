@@ -12,7 +12,7 @@ import UIKit
 class TaskRouter {
     var view: TaskDetailViewController?
     
-    static func buildModule() -> UIViewController {
+    static func buildModule(forTask id: Int) -> UIViewController {
         let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.taskDetailViewControllerIdentifier) as! TaskDetailViewController
         let presenter = TaskPresenter()
         let interactor = TaskInteractor()
@@ -24,6 +24,7 @@ class TaskRouter {
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
+        presenter.taskId = id
         
         interactor.output = presenter
         

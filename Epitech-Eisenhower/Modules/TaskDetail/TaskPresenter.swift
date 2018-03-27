@@ -13,12 +13,14 @@ class TaskPresenter {
     var view: TaskDetailViewController?
     var router: TaskRouter?
     
-    func fetchData(ofTask taskId: Int) {
+    var taskId: Int = -1
+    
+    func fetchData() {
         interactor?.fetchData(ofTask: taskId)
         view?.showSpinner()
     }
     
-    func didTapMoreImage(ofTask taskId: Int) {
+    func didTapMoreImage() {
         router?.goToMemberList(ofTask: taskId)
     }
     
