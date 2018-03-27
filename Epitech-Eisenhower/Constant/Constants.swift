@@ -55,7 +55,7 @@ final class Constants {
         public class var loginURL: String { return "auth/login" }
         public class var signupURL: String { return "auth/register" }
         public class var taskURL: String { return "task/" }
-        public class var profileURL: String { return "" }
+        public class var profileURL: String { return "users/" }
         public class var logoutURL: String { return "auth/logout" }
     }
     

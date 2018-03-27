@@ -11,7 +11,7 @@ import Foundation
 class ProfileInteractor {
     var output: ProfilePresenter?
     
-    func fetchData() {
+    func fetchData(forUser userId: Int) {
         
     }
 }

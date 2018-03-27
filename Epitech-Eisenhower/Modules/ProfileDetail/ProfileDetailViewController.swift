@@ -16,11 +16,14 @@ class ProfileDetailViewController: UIViewController {
     @IBOutlet weak var userProfileImage: UIImageView?
     @IBOutlet weak var nameTextfield: UITextField?
     @IBOutlet weak var emailTextfield: UITextField?
-    
+    @IBOutlet weak var descriptionTextView: UITextView?
     
     var isCurrentUser = true {
         didSet {
             logoutButton?.isHidden = !isCurrentUser
+            nameTextfield?.isUserInteractionEnabled = isCurrentUser
+            emailTextfield?.isUserInteractionEnabled = isCurrentUser
+            descriptionTextView?.isUserInteractionEnabled = isCurrentUser
         }
     }
     

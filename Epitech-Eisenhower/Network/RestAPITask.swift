@@ -10,20 +10,23 @@ import Foundation
 import Alamofire
 
 class RestAPITask: RestAPIBase {
-    
-    func createTask() { //Create
+    func getTaskList() {
         
     }
     
-    func fetchData() { //Read
+    func getData(forTask taskId: Int) {
         
     }
     
-    func updateTask() { //Update
+    func createTask() {
         
     }
     
-    func deleteTask() { //Delete
+    func deleteTask(_ taskId: Int) {
+        
+    }
+    
+    func updateTaskMember(ofTask taskId: Int, withMembers ids: [Int]) {
         
     }
 }

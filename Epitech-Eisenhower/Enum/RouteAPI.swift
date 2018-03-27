@@ -16,6 +16,7 @@ enum RoutesAPI {
     case signUp
     case task
     case profile
+    case logout
 }
 
 extension RoutesAPI {
@@ -30,6 +31,8 @@ extension RoutesAPI {
                 return Constants.network.taskURL
             case .profile:
                 return Constants.network.profileURL
+            case .logout:
+                return Constants.network.logoutURL
             }
         }()
         return (RoutesAPI.base.appending(path))

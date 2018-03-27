@@ -459,6 +459,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rro-IR-3rR">
+                                <rect key="frame" x="16" y="237" width="288" height="152"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.62745098040000002" blue="0.69803921570000005" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -466,17 +474,22 @@
                             <constraint firstItem="TyK-ll-oAR" firstAttribute="centerX" secondItem="xTJ-RZ-IWh" secondAttribute="centerX" id="AWi-qT-9a8"/>
                             <constraint firstItem="xLz-uC-PRM" firstAttribute="top" secondItem="ZZq-2Q-v69" secondAttribute="bottom" constant="42" id="BLf-1s-i8L"/>
                             <constraint firstItem="xLz-uC-PRM" firstAttribute="leading" secondItem="TyK-ll-oAR" secondAttribute="leading" id="CpT-ec-KZk"/>
+                            <constraint firstItem="rro-IR-3rR" firstAttribute="top" secondItem="xLz-uC-PRM" secondAttribute="bottom" constant="60" id="Eea-Rf-IZi"/>
+                            <constraint firstItem="rro-IR-3rR" firstAttribute="bottom" secondItem="TyK-ll-oAR" secondAttribute="top" constant="-40" id="Kc0-vT-CmQ"/>
                             <constraint firstItem="xTJ-RZ-IWh" firstAttribute="bottom" secondItem="tOT-tD-Lox" secondAttribute="bottom" id="NfB-B9-TG2"/>
                             <constraint firstItem="ZZq-2Q-v69" firstAttribute="top" secondItem="tOT-tD-Lox" secondAttribute="top" constant="5" id="O5A-Uw-1TL"/>
                             <constraint firstItem="xLz-uC-PRM" firstAttribute="trailing" secondItem="TyK-ll-oAR" secondAttribute="trailing" id="Rsl-jT-efv"/>
+                            <constraint firstItem="rro-IR-3rR" firstAttribute="leading" secondItem="TyK-ll-oAR" secondAttribute="leading" id="SJc-hb-DRr"/>
                             <constraint firstItem="xTJ-RZ-IWh" firstAttribute="top" secondItem="TyK-ll-oAR" secondAttribute="bottom" constant="69" id="XgT-op-OgF"/>
                             <constraint firstItem="xTJ-RZ-IWh" firstAttribute="leading" secondItem="tOT-tD-Lox" secondAttribute="leading" id="knW-xy-gWo"/>
+                            <constraint firstItem="rro-IR-3rR" firstAttribute="trailing" secondItem="TyK-ll-oAR" secondAttribute="trailing" id="pSt-ph-TTf"/>
                             <constraint firstItem="ZZq-2Q-v69" firstAttribute="centerX" secondItem="tOT-tD-Lox" secondAttribute="centerX" id="uWp-k0-lt2"/>
                             <constraint firstItem="TyK-ll-oAR" firstAttribute="leading" secondItem="1tk-J7-K8C" secondAttribute="leadingMargin" id="v8h-7B-KVW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tOT-tD-Lox"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="rro-IR-3rR" id="baD-tE-ueM"/>
                         <outlet property="emailTextfield" destination="TyK-ll-oAR" id="h7b-gi-fPv"/>
                         <outlet property="logoutButton" destination="xTJ-RZ-IWh" id="lYv-E7-h4B"/>
                         <outlet property="nameTextfield" destination="xLz-uC-PRM" id="6hy-tB-ncO"/>

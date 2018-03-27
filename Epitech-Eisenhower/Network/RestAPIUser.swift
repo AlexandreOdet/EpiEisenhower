@@ -10,11 +10,16 @@ import Foundation
 import Alamofire
 
 class RestAPIUser: RestAPIBase {
-    func getUserInfos() {
+    
+    func getUserInfos(ofUser userId: Int) {
         
     }
     
-    func updateUserInfos() {
+    func updateUserInfos(forUser userId: Int) {
+        
+    }
+    
+    func searchUsers(withName name: String) {
         
     }
 }
