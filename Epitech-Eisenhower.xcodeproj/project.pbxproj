@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29F582A14A5D0A56E99F2782 /* Pods_Epitech_EisenhowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */; };
-		8460002BA2FF59F041A35B08 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */; };
-		A64E4A02B7477F8036484B4B /* Pods_Epitech_Eisenhower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */; };
+		2EC32575A08FEFF289286171 /* Pods_Epitech_Eisenhower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B6E760F55FF1C18A437894 /* Pods_Epitech_Eisenhower.framework */; };
+		43BD95DEF282EB710EB9AAA3 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D50B7558171D94BD09FD7B4 /* Pods_Epitech_EisenhowerUITests.framework */; };
+		9B088D6A2F424E2AE557F74F /* Pods_Epitech_EisenhowerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C537F748E4C45E7CAE2FCFDC /* Pods_Epitech_EisenhowerTests.framework */; };
 		FA11BC442052D11700DAD993 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC432052D11700DAD993 /* LoginRouter.swift */; };
 		FA11BC462052D39300DAD993 /* RestAPITask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11BC452052D39300DAD993 /* RestAPITask.swift */; };
 		FA1D650B2056CE7200436616 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1D650A2056CE7200436616 /* UIButtonExtension.swift */; };
@@ -60,6 +60,7 @@
 		FACCA6342065359800B46EB0 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA6332065359800B46EB0 /* UserListPresenter.swift */; };
 		FACCA636206535A500B46EB0 /* UserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA635206535A500B46EB0 /* UserListInteractor.swift */; };
 		FACCA638206535B100B46EB0 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACCA637206535B100B46EB0 /* UserListViewController.swift */; };
+		FACFF0CC206B8E1F00B54461 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0CB206B8E1F00B54461 /* ProfilePicture.swift */; };
 		FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA65892068FCFB0087AD34 /* UserList.swift */; };
 		FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
@@ -83,15 +84,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.debug.xcconfig"; sourceTree = "<group>"; };
-		7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.release.xcconfig"; sourceTree = "<group>"; };
-		C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_Eisenhower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A3F17B47557A43C9B9A1A4C /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7285C2604E9259154AF8BFFE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D50B7558171D94BD09FD7B4 /* Pods_Epitech_EisenhowerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82BE8072E417C20AE06A81B7 /* Pods-Epitech-Eisenhower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.release.xcconfig"; sourceTree = "<group>"; };
+		A548C8266B1595AC6FB9447B /* Pods-Epitech-Eisenhower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-Eisenhower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower.debug.xcconfig"; sourceTree = "<group>"; };
+		C2FAF5628A5238A517A638D6 /* Pods-Epitech-EisenhowerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C537F748E4C45E7CAE2FCFDC /* Pods_Epitech_EisenhowerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_EisenhowerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B6E760F55FF1C18A437894 /* Pods_Epitech_Eisenhower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Epitech_Eisenhower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA11BC432052D11700DAD993 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FA11BC452052D39300DAD993 /* RestAPITask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPITask.swift; sourceTree = "<group>"; };
 		FA1D650A2056CE7200436616 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -148,9 +148,11 @@
 		FACCA6332065359800B46EB0 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 		FACCA635206535A500B46EB0 /* UserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListInteractor.swift; sourceTree = "<group>"; };
 		FACCA637206535B100B46EB0 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		FACFF0CB206B8E1F00B54461 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		FAEA65892068FCFB0087AD34 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		FCABB90F48123E0AC4AEF068 /* Pods-Epitech-EisenhowerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Epitech-EisenhowerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A64E4A02B7477F8036484B4B /* Pods_Epitech_Eisenhower.framework in Frameworks */,
+				2EC32575A08FEFF289286171 /* Pods_Epitech_Eisenhower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F582A14A5D0A56E99F2782 /* Pods_Epitech_EisenhowerTests.framework in Frameworks */,
+				9B088D6A2F424E2AE557F74F /* Pods_Epitech_EisenhowerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,32 +176,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8460002BA2FF59F041A35B08 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */,
+				43BD95DEF282EB710EB9AAA3 /* Pods_Epitech_EisenhowerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		508F192F7EFCEE5A1161B21F /* Frameworks */ = {
+		20C4D4D9422982BDF905D9B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C69566DF0979B624D96FED3C /* Pods_Epitech_Eisenhower.framework */,
-				7961AB9A0C8BC416D2A33892 /* Pods_Epitech_EisenhowerTests.framework */,
-				7E708007951A68B53A217998 /* Pods_Epitech_EisenhowerUITests.framework */,
+				D1B6E760F55FF1C18A437894 /* Pods_Epitech_Eisenhower.framework */,
+				C537F748E4C45E7CAE2FCFDC /* Pods_Epitech_EisenhowerTests.framework */,
+				7D50B7558171D94BD09FD7B4 /* Pods_Epitech_EisenhowerUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		77F6E4813458770E335AF344 /* Pods */ = {
+		46B2702AAC5A093648429DE3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */,
-				9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */,
-				51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */,
-				DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */,
-				CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */,
-				C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */,
+				A548C8266B1595AC6FB9447B /* Pods-Epitech-Eisenhower.debug.xcconfig */,
+				82BE8072E417C20AE06A81B7 /* Pods-Epitech-Eisenhower.release.xcconfig */,
+				7285C2604E9259154AF8BFFE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */,
+				C2FAF5628A5238A517A638D6 /* Pods-Epitech-EisenhowerTests.release.xcconfig */,
+				5A3F17B47557A43C9B9A1A4C /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */,
+				FCABB90F48123E0AC4AEF068 /* Pods-Epitech-EisenhowerUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -290,8 +292,8 @@
 				FA59F1C520455422008F3F4D /* Epitech-EisenhowerTests */,
 				FA59F1D020455422008F3F4D /* Epitech-EisenhowerUITests */,
 				FA59F1AF20455422008F3F4D /* Products */,
-				77F6E4813458770E335AF344 /* Pods */,
-				508F192F7EFCEE5A1161B21F /* Frameworks */,
+				46B2702AAC5A093648429DE3 /* Pods */,
+				20C4D4D9422982BDF905D9B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,6 +350,7 @@
 				FA59F1E02045553B008F3F4D /* TaskType.swift */,
 				FA366D2D204E9A520019C725 /* TaskState.swift */,
 				FA2A79EF205AA5B400F8C742 /* RouteAPI.swift */,
+				FACFF0CB206B8E1F00B54461 /* ProfilePicture.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -422,13 +425,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA59F1D620455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-Eisenhower" */;
 			buildPhases = (
-				DBE526478EB37313DF0D81B6 /* [CP] Check Pods Manifest.lock */,
+				F9A40261D29740684E49724B /* [CP] Check Pods Manifest.lock */,
 				FA3B29E22057CDD80041B207 /* ShellScript */,
 				FA59F1AA20455422008F3F4D /* Sources */,
 				FA59F1AB20455422008F3F4D /* Frameworks */,
 				FA59F1AC20455422008F3F4D /* Resources */,
-				094366417315BBA5D5AB45DA /* [CP] Embed Pods Frameworks */,
-				E179EACF3848F6FF3E4574D9 /* [CP] Copy Pods Resources */,
+				862EC92500F45ADD7AAE8C3B /* [CP] Embed Pods Frameworks */,
+				6DBE02B9784CF56DD871B7AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -443,12 +446,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA59F1D920455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerTests" */;
 			buildPhases = (
-				B84ED2DBDA0B73E487015F9A /* [CP] Check Pods Manifest.lock */,
+				A731BC088E650CAC23ED9AB9 /* [CP] Check Pods Manifest.lock */,
 				FA59F1BE20455422008F3F4D /* Sources */,
 				FA59F1BF20455422008F3F4D /* Frameworks */,
 				FA59F1C020455422008F3F4D /* Resources */,
-				3198EA34B6E807377AC88C65 /* [CP] Embed Pods Frameworks */,
-				0E8230EEFE2E9F7AD898A042 /* [CP] Copy Pods Resources */,
+				BA39445FA6B3ABA8877562BA /* [CP] Embed Pods Frameworks */,
+				158C8A82BF283F2F37629FFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -464,12 +467,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA59F1DC20455422008F3F4D /* Build configuration list for PBXNativeTarget "Epitech-EisenhowerUITests" */;
 			buildPhases = (
-				9FDABE0770D6ADCC81FB6D90 /* [CP] Check Pods Manifest.lock */,
+				D4E82318EA7620BFB6A892FF /* [CP] Check Pods Manifest.lock */,
 				FA59F1C920455422008F3F4D /* Sources */,
 				FA59F1CA20455422008F3F4D /* Frameworks */,
 				FA59F1CB20455422008F3F4D /* Resources */,
-				58398084CCD1D88387F8F544 /* [CP] Embed Pods Frameworks */,
-				DAD1A0DB4435DA75903340C9 /* [CP] Copy Pods Resources */,
+				7B60BDEBEA7A6657DD4D65B3 /* [CP] Embed Pods Frameworks */,
+				C108F8DAF96D4BDA8F33B1E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -555,31 +558,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		094366417315BBA5D5AB45DA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftOverlays/SwiftOverlays.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOverlays.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0E8230EEFE2E9F7AD898A042 /* [CP] Copy Pods Resources */ = {
+		158C8A82BF283F2F37629FFE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -594,22 +573,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3198EA34B6E807377AC88C65 /* [CP] Embed Pods Frameworks */ = {
+		6DBE02B9784CF56DD871B7AD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58398084CCD1D88387F8F544 /* [CP] Embed Pods Frameworks */ = {
+		7B60BDEBEA7A6657DD4D65B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -624,25 +603,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FDABE0770D6ADCC81FB6D90 /* [CP] Check Pods Manifest.lock */ = {
+		862EC92500F45ADD7AAE8C3B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOverlays/SwiftOverlays.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Epitech-EisenhowerUITests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOverlays.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B84ED2DBDA0B73E487015F9A /* [CP] Check Pods Manifest.lock */ = {
+		A731BC088E650CAC23ED9AB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -660,7 +651,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAD1A0DB4435DA75903340C9 /* [CP] Copy Pods Resources */ = {
+		BA39445FA6B3ABA8877562BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerTests/Pods-Epitech-EisenhowerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C108F8DAF96D4BDA8F33B1E8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -675,7 +681,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-EisenhowerUITests/Pods-Epitech-EisenhowerUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBE526478EB37313DF0D81B6 /* [CP] Check Pods Manifest.lock */ = {
+		D4E82318EA7620BFB6A892FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Epitech-EisenhowerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9A40261D29740684E49724B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -691,21 +715,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E179EACF3848F6FF3E4574D9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Epitech-Eisenhower/Pods-Epitech-Eisenhower-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA3B29E22057CDD80041B207 /* ShellScript */ = {
@@ -757,6 +766,7 @@
 				FA50C5D92057C02E0040631F /* HomeRouter.swift in Sources */,
 				FA4ADC06204EEBC2008A7306 /* RestAPIAuthentication.swift in Sources */,
 				FA3B29DB2057C7580041B207 /* ProfileDetailViewController.swift in Sources */,
+				FACFF0CC206B8E1F00B54461 /* ProfilePicture.swift in Sources */,
 				FA3B29E42057CE1C0041B207 /* R.generated.swift in Sources */,
 				FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */,
 				FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */,
@@ -939,7 +949,7 @@
 		};
 		FA59F1D720455422008F3F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 771A642AA28D0D84FCA66532 /* Pods-Epitech-Eisenhower.debug.xcconfig */;
+			baseConfigurationReference = A548C8266B1595AC6FB9447B /* Pods-Epitech-Eisenhower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -955,7 +965,7 @@
 		};
 		FA59F1D820455422008F3F4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D0BE4E0A526750F56298E77 /* Pods-Epitech-Eisenhower.release.xcconfig */;
+			baseConfigurationReference = 82BE8072E417C20AE06A81B7 /* Pods-Epitech-Eisenhower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -971,7 +981,7 @@
 		};
 		FA59F1DA20455422008F3F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C67C120473988866021360 /* Pods-Epitech-EisenhowerTests.debug.xcconfig */;
+			baseConfigurationReference = 7285C2604E9259154AF8BFFE /* Pods-Epitech-EisenhowerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -989,7 +999,7 @@
 		};
 		FA59F1DB20455422008F3F4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE226595B1F19C68D6958B1C /* Pods-Epitech-EisenhowerTests.release.xcconfig */;
+			baseConfigurationReference = C2FAF5628A5238A517A638D6 /* Pods-Epitech-EisenhowerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1007,7 +1017,7 @@
 		};
 		FA59F1DD20455422008F3F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF16A8A04B60FCBD630D2538 /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */;
+			baseConfigurationReference = 5A3F17B47557A43C9B9A1A4C /* Pods-Epitech-EisenhowerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1024,7 +1034,7 @@
 		};
 		FA59F1DE20455422008F3F4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3A04A01ABCA2650EDB401BB /* Pods-Epitech-EisenhowerUITests.release.xcconfig */;
+			baseConfigurationReference = FCABB90F48123E0AC4AEF068 /* Pods-Epitech-EisenhowerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

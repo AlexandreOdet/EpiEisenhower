@@ -54,7 +54,7 @@ extension LoginViewController: UITextFieldDelegate {
             let nextTextField = view.viewWithTag(textField.tag + 1)
             nextTextField?.becomeFirstResponder()
         }
-        if textField.tag == 1 {
+        if textField.tag == passwordTextField?.tag {
             view.endEditing(true)
         }
         return true

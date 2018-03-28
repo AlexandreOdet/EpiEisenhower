@@ -8,6 +8,9 @@ target 'Epitech-Eisenhower' do
   pod 'RxSwift'
   pod 'R.swift'
   pod 'SwiftOverlays'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
+  pod 'SCLAlertView'
   # Pods for Epitech-Eisenhower
 
   target 'Epitech-EisenhowerTests' do

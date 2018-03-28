@@ -26,9 +26,7 @@ class UserListViewController: UIViewController {
     
     override func viewDidLoad() {
         setUpEmptyLabel()
-        if taskId != -1 {
-            presenter?.fetchMembersFrom(task: taskId)
-        }
+        presenter?.fetchMembersFrom(task: taskId)
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.separatorInset = UIEdgeInsets.zero

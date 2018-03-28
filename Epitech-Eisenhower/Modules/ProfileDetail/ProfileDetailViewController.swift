@@ -35,6 +35,7 @@ class ProfileDetailViewController: UIViewController {
         if isCurrentUser {
             setUpRightBarButtonItem()
             title = Constants.titles.userProfileTitle
+            setUpProfileImage()
         }
         descriptionTextView?.roundCorner()
     }
@@ -44,12 +45,29 @@ class ProfileDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
+    private func setUpProfileImage() {
+        userProfileImage?.isUserInteractionEnabled = true
+        userProfileImage?.backgroundColor = .white
+        userProfileImage?.contentMode = .scaleAspectFit
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        userProfileImage?.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
     @objc func didTapLogoutButton() {
         presenter?.didTapLogoutButton()
     }
     
     @objc func didTapRightBarButtonItem() {
         presenter?.didTapUpdateProfileButton()
+    }
+    
+    @objc func didTapProfileImage() {
+        presenter?.didTapProfileImage()
+    }
+    
+    func userDidSelect(profilePicture picture: ProfilePicture) {
+        userProfileImage?.image = picture.associatedImage
     }
 }
 

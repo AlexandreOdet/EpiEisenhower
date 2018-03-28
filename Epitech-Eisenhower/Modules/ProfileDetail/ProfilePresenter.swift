@@ -38,6 +38,16 @@ class ProfilePresenter {
         })
     }
     
+    func didTapProfileImage() {
+        router?.presentProfilePictureAlert(withCompletion: { picture in
+            self.didSelect(picture: picture)
+        })
+    }
+    
+    private func didSelect(picture: ProfilePicture) {
+        view?.userDidSelect(profilePicture: picture)
+    }
+    
     func didTapUpdateProfileButton() {
         
     }

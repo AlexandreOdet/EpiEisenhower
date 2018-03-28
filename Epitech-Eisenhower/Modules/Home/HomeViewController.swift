@@ -11,7 +11,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    //var collectionView: UICollectionView!
     var presenter: HomePresenter?
     
     @IBOutlet weak var collectionView: UICollectionView?
@@ -58,7 +57,6 @@ extension HomeViewController: Networkable {
     typealias Object = TaskList
     
     func displayDataOnResponse(data: TaskList) {
-        //To-Do
         taskList.removeAll()
         if data.tasks.count > 0 {
             taskList = data.tasks
