@@ -26,8 +26,8 @@ class RestAPITask: RestAPIBase {
             taskList.tasks.append(newTask)
         }
         return Observable<TaskList>.create({ observer -> Disposable in
-            if taskList.tasks.contains(where: { $0.id == -1 }) {
-                observer.onError(TaskError.networkError)
+            if !self.isNetworkAvailable {
+                observer.onError(Network.networkUnreachable)
             } else {
                 observer.onNext(taskList)
                 observer.onCompleted()
@@ -36,8 +36,11 @@ class RestAPITask: RestAPIBase {
         })
     }
     
-    func getData(forTask taskId: Int) {
-        
+    func getData(forTask taskId: Int) -> Observable<Task> {
+        return Observable<Task>.create({ observer -> Disposable in
+            observer.onError(TaskError.invalidIdSupplied)
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
     
     func createTask() {

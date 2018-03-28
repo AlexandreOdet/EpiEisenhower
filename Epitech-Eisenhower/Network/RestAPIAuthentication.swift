@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-enum LoginError: Error {
+fileprivate enum LoginError: Error {
     case invalidInput
 }
 
@@ -19,6 +19,9 @@ class RestAPIAuthentication: RestAPIBase {
     func signIn(email: String, password: String) -> Observable<User> {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
+            if !self.isNetworkAvailable {
+                observer.onError(Network.networkUnreachable)
+            }
             if email != "test" && password != "test" {
                 observer.onError(LoginError.invalidInput)
                 observer.onCompleted()
@@ -33,6 +36,9 @@ class RestAPIAuthentication: RestAPIBase {
     func signUp(email: String, password: String) -> Observable<User> {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
+            if !self.isNetworkAvailable {
+                observer.onError(Network.networkUnreachable)
+            }
             if email.isEmpty || password.isEmpty {
                 observer.onError(LoginError.invalidInput)
                 observer.onCompleted()

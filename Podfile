@@ -10,7 +10,6 @@ target 'Epitech-Eisenhower' do
   pod 'SwiftOverlays'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
-  pod 'SCLAlertView'
   # Pods for Epitech-Eisenhower
 
   target 'Epitech-EisenhowerTests' do

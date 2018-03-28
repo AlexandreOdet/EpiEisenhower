@@ -18,6 +18,7 @@ protocol Networkable {
     func displayDataOnResponse(data: Object)
     func showSpinner()
     func hideSpinner()
+    func displayNetworkUnreachableAlert()
 }
 
 extension Networkable where Self: UIViewController {
@@ -35,5 +36,11 @@ extension Networkable where Self: UIViewController {
     func hideSpinner() {
         //removeAllOverlays()
         SwiftOverlays.removeAllBlockingOverlays()
+    }
+    
+    func displayNetworkUnreachableAlert() {
+        let alert = UIAlertController(title: "Erreur", message: "Il semblerait que le réseau ne soit pas disponible.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

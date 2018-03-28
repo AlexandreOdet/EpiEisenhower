@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-enum UserError: Error {
+fileprivate enum UserError: Error {
     case invalidIdSupplied
 }
 
@@ -22,6 +22,9 @@ class RestAPIUser: RestAPIBase {
         user.description = "Lorem Ipsum"
         user.email = "alexandre.odet@viseo.com"
         return Observable<User>.create({ observer -> Disposable in
+            if !self.isNetworkAvailable {
+                observer.onError(Network.networkUnreachable)
+            }
             if userId == -1 {
                 observer.onError(UserError.invalidIdSupplied)
             } else {
