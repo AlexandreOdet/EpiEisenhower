@@ -10,9 +10,30 @@ import Foundation
 import Alamofire
 import RxSwift
 
+fileprivate enum TaskError: Error {
+    case networkError
+    case invalidIdSupplied
+}
+
 class RestAPITask: RestAPIBase {
-    func getTaskList() {
-        
+    func getTaskList() -> Observable<TaskList> {
+        let taskList = TaskList()
+        for i in 0...4 {
+            let newTask = Task()
+            newTask.id = i
+            newTask.title = "Task \(i)"
+            newTask.status = (i % 2 == 0) ? TaskType.toDo : TaskType.toDelegate
+            taskList.tasks.append(newTask)
+        }
+        return Observable<TaskList>.create({ observer -> Disposable in
+            if taskList.tasks.contains(where: { $0.id == -1 }) {
+                observer.onError(TaskError.networkError)
+            } else {
+                observer.onNext(taskList)
+                observer.onCompleted()
+            }
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
     
     func getData(forTask taskId: Int) {

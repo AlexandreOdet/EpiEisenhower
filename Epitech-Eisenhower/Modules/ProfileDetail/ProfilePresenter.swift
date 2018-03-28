@@ -38,7 +38,7 @@ class ProfilePresenter {
     }
     
     func didTapProfileImage() {
-        router?.presentProfilePictureAlert(withCompletion: { picture in
+        router?.presentProfilePictureAlert(withCompletion: { [unowned self] picture in
             self.didSelect(picture: picture)
         })
     }

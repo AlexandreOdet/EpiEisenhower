@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomeInteractor {
     
@@ -16,22 +17,14 @@ class HomeInteractor {
     
     var output: HomePresenter?
     var restApiTask = RestAPITask()
+    private lazy var disposeBag = DisposeBag()
     
     func fetchData() {
-        /*restApiTask.fetchData()
-         .onNext({ tasks in
-            output?.didFetch(result: tasks)
-         }).onError({ error in
-            output?.didFail(with: error)
-         })*/
-        let taskList = TaskList()
-        for i in 0...4 {
-            let newTask = Task()
-            newTask.id = i
-            newTask.title = "Task \(i)"
-            newTask.status = (i % 2 == 0) ? TaskType.toDo : TaskType.toDelegate
-            taskList.tasks.append(newTask)
-        }
-        output?.didFetch(result: taskList)
+        restApiTask.getTaskList().subscribe(
+            onNext:{ [weak self] tasklist in
+                self?.output?.didFetch(result: tasklist)
+        }, onError: { [weak self] error in
+            self?.output?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
 }
