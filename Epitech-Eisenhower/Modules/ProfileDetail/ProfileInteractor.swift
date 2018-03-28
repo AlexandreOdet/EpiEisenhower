@@ -7,22 +7,30 @@
 //
 
 import Foundation
+import RxSwift
 
 class ProfileInteractor {
     var output: ProfilePresenter?
     
     let restApiUser = RestAPIUser()
     
+    private lazy var disposeBag = DisposeBag()
+    
     deinit {
         restApiUser.cancelRequest()
     }
     
     func fetchData(forUser userId: Int) {
-        
+        restApiUser.getInfos(ofUser: userId).subscribe(
+            onNext: { user in
+                self.output?.didFetch(result: user)
+        }, onError: { error in
+                self.output?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
     
     func updateData(forUser userId: Int) {
-        
+        restApiUser.updateInfos(forUser: userId)
     }
     
     func logout(user userId: Int) {

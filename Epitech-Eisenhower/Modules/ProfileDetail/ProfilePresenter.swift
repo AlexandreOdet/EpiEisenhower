@@ -17,14 +17,13 @@ class ProfilePresenter {
     weak var logoutDelegate: Exitable? = nil
     
     func viewDidLoad() {
-        print(UserDefaults.standard.integer(forKey: Constants.keys.userIdKey), userId)
         if UserDefaults.standard.integer(forKey: Constants.keys.userIdKey) == userId && logoutDelegate != nil {
             view?.isCurrentUser = true
         } else {
             view?.isCurrentUser = false
         }
-//        view?.showSpinner()
-//        interactor?.fetchData()
+        view?.showSpinner()
+        interactor?.fetchData(forUser: userId)
     }
     
     
@@ -49,7 +48,7 @@ class ProfilePresenter {
     }
     
     func didTapUpdateProfileButton() {
-        
+        interactor?.updateData(forUser: userId)
     }
 }
 

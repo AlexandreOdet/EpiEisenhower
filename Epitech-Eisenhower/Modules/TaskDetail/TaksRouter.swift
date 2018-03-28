@@ -33,7 +33,7 @@ class TaskRouter {
     }
     
     func goToMemberList(ofTask taskId: Int) {
-        let nextViewController = UserListRouter.buildModule(withTaskId: taskId)
+        let nextViewController = UserListRouter.buildModule(with: taskId)
         view?.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }

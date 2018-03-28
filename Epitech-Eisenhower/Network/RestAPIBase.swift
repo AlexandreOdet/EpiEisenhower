@@ -12,6 +12,7 @@ import Alamofire
 class RestAPIBase: Cancelable {
     
     var request: Alamofire.Request?
+    var headers: [String:String] = ["Authorization":""]
     
     func cancelRequest() {
         request?.cancel()

@@ -10,13 +10,29 @@ import Foundation
 import Alamofire
 import RxSwift
 
+enum UserError: Error {
+    case invalidIdSupplied
+}
+
 class RestAPIUser: RestAPIBase {
     
-    func getUserInfos(ofUser userId: Int) {
-        
+    func getInfos(ofUser userId: Int) -> Observable<User> {
+        let user = User()
+        user.name = "Odet Alexandre"
+        user.description = "Lorem Ipsum"
+        user.email = "alexandre.odet@viseo.com"
+        return Observable<User>.create({ observer -> Disposable in
+            if userId == -1 {
+                observer.onError(UserError.invalidIdSupplied)
+            } else {
+                observer.onNext(user)
+                observer.onCompleted()
+            }
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
     
-    func updateUserInfos(forUser userId: Int) {
+    func updateInfos(forUser userId: Int) {
         
     }
     
