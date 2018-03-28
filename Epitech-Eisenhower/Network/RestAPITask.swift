@@ -27,7 +27,7 @@ class RestAPITask: RestAPIBase {
         }
         return Observable<TaskList>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
-                observer.onError(Network.networkUnreachable)
+                observer.onError(Network.unreachable)
             } else {
                 observer.onNext(taskList)
                 observer.onCompleted()

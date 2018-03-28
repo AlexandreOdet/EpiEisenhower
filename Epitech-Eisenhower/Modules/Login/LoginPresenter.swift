@@ -42,6 +42,10 @@ extension LoginPresenter: Output {
     
     func didFail(with error: Error?) {
         view?.hideSpinner()
-        view?.displayAlertOnError()
+        if error is Network {
+            view?.displayNetworkUnreachableAlert()
+        } else {
+            view?.displayAlertOnError()
+        }
     }
 }

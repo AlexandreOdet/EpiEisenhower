@@ -23,7 +23,7 @@ class RestAPIUser: RestAPIBase {
         user.email = "alexandre.odet@viseo.com"
         return Observable<User>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
-                observer.onError(Network.networkUnreachable)
+                observer.onError(Network.unreachable)
             }
             if userId == -1 {
                 observer.onError(UserError.invalidIdSupplied)

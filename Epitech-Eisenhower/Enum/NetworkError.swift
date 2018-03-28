@@ -9,5 +9,5 @@
 import Foundation
 
 enum Network: Error {
-    case networkUnreachable
+    case unreachable
 }

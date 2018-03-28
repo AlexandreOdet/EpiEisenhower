@@ -20,7 +20,7 @@ class RestAPIAuthentication: RestAPIBase {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
-                observer.onError(Network.networkUnreachable)
+                observer.onError(Network.unreachable)
             }
             if email != "test" && password != "test" {
                 observer.onError(LoginError.invalidInput)
@@ -37,7 +37,7 @@ class RestAPIAuthentication: RestAPIBase {
         let user = User()
         return Observable<User>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
-                observer.onError(Network.networkUnreachable)
+                observer.onError(Network.unreachable)
             }
             if email.isEmpty || password.isEmpty {
                 observer.onError(LoginError.invalidInput)
