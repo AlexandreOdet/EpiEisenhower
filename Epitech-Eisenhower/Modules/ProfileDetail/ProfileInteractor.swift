@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class ProfileInteractor {
+final class ProfileInteractor {
     var output: ProfilePresenter?
     
     let restApiUser = RestAPIUser()

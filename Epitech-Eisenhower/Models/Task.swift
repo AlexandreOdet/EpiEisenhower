@@ -7,14 +7,27 @@
 //
 
 import Foundation
-//import ObjectMapper
+import ObjectMapper
 
 /*To-Do: Make Task conforms to Mappable Protocol*/
 
-final class Task {
+final class Task: Mappable {
     var id = 0
     var title = ""
-    var status: TaskType = .toRemove
+    var description = ""
+    var status = ""
     var dueDate = ""
+    
+    init() {}
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        title <- map["title"]
+        description <- map["description"]
+        status <- map["type"]
+        dueDate <- map["due_date"]
+    }
 }
 

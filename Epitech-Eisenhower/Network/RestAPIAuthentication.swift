@@ -8,44 +8,63 @@
 
 import Foundation
 import Alamofire
+import AlamofireObjectMapper
 import RxSwift
 
 fileprivate enum LoginError: Error {
     case invalidInput
 }
 
-class RestAPIAuthentication: RestAPIBase {
+final class RestAPIAuthentication: RestAPIBase {
     
-    func signIn(email: String, password: String) -> Observable<User> {
-        let user = User()
-        return Observable<User>.create({ observer -> Disposable in
+    func signIn(email: String, password: String) -> Observable<LogResponse> {
+        var paramaters = ["email":email]
+        paramaters["password"] = password
+        return Observable<LogResponse>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
             }
-            if email != "test" && password != "test" {
-                observer.onError(LoginError.invalidInput)
-                observer.onCompleted()
-            } else {
-                observer.onNext(user)
-                observer.onCompleted()
-            }
+            self.request = Alamofire.request(RoutesAPI.login.url,
+                                             method: .post,
+                                             parameters: paramaters,
+                                             encoding: JSONEncoding.default)
+                .validate()
+                .responseObject(completionHandler: {
+                    (response: DataResponse<LogResponse>) in
+                    switch response.result {
+                    case .success(let response):
+                        observer.onNext(response); observer.onCompleted()
+                    case .failure(let error):
+                        print("Error = \(error)")
+                        observer.onError(error)
+                    }
+                })
             return Disposables.create(with: { self.cancelRequest() })
         })
     }
     
-    func signUp(email: String, password: String) -> Observable<User> {
-        let user = User()
-        return Observable<User>.create({ observer -> Disposable in
+    func signUp(email: String, password: String) -> Observable<LogResponse> {
+        var paramaters = ["email":email]
+        paramaters["password"] = password
+        return Observable<LogResponse>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
             }
-            if email.isEmpty || password.isEmpty {
-                observer.onError(LoginError.invalidInput)
-                observer.onCompleted()
-            } else {
-                observer.onNext(user)
-                observer.onCompleted()
-            }
+            self.request = Alamofire.request(RoutesAPI.signUp.url,
+                                             method: .post,
+                                             parameters: paramaters,
+                                             encoding: JSONEncoding.default)
+                .validate()
+                .responseObject(completionHandler: {
+                    (response: DataResponse<LogResponse>) in
+                    switch response.result {
+                    case .success(let response):
+                        observer.onNext(response); observer.onCompleted()
+                    case .failure(let error):
+                        print("Error = \(error)")
+                        observer.onError(error)
+                    }
+                })
             return Disposables.create(with: { self.cancelRequest() })
         })
     }

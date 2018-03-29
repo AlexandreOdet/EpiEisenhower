@@ -29,12 +29,10 @@ extension Networkable where Self: UIViewController {
     }
     
     func showSpinner() {
-        //showWaitOverlayWithText("Chargement des données...")
         SwiftOverlays.showBlockingWaitOverlayWithText("Chargement des données...")
     }
     
     func hideSpinner() {
-        //removeAllOverlays()
         SwiftOverlays.removeAllBlockingOverlays()
     }
     

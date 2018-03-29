@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class UserListInteractor {
+final class UserListInteractor {
     var output: UserListPresenter?
     
     var restApiTask = RestAPITask()

@@ -8,6 +8,6 @@
 
 import Foundation
 
-class UserList {
+final class UserList {
     var users = [User]()
 }

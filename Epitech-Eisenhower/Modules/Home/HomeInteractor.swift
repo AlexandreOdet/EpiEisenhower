@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class HomeInteractor {
+final class HomeInteractor {
     
     deinit {
         restApiTask.cancelRequest()

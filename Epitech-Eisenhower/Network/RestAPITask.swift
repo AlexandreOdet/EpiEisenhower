@@ -15,14 +15,14 @@ fileprivate enum TaskError: Error {
     case invalidIdSupplied
 }
 
-class RestAPITask: RestAPIBase {
+final class RestAPITask: RestAPIBase {
     func getTaskList() -> Observable<TaskList> {
         let taskList = TaskList()
         for i in 0...4 {
             let newTask = Task()
             newTask.id = i
             newTask.title = "Task \(i)"
-            newTask.status = (i % 2 == 0) ? TaskType.toDo : TaskType.toDelegate
+            newTask.status = (i % 2 == 0) ? TaskType.toDo.rawValue : TaskType.toDelegate.rawValue
             taskList.tasks.append(newTask)
         }
         return Observable<TaskList>.create({ observer -> Disposable in

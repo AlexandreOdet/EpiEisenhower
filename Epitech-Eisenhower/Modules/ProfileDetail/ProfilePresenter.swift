@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProfilePresenter {
+final class ProfilePresenter {
     var interactor: ProfileInteractor?
     var view: ProfileDetailViewController?
     var router: ProfileRouter?

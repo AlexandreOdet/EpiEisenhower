@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginPresenter {
+final class LoginPresenter {
     
     var interactor: LoginInteractor?
     
@@ -26,16 +26,16 @@ class LoginPresenter {
         interactor?.signUp(email: email, password: password)
     }
     
-    func loggedUser() {
-        interactor?.saveUserId()
+    func loggedUser(withId id: Int, withAuthenticationToken token: String) {
+        interactor?.save(userId: id, userToken: token)
         router?.dismissLoginModule()
     }
 }
 
 extension LoginPresenter: Output {
-    typealias Object = User
+    typealias Object = LogResponse
     
-    func didFetch(result: User) {
+    func didFetch(result: LogResponse) {
         view?.hideSpinner()
         view?.displayDataOnResponse(data: result)
     }

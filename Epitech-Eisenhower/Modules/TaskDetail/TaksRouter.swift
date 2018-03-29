@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TaskRouter {
+final class TaskRouter {
     var view: TaskDetailViewController?
     
     static func buildModule(forTask id: Int) -> UIViewController {

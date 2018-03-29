@@ -14,7 +14,7 @@ fileprivate enum UserError: Error {
     case invalidIdSupplied
 }
 
-class RestAPIUser: RestAPIBase {
+final class RestAPIUser: RestAPIBase {
     
     func getInfos(ofUser userId: Int) -> Observable<User> {
         let user = User()

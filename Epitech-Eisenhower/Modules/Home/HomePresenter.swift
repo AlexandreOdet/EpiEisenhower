@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomePresenter {
+final class HomePresenter {
     
     var interactor: HomeInteractor?
     var view: HomeViewController?

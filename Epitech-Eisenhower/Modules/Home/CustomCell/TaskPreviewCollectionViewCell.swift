@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TaskPreviewCollectionViewCell: UICollectionViewCell {
+final class TaskPreviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var taskDetailLabel: UILabel?
     @IBOutlet weak var dueDateLabel: UILabel?
     

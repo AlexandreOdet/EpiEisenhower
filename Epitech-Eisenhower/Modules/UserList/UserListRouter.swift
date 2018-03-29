@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UserListRouter {
+final class UserListRouter {
     var view: UserListViewController?
     
     static func buildModule(with taskId: Int) -> UIViewController {

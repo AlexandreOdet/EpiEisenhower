@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter?
     
@@ -62,9 +62,10 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 extension LoginViewController: Networkable  {
-    typealias Object = User
+    typealias Object = LogResponse
 
-    func displayDataOnResponse(data: User) {
-        presenter?.loggedUser()
+    func displayDataOnResponse(data: LogResponse) {
+        print("Response: \(data)")
+        presenter?.loggedUser(withId: data.id, withAuthenticationToken: data.key)
     }
 }

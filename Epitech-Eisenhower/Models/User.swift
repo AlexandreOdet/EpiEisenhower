@@ -7,10 +7,23 @@
 //
 
 import Foundation
+import ObjectMapper
 
-final class User {
+final class User: Mappable {
     var id = 0
     var name = ""
     var description = ""
     var email = ""
+    var picture = ""
+    
+    init?(map: Map) {}
+    
+    init() {}
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        name <- map["username"]
+        email <- map["email"]
+        picture <- map["picture"]
+    }
 }

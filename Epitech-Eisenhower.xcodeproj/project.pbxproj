@@ -52,6 +52,7 @@
 		FA728E7A2050159300F45D24 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA728E792050159300F45D24 /* Output.swift */; };
 		FA728E7C2050166F00F45D24 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA728E7B2050166F00F45D24 /* Networkable.swift */; };
 		FA8361912068E9AF009EA912 /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8361902068E9AF009EA912 /* Notifiable.swift */; };
+		FAA2BA58206D0B6E0059DB33 /* LogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2BA57206D0B6E0059DB33 /* LogResponse.swift */; };
 		FAB37532204EA5D2007BE02C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37531204EA5D2007BE02C /* LoginViewController.swift */; };
 		FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37533204EA5E6007BE02C /* LoginPresenter.swift */; };
 		FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB37535204EA5F3007BE02C /* LoginInteractor.swift */; };
@@ -143,6 +144,7 @@
 		FA728E792050159300F45D24 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		FA728E7B2050166F00F45D24 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		FA8361902068E9AF009EA912 /* Notifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
+		FAA2BA57206D0B6E0059DB33 /* LogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogResponse.swift; sourceTree = "<group>"; };
 		FAB37531204EA5D2007BE02C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAB37533204EA5E6007BE02C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		FAB37535204EA5F3007BE02C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				FA59F1E520455836008F3F4D /* User.swift */,
 				FA3DE4A82059546800D9DD28 /* TaskList.swift */,
 				FAEA65892068FCFB0087AD34 /* UserList.swift */,
+				FAA2BA57206D0B6E0059DB33 /* LogResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				FA3B29DD2057C7AB0041B207 /* ProfilePresenter.swift in Sources */,
 				FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */,
 				FA3B29E12057C8490041B207 /* ProfileRouter.swift in Sources */,
+				FAA2BA58206D0B6E0059DB33 /* LogResponse.swift in Sources */,
 				FA59F1B220455422008F3F4D /* AppDelegate.swift in Sources */,
 				FACFF0D6206BD09600B54461 /* Reachable.swift in Sources */,
 				FA366D2E204E9A520019C725 /* TaskState.swift in Sources */,

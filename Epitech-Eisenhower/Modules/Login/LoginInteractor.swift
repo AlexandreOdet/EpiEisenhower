@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class LoginInteractor {
+final class LoginInteractor {
     
     var ouput: LoginPresenter?
     
@@ -23,8 +23,8 @@ class LoginInteractor {
     
     func signIn(email: String, password: String) {
         raAuthentication.signIn(email: email, password: password).subscribe(
-            onNext: { user in
-            self.ouput?.didFetch(result: user)
+            onNext: { response in
+            self.ouput?.didFetch(result: response)
         }, onError: { error in
             self.ouput?.didFail(with: error)
         }).disposed(by: disposeBag)
@@ -39,9 +39,10 @@ class LoginInteractor {
         }).disposed(by: disposeBag)
     }
     
-    func saveUserId() {
+    func save(userId: Int, userToken token: String) {
         UserDefaults.standard.set(true, forKey: Constants.keys.isLoggedKey)
-        UserDefaults.standard.set(1, forKey: Constants.keys.userIdKey)
+        UserDefaults.standard.set(userId, forKey: Constants.keys.userIdKey)
+        UserDefaults.standard.set(token, forKey: Constants.keys.authenticationTokenKey)
         UserDefaults.standard.synchronize()
     }
 }

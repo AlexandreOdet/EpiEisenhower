@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeRouter {
+final class HomeRouter {
     
     var view: HomeViewController?
     

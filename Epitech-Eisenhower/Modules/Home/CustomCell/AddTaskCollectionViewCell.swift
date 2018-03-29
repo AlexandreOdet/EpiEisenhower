@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AddTaskCollectionViewCell: UICollectionViewCell {
+final class AddTaskCollectionViewCell: UICollectionViewCell {
     var addImageView: UIImageView = UIImageView()
     
     override init(frame: CGRect) {

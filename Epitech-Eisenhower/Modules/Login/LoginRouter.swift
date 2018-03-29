@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginRouter {
+final class LoginRouter {
     
     var view: LoginViewController?
     

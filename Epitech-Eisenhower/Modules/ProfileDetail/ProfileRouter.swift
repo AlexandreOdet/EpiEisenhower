@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProfileRouter {
+final class ProfileRouter {
     
     var view: ProfileDetailViewController?
     

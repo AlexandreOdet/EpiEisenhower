@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TaskDetailViewController: UIViewController, Notifiable {
+final class TaskDetailViewController: UIViewController, Notifiable {
     var presenter: TaskPresenter?
     var isEditingTask: Bool = false
     

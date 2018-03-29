@@ -9,7 +9,7 @@
 import Foundation
 //import ObjectMapper
 
-class TaskList {
+final class TaskList {
     var tasks = [Task]()
 }
 

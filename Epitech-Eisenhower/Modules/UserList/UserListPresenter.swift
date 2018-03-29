@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class UserListPresenter {
+final class UserListPresenter {
     var view: UserListViewController?
     var interactor: UserListInteractor?
     var router: UserListRouter?

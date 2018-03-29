@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TaskInteractor {
+final class TaskInteractor {
     var output: TaskPresenter?
     
     func fetchData(ofTask taskId: Int) {

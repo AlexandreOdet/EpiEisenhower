@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TaskPresenter {
+final class TaskPresenter {
     var interactor: TaskInteractor?
     var view: TaskDetailViewController?
     var router: TaskRouter?

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProfileDetailViewController: UIViewController {
+final class ProfileDetailViewController: UIViewController {
     var presenter: ProfilePresenter?
     
     @IBOutlet weak var logoutButton: UIButton?
