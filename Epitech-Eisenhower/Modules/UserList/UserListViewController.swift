@@ -11,12 +11,17 @@ import UIKit
 
 class UserListViewController: UIViewController {
     var presenter: UserListPresenter?
-    var taskId = -1
     var didTapBackButton: Bool = false
     
     let emptyLabel = UILabel()
+    var taskId = -1
     
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var updateButton: UIButton?
+    
+    deinit {
+        print("Deinit UserList")
+    }
     
     var users = [User]() {
         didSet {
@@ -25,8 +30,9 @@ class UserListViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        updateButton?.addTarget(self, action: #selector(didTapUpdateButton), for: .touchUpInside)
         setUpEmptyLabel()
-        presenter?.fetchMembersFrom(task: taskId)
+        presenter?.fetchMembersFromTask()
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.separatorInset = UIEdgeInsets.zero
@@ -36,14 +42,6 @@ class UserListViewController: UIViewController {
     private func setUpRightBarButtonItem() {
         let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapRightBarButtonItem))
         navigationItem.rightBarButtonItem = rightBarButtonItem
-    }
-    
-    override func willMove(toParentViewController parent: UIViewController?) {
-        if parent == nil {
-            let usersIds = users.flatMap({ $0.id })
-            presenter?.updateMembers(ofTask: taskId, withMembers: usersIds)
-            didTapBackButton = true
-        }
     }
     
     func displayEmptyContentView() {
@@ -64,6 +62,11 @@ class UserListViewController: UIViewController {
     
     @objc func didTapRightBarButtonItem() {
         presenter?.didTapRightBarButtonItem()
+    }
+    
+    @objc func didTapUpdateButton() {
+        let usersIds = users.flatMap({ $0.id })
+        presenter?.updateMembersOfTask(withMembers: usersIds)
     }
 }
 
@@ -92,8 +95,8 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Supprimer") { [weak self] action, index in
-            self?.presenter?.didRemove(userAt: index)
+        let delete = UITableViewRowAction(style: .destructive, title: "Supprimer") { [unowned self] action, index in
+            self.presenter?.didRemove(userAt: index)
         }
         delete.backgroundColor = .red
         return [delete]
@@ -109,12 +112,7 @@ extension UserListViewController: Networkable {
     typealias Object = UserList
     
     func displayDataOnResponse(data: UserList) {
-        if didTapBackButton {
-            presenter?.popBack()
-            didTapBackButton = false
-        } else {
-            users = data.users
-        }
+        users = data.users
     }
 }
 

@@ -14,7 +14,7 @@ class HomeRouter {
     var view: HomeViewController?
     
     static func buildModule() -> UIViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.homeViewControllerIdentifier) as! HomeViewController
+        let viewController = R.storyboard.main().instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.homeViewControllerIdentifier) as! HomeViewController
         let navigationController = UINavigationController(rootViewController: viewController)
         
         let presenter = HomePresenter()

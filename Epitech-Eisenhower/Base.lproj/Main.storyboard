@@ -399,18 +399,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kS-pE-4m8">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.72549019609999998" blue="0.2156862745" alpha="0.89693921229999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NiZ-eo-Vnv"/>
+                                </constraints>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NYL-98-wWA" firstAttribute="width" secondItem="p6h-XP-uzw" secondAttribute="width" id="6qT-Mg-HkX"/>
+                            <constraint firstItem="RF8-D0-sZw" firstAttribute="bottom" secondItem="2kS-pE-4m8" secondAttribute="bottom" id="IJz-cE-7Mo"/>
                             <constraint firstItem="NYL-98-wWA" firstAttribute="centerY" secondItem="RF8-D0-sZw" secondAttribute="centerY" id="S7S-zM-ux2"/>
+                            <constraint firstItem="2kS-pE-4m8" firstAttribute="width" secondItem="p6h-XP-uzw" secondAttribute="width" id="YGf-3o-EJS"/>
                             <constraint firstItem="NYL-98-wWA" firstAttribute="centerX" secondItem="RF8-D0-sZw" secondAttribute="centerX" id="cVR-dJ-rK0"/>
                             <constraint firstItem="NYL-98-wWA" firstAttribute="height" secondItem="p6h-XP-uzw" secondAttribute="height" id="lcB-cr-iJg"/>
+                            <constraint firstItem="2kS-pE-4m8" firstAttribute="centerX" secondItem="RF8-D0-sZw" secondAttribute="centerX" id="nSB-Tx-kxz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RF8-D0-sZw"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="NYL-98-wWA" id="VIz-XI-cMf"/>
+                        <outlet property="updateButton" destination="2kS-pE-4m8" id="aYh-Hd-pN4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WU4-Gu-IWS" userLabel="First Responder" sceneMemberID="firstResponder"/>

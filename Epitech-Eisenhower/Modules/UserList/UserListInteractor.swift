@@ -29,6 +29,7 @@ class UserListInteractor {
 
     func updateMembersOf(task taskId: Int, withMembers ids: [Int]) {
         restApiTask.updateTaskMember(ofTask: taskId, withMembers: ids)
+        output?.didFetch(result: UserList())
     }
     
 }

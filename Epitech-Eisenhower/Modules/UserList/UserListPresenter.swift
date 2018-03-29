@@ -13,6 +13,7 @@ class UserListPresenter {
     var view: UserListViewController?
     var interactor: UserListInteractor?
     var router: UserListRouter?
+    var taskId = -1
     
     var userList = UserList() {
         didSet {
@@ -24,19 +25,18 @@ class UserListPresenter {
         }
     }
     
-    func fetchMembersFrom(task id: Int) {
+    func fetchMembersFromTask() {
         view?.showSpinner()
-        interactor?.fetchData(forTask: id)
+        interactor?.fetchData(forTask: taskId)
     }
     
     func removeUserFromMemberList(at indexPath: IndexPath) {
         userList.users.remove(at: indexPath.row)
     }
     
-    func updateMembers(ofTask taskId: Int, withMembers ids: [Int]) {
+    func updateMembersOfTask(withMembers ids: [Int]) {
         view?.showSpinner()
         interactor?.updateMembersOf(task: taskId, withMembers: ids)
-        view?.hideSpinner()
     }
     
     func popBack() {

@@ -13,7 +13,7 @@ class TaskRouter {
     var view: TaskDetailViewController?
     
     static func buildModule(forTask id: Int) -> UIViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.taskDetailViewControllerIdentifier) as! TaskDetailViewController
+        let viewController = R.storyboard.main().instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.taskDetailViewControllerIdentifier) as! TaskDetailViewController
         let presenter = TaskPresenter()
         let interactor = TaskInteractor()
         let router = TaskRouter()

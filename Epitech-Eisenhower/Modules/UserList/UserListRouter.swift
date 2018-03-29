@@ -13,7 +13,7 @@ class UserListRouter {
     var view: UserListViewController?
     
     static func buildModule(with taskId: Int) -> UIViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.userListViewControllerIdentifier) as! UserListViewController
+        let viewController = R.storyboard.main().instantiateViewController(withIdentifier: Constants.identifiers.viewControllers.userListViewControllerIdentifier) as! UserListViewController
         let presenter = UserListPresenter()
         let interactor = UserListInteractor()
         let router = UserListRouter()
@@ -26,6 +26,7 @@ class UserListRouter {
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
+        presenter.taskId = taskId
         
         interactor.output = presenter
         
