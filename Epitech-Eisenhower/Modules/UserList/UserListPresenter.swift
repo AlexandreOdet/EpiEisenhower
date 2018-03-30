@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 final class UserListPresenter {
-    var view: UserListViewController?
+    weak var view: UserListViewController?
     var interactor: UserListInteractor?
     var router: UserListRouter?
     var taskId = -1

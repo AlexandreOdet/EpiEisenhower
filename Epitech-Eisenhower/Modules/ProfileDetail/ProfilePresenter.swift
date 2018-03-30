@@ -10,7 +10,7 @@ import Foundation
 
 final class ProfilePresenter {
     var interactor: ProfileInteractor?
-    var view: ProfileDetailViewController?
+    weak var view: ProfileDetailViewController?
     var router: ProfileRouter?
     var userId: Int = -1
     

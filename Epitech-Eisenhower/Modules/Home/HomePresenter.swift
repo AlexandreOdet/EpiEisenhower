@@ -11,7 +11,7 @@ import Foundation
 final class HomePresenter {
     
     var interactor: HomeInteractor?
-    var view: HomeViewController?
+    weak var view: HomeViewController?
     var router: HomeRouter?
     
     var taskList = [Task]()

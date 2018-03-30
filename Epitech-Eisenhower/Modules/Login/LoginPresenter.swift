@@ -12,7 +12,7 @@ final class LoginPresenter {
     
     var interactor: LoginInteractor?
     
-    var view: LoginViewController?
+    weak var view: LoginViewController?
     
     var router: LoginRouter?
     

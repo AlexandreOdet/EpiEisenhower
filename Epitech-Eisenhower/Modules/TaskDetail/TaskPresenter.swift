@@ -10,7 +10,7 @@ import Foundation
 
 final class TaskPresenter {
     var interactor: TaskInteractor?
-    var view: TaskDetailViewController?
+    weak var view: TaskDetailViewController?
     var router: TaskRouter?
     
     var taskId: Int = -1
