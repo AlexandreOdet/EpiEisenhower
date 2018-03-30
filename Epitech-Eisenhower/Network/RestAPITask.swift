@@ -18,7 +18,6 @@ fileprivate enum TaskError: Error {
 
 final class RestAPITask: RestAPIBase {
     func getTaskList() -> Observable<TaskList> {
-        print(RoutesAPI.task.url, headers)
         return Observable<TaskList>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
@@ -30,7 +29,6 @@ final class RestAPITask: RestAPIBase {
                     case .success(let tasks):
                         observer.onNext(tasks); observer.onCompleted()
                     case .failure(let error):
-                        print(error)
                         observer.onError(error)
                     }
                 })

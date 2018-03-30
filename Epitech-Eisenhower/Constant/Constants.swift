@@ -49,14 +49,4 @@ final class Constants {
         public class var taskDescriptionPlaceholder: String { return "Please enter a description for your task..." }
         public class var taskDueDateLabelPlaceholder: String { return "Please select a due date for your task..." }
     }
-    
-    final class network {
-        public class var apiBaseURL: String { return "https://eisenhower-ios.herokuapp.com/" }
-        public class var loginURL: String { return "auth/login" }
-        public class var signupURL: String { return "auth/register" }
-        public class var taskURL: String { return "task/" }
-        public class var profileURL: String { return "users/" }
-        public class var logoutURL: String { return "auth/logout" }
-    }
-    
 }

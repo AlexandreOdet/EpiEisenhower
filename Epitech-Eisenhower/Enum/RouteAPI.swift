@@ -8,9 +8,18 @@
 
 import Foundation
 
+fileprivate final class network {
+    public class var apiBaseURL: String { return "https://eisenhower-ios.herokuapp.com/" }
+    public class var loginURL: String { return "auth/login" }
+    public class var signupURL: String { return "auth/register" }
+    public class var taskURL: String { return "task/" }
+    public class var profileURL: String { return "users/" }
+    public class var logoutURL: String { return "auth/logout" }
+}
+
 enum RoutesAPI {
     
-    static var base = Constants.network.apiBaseURL
+    static var base = network.apiBaseURL
     
     case login
     case signUp
@@ -24,15 +33,15 @@ extension RoutesAPI {
         let path: String = {
             switch self {
             case .login:
-                return Constants.network.loginURL
+                return network.loginURL
             case .signUp:
-                return Constants.network.signupURL
+                return network.signupURL
             case .task:
-                return Constants.network.taskURL
+                return network.taskURL
             case .profile:
-                return Constants.network.profileURL
+                return network.profileURL
             case .logout:
-                return Constants.network.logoutURL
+                return network.logoutURL
             }
         }()
         return (RoutesAPI.base.appending(path))
