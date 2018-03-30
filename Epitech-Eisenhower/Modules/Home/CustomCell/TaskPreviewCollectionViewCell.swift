@@ -13,7 +13,7 @@ final class TaskPreviewCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private var taskDetailLabel: UILabel?
     @IBOutlet weak private var dueDateLabel: UILabel?
     
-    func buildCell(withTask task: Task) {
+    func buildCell(withTask task: TaskPreviewCellProtocol) {
         taskDetailLabel?.text = task.title
         dueDateLabel?.text = Date().toString()
     }

@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
     
     @IBOutlet weak private var collectionView: UICollectionView?
     
-    private var taskList = [Task]() {
+    private var taskList = [TaskPreviewCellProtocol]() {
         didSet {
             collectionView?.reloadData()
         }

@@ -11,7 +11,7 @@ import ObjectMapper
 
 /*To-Do: Make Task conforms to Mappable Protocol*/
 
-final class Task: Mappable {
+final class Task: Mappable, TaskPreviewCellProtocol {
     var id = 0
     var title = ""
     var description = ""

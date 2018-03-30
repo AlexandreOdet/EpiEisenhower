@@ -64,6 +64,7 @@
 		FACFF0CC206B8E1F00B54461 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0CB206B8E1F00B54461 /* ProfilePicture.swift */; };
 		FACFF0D4206BCF3D00B54461 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0D3206BCF3D00B54461 /* NetworkError.swift */; };
 		FACFF0D6206BD09600B54461 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0D5206BD09600B54461 /* Reachable.swift */; };
+		FAD5FE32206E80DB0049500C /* TaskPreviewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */; };
 		FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA65892068FCFB0087AD34 /* UserList.swift */; };
 		FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
@@ -156,6 +157,7 @@
 		FACFF0CB206B8E1F00B54461 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		FACFF0D3206BCF3D00B54461 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FACFF0D5206BD09600B54461 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
+		FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewCellProtocol.swift; sourceTree = "<group>"; };
 		FAEA65892068FCFB0087AD34 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				FAC810DA205C10B400588A47 /* Exitable.swift */,
 				FA8361902068E9AF009EA912 /* Notifiable.swift */,
 				FACFF0D5206BD09600B54461 /* Reachable.swift */,
+				FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 			files = (
 				FA4ADC08204EF0AB008A7306 /* UIColorExtension.swift in Sources */,
 				FACCA636206535A500B46EB0 /* UserListInteractor.swift in Sources */,
+				FAD5FE32206E80DB0049500C /* TaskPreviewCellProtocol.swift in Sources */,
 				FA1D650B2056CE7200436616 /* UIButtonExtension.swift in Sources */,
 				FA2A79F0205AA5B400F8C742 /* RouteAPI.swift in Sources */,
 				FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */,
