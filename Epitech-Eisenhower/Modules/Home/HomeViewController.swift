@@ -13,9 +13,9 @@ final class HomeViewController: UIViewController {
     
     var presenter: HomePresenter?
     
-    @IBOutlet weak var collectionView: UICollectionView?
+    @IBOutlet weak private var collectionView: UICollectionView?
     
-    var taskList = [Task]() {
+    private var taskList = [Task]() {
         didSet {
             collectionView?.reloadData()
         }
@@ -75,7 +75,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.identifiers.customCells.taskCollectionViewCellIdentifier, for: indexPath) as! TaskPreviewCollectionViewCell
-            cell.buildCell(with: taskList[indexPath.row - 1])
+            cell.buildCell(withTask: taskList[indexPath.row - 1])
             cell.backgroundColor = .red
             return cell
         }

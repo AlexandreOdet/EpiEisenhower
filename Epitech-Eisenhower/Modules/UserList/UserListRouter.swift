@@ -49,8 +49,4 @@ final class UserListRouter {
         }()
         view?.present(searchController, animated: false, completion: nil)
     }
-    
-    func popBack() {
-        view?.navigationController?.popViewController(animated: true)
-    }
 }

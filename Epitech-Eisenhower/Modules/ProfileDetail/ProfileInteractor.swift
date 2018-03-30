@@ -12,7 +12,7 @@ import RxSwift
 final class ProfileInteractor {
     var output: ProfilePresenter?
     
-    let restApiUser = RestAPIUser()
+    private let restApiUser = RestAPIUser()
     
     private lazy var disposeBag = DisposeBag()
     
@@ -34,9 +34,7 @@ final class ProfileInteractor {
     }
     
     func logout(user userId: Int) {
-        UserDefaults.standard.set(false, forKey: Constants.keys.isLoggedKey)
-        UserDefaults.standard.set(-1, forKey: Constants.keys.userIdKey)
-        UserDefaults.standard.synchronize()
+        restApiUser.logout()
         output?.didReceiveLogoutResponse()
     }
 }

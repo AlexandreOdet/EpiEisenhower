@@ -12,11 +12,11 @@ import UIKit
 final class ProfileDetailViewController: UIViewController {
     var presenter: ProfilePresenter?
     
-    @IBOutlet weak var logoutButton: UIButton?
-    @IBOutlet weak var userProfileImage: UIImageView?
-    @IBOutlet weak var nameTextfield: UITextField?
-    @IBOutlet weak var emailTextfield: UITextField?
-    @IBOutlet weak var descriptionTextView: UITextView?
+    @IBOutlet weak private var logoutButton: UIButton?
+    @IBOutlet weak private var userProfileImage: UIImageView?
+    @IBOutlet weak private var nameTextfield: UITextField?
+    @IBOutlet weak private var emailTextfield: UITextField?
+    @IBOutlet weak private var descriptionTextView: UITextView?
     
     var isCurrentUser = true {
         didSet {

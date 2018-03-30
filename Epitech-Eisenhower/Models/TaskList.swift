@@ -7,10 +7,17 @@
 //
 
 import Foundation
-//import ObjectMapper
+import ObjectMapper
 
-final class TaskList {
+final class TaskList: Mappable {
     var tasks = [Task]()
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+            tasks <- map["tasks"]
+    }
 }
 
 //To-Do make TaskList conforms to Mappable Protocol

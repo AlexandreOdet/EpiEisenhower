@@ -13,16 +13,16 @@ final class TaskDetailViewController: UIViewController, Notifiable {
     var presenter: TaskPresenter?
     var isEditingTask: Bool = false
     
-    var task = Task()
+    private var task = Task()
     
-    @IBOutlet weak var taskTitleTextView: UITextView?
-    @IBOutlet weak var showTaskMemberImage: UIImageView?
-    @IBOutlet weak var taskDescriptionTextView: UITextView?
-    @IBOutlet weak var taskDueDateTextField: UITextField?
+    @IBOutlet weak private var taskTitleTextView: UITextView?
+    @IBOutlet weak private var showTaskMemberImage: UIImageView?
+    @IBOutlet weak private var taskDescriptionTextView: UITextView?
+    @IBOutlet weak private var taskDueDateTextField: UITextField?
     
-    @IBOutlet weak var taskUpdateOrCreationButton: UIButton?
+    @IBOutlet weak private var taskUpdateOrCreationButton: UIButton?
     
-    let datePicker = UIDatePicker()
+    private let datePicker = UIDatePicker()
     
     deinit {
         stopObservingKeyboard()

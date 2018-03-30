@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import RxSwift
+import AlamofireObjectMapper
 
 fileprivate enum TaskError: Error {
     case networkError
@@ -17,20 +18,22 @@ fileprivate enum TaskError: Error {
 
 final class RestAPITask: RestAPIBase {
     func getTaskList() -> Observable<TaskList> {
-        let taskList = TaskList()
-        for i in 0...4 {
-            let newTask = Task()
-            newTask.id = i
-            newTask.title = "Task \(i)"
-            newTask.status = (i % 2 == 0) ? TaskType.toDo.rawValue : TaskType.toDelegate.rawValue
-            taskList.tasks.append(newTask)
-        }
+        print(RoutesAPI.task.url, headers)
         return Observable<TaskList>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
             } else {
-                observer.onNext(taskList)
-                observer.onCompleted()
+                self.request = Alamofire.request(RoutesAPI.task.url, method: .get, headers: self.headers)
+                .responseObject(completionHandler: {
+                    (response: DataResponse<TaskList>) in
+                    switch response.result {
+                    case .success(let tasks):
+                        observer.onNext(tasks); observer.onCompleted()
+                    case .failure(let error):
+                        print(error)
+                        observer.onError(error)
+                    }
+                })
             }
             return Disposables.create(with: { self.cancelRequest() })
         })
@@ -43,7 +46,7 @@ final class RestAPITask: RestAPIBase {
         })
     }
     
-    func createTask() {
+    func createTask(withContent content: Task) {
         
     }
     

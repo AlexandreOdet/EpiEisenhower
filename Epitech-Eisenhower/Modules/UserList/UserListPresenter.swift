@@ -39,10 +39,6 @@ final class UserListPresenter {
         interactor?.updateMembersOf(task: taskId, withMembers: ids)
     }
     
-    func popBack() {
-        router?.popBack()
-    }
-    
     func didRemove(userAt indexPath: IndexPath) {
         userList.users.remove(at: indexPath.row)
         if userList.users.isEmpty {

@@ -11,6 +11,12 @@ import Foundation
 final class TaskInteractor {
     var output: TaskPresenter?
     
+    private var restApiTask = RestAPITask()
+    
+    deinit {
+        restApiTask.cancelRequest()
+    }
+    
     func fetchData(ofTask taskId: Int) {
         
     }

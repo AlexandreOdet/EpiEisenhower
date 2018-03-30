@@ -11,19 +11,14 @@ import UIKit
 
 final class UserListViewController: UIViewController {
     var presenter: UserListPresenter?
-    var didTapBackButton: Bool = false
     
-    let emptyLabel = UILabel()
+    private let emptyLabel = UILabel()
     var taskId = -1
     
-    @IBOutlet weak var tableView: UITableView?
-    @IBOutlet weak var updateButton: UIButton?
+    @IBOutlet weak private var tableView: UITableView?
+    @IBOutlet weak private var updateButton: UIButton?
     
-    deinit {
-        print("Deinit UserList")
-    }
-    
-    var users = [User]() {
+    private var users = [User]() {
         didSet {
             tableView?.reloadData()
         }

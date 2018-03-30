@@ -10,13 +10,4 @@ import Foundation
 import UIKit
 
 final class AddTaskCollectionViewCell: UICollectionViewCell {
-    var addImageView: UIImageView = UIImageView()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
 }

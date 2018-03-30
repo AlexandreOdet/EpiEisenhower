@@ -16,7 +16,7 @@ final class HomeInteractor {
     }
     
     var output: HomePresenter?
-    var restApiTask = RestAPITask()
+    private let restApiTask = RestAPITask()
     private lazy var disposeBag = DisposeBag()
     
     func fetchData() {

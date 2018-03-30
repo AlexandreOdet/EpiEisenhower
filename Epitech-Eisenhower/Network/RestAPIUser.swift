@@ -42,4 +42,8 @@ final class RestAPIUser: RestAPIBase {
     func searchUsers(withName name: String) {
         
     }
+    
+    func logout() {
+        request = Alamofire.request(RoutesAPI.logout.url, method: .post, headers: headers)
+    }
 }

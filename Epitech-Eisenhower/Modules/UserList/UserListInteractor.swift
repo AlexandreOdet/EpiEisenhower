@@ -12,7 +12,7 @@ import RxSwift
 final class UserListInteractor {
     var output: UserListPresenter?
     
-    var restApiTask = RestAPITask()
+    private var restApiTask = RestAPITask()
     
     private lazy var disposeBag = DisposeBag()
     

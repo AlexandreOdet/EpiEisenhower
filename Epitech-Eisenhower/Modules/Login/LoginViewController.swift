@@ -13,10 +13,10 @@ final class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter?
     
-    @IBOutlet weak var emailTextField: UITextField?
-    @IBOutlet weak var passwordTextField: UITextField?
-    @IBOutlet weak var loginButton: UIButton?
-    @IBOutlet weak var signUpButton: UIButton?
+    @IBOutlet weak private var emailTextField: UITextField?
+    @IBOutlet weak private var passwordTextField: UITextField?
+    @IBOutlet weak private var loginButton: UIButton?
+    @IBOutlet weak private var signUpButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ extension LoginViewController: Networkable  {
     typealias Object = LogResponse
 
     func displayDataOnResponse(data: LogResponse) {
-        print("Response: \(data)")
+        print("Response: \(data.id), \(data.key)")
         presenter?.loggedUser(withId: data.id, withAuthenticationToken: data.key)
     }
 }

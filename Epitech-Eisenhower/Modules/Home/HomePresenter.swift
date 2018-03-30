@@ -14,7 +14,7 @@ final class HomePresenter {
     weak var view: HomeViewController?
     var router: HomeRouter?
     
-    var taskList = [Task]()
+    private var taskList = [Task]()
     
     func viewDidLoad() {
         if UserDefaults.standard.bool(forKey: Constants.keys.isLoggedKey) {
@@ -34,7 +34,7 @@ final class HomePresenter {
     }
     
     func didTapRightBarButtonItem() {
-        router?.goToUserProfile(userID: 1, withDelegate: self)
+        router?.goToUserProfile(userID: UserDefaults.standard.integer(forKey: Constants.keys.userIdKey), withDelegate: self)
     }
 }
 

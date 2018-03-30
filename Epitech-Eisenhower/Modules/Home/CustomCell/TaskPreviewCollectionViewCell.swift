@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 final class TaskPreviewCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var taskDetailLabel: UILabel?
-    @IBOutlet weak var dueDateLabel: UILabel?
+    @IBOutlet weak private var taskDetailLabel: UILabel?
+    @IBOutlet weak private var dueDateLabel: UILabel?
     
-    func buildCell(with task: Task) {
+    func buildCell(withTask task: Task) {
         taskDetailLabel?.text = task.title
         dueDateLabel?.text = Date().toString()
     }
