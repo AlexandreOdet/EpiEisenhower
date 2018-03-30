@@ -41,13 +41,44 @@ final class RestAPITask: RestAPIBase {
     
     func getData(forTask taskId: Int) -> Observable<Task> {
         return Observable<Task>.create({ observer -> Disposable in
-            observer.onError(TaskError.invalidIdSupplied)
+            if !self.isNetworkAvailable {
+                observer.onError(Network.unreachable)
+            } else if taskId == -1 {
+                observer.onError(TaskError.invalidIdSupplied)
+            } else {
+                self.request = Alamofire.request(RoutesAPI.task.url + "\(taskId)", method: .get, headers: self.headers)
+                    .responseObject(completionHandler: {
+                        (response: DataResponse<Task>) in
+                        switch response.result {
+                        case .success(let task):
+                            observer.onNext(task); observer.onCompleted()
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                    })
+            }
             return Disposables.create(with: { self.cancelRequest() })
         })
     }
     
-    func createTask(withContent content: Task) {
-        
+    func createTask(withContent content: Task) -> Observable<Task> {
+        return Observable<Task>.create({ observer -> Disposable in
+            if !self.isNetworkAvailable {
+                observer.onError(Network.unreachable)
+            } else {
+                self.request = Alamofire.request(RoutesAPI.task.url, method: .post, parameters: content.toJSON(), encoding: JSONEncoding.default, headers: self.headers)
+                    .responseObject(completionHandler: {
+                        (response: DataResponse<Task>) in
+                        switch response.result {
+                        case .success(let task):
+                            observer.onNext(task); observer.onCompleted()
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                    })
+            }
+            return Disposables.create(with: { self.cancelRequest() })
+        })
     }
     
     func deleteTask(_ taskId: Int) {

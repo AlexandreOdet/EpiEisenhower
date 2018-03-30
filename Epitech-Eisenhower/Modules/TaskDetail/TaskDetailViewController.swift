@@ -31,9 +31,9 @@ final class TaskDetailViewController: UIViewController, Notifiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = (isEditingTask) ? Constants.titles.taskEditionTitle : Constants.titles.taskCreationTitle
-//        if isEditingTask {
-//            presenter?.fetchData()
-//        }
+        if isEditingTask {
+            presenter?.fetchData()
+        }
         startObservingKeyboard()
         setUpTextView()
         setUpImageView()
@@ -148,11 +148,15 @@ extension TaskDetailViewController: UITextViewDelegate {
             if textView.text.isEmpty {
                 taskTitleTextView?.text = Constants.placeholders.taskTitlePlaceholder
                 taskTitleTextView?.textColor = UIColor.veryLightGray
+            } else {
+                task.title = taskTitleTextView?.text ?? ""
             }
         } else if textView.tag == 2 {
             if textView.text.isEmpty {
                 taskTitleTextView?.text = Constants.placeholders.taskDescriptionPlaceholder
                 taskTitleTextView?.textColor = UIColor.veryLightGray
+            } else {
+                task.description = taskDescriptionTextView?.text ?? ""
             }
         }
     }
@@ -169,6 +173,7 @@ extension TaskDetailViewController: Networkable {
         //To-Do
         task = data
         taskTitleTextView?.text = data.title
-        taskDescriptionTextView?.text = "Mamène description du sale"
+        taskDescriptionTextView?.text = data.description
+        taskDueDateTextField?.text = data.dueDate
     }
 }

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 final class TaskInteractor {
     var output: TaskPresenter?
     
     private var restApiTask = RestAPITask()
+    private lazy var disposeBag = DisposeBag()
     
     deinit {
         restApiTask.cancelRequest()
@@ -26,6 +28,10 @@ final class TaskInteractor {
     }
     
     func willCreate(task: Task) {
-        
+        restApiTask.createTask(withContent: task).subscribe(onNext: { task in
+            self.output?.didFetch(result: task)
+        }, onError: { error in
+            self.output?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
 }
