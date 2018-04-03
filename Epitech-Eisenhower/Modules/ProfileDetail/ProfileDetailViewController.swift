@@ -59,7 +59,20 @@ final class ProfileDetailViewController: UIViewController {
     }
     
     @objc func didTapRightBarButtonItem() {
-        presenter?.didTapUpdateProfileButton()
+        var pictureName = ""
+        switch userProfileImage?.image {
+        case R.image.searching():
+            pictureName = "robot"
+        case R.image.monkey():
+            pictureName = "monkey"
+        case R.image.pacman():
+            pictureName = "ghost"
+        default:
+            pictureName = ""
+        }
+        presenter?.didTapUpdateProfileButton(withName: nameTextfield?.text ?? "",
+        profilePicture: pictureName, description: descriptionTextView?.text ?? "",
+        email: emailTextfield?.text ?? "")
     }
     
     @objc func didTapProfileImage() {
@@ -82,5 +95,15 @@ extension ProfileDetailViewController: Networkable {
         nameTextfield?.text = data.content.name
         emailTextfield?.text = data.content.email
         descriptionTextView?.text = data.content.description
+        switch data.content.picture {
+        case "robot":
+            userProfileImage?.image = R.image.searching()
+        case "monkey":
+            userProfileImage?.image = R.image.monkey()
+        case "ghost":
+            userProfileImage?.image = R.image.pacman()
+        default:
+            userProfileImage?.image = R.image.profilePlaceholder()
+        }
     }
 }

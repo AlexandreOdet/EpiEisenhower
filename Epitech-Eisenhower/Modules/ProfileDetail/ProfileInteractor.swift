@@ -29,8 +29,13 @@ final class ProfileInteractor {
         }).disposed(by: disposeBag)
     }
     
-    func updateData(forUser userId: Int) {
-        restApiUser.updateInfos(forUser: userId)
+    func updateData(forUser userId: Int, withInfos infos: UserContent) {
+        restApiUser.updateInfos(forUser: userId, withInfos: infos).subscribe(onNext: { user in
+            self.output?.didFetch(result: user)
+        }, onError: {
+            error in
+            self.output?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
     
     func logout(user userId: Int) {

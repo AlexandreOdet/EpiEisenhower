@@ -47,8 +47,14 @@ final class ProfilePresenter {
         view?.userDidSelect(profilePicture: picture)
     }
     
-    func didTapUpdateProfileButton() {
-        interactor?.updateData(forUser: userId)
+    func didTapUpdateProfileButton(withName name: String, profilePicture picture: String, description: String, email: String) {
+        let infos = UserContent()
+        infos.name = name
+        infos.picture = picture
+        infos.description = description
+        infos.email = email
+        view?.showSpinner()
+        interactor?.updateData(forUser: userId, withInfos: infos)
     }
 }
 

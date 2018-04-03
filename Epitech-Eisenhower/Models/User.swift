@@ -9,12 +9,7 @@
 import Foundation
 import ObjectMapper
 
-final class User: Mappable, UserPreviewCellProtocol {
-    var id: Int { return content.id }
-    
-    var name: String { return content.name }
-    
-    var picture: String { return content.picture }
+final class User: Mappable {
     
     var content: UserContent!
     
@@ -25,4 +20,12 @@ final class User: Mappable, UserPreviewCellProtocol {
     func mapping(map: Map) {
         content <- map["user"]
     }
+}
+
+extension User: UserPreviewCellProtocol {
+    var id: Int { return content.id }
+    
+    var name: String { return content.name }
+    
+    var picture: String { return content.picture }
 }
