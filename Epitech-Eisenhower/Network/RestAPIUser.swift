@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import RxSwift
+import AlamofireObjectMapper
 
 fileprivate enum UserError: Error {
     case invalidIdSupplied
@@ -17,10 +18,6 @@ fileprivate enum UserError: Error {
 final class RestAPIUser: RestAPIBase {
     
     func getInfos(ofUser userId: Int) -> Observable<User> {
-        let user = User()
-        user.name = "Odet Alexandre"
-        user.description = "Lorem Ipsum"
-        user.email = "alexandre.odet@viseo.com"
         return Observable<User>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
@@ -28,8 +25,16 @@ final class RestAPIUser: RestAPIBase {
             if userId == -1 {
                 observer.onError(UserError.invalidIdSupplied)
             } else {
-                observer.onNext(user)
-                observer.onCompleted()
+                self.request = Alamofire.request(RoutesAPI.profile.url + "\(userId)", method: .get, headers: self.headers)
+                    .responseObject(completionHandler: {
+                        (response: DataResponse<User>) in
+                        switch response.result {
+                        case .success(let user):
+                            observer.onNext(user); observer.onCompleted()
+                        case .failure(let error):
+                            observer.onError(error)
+                        }
+                    })
             }
             return Disposables.create(with: { self.cancelRequest() })
         })

@@ -46,7 +46,7 @@
 		FA59F1D220455422008F3F4D /* Epitech_EisenhowerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1D120455422008F3F4D /* Epitech_EisenhowerUITests.swift */; };
 		FA59F1E12045553B008F3F4D /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E02045553B008F3F4D /* TaskType.swift */; };
 		FA59F1E420455787008F3F4D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E320455787008F3F4D /* Task.swift */; };
-		FA59F1E620455836008F3F4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E520455836008F3F4D /* User.swift */; };
+		FA59F1E620455836008F3F4D /* UserContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E520455836008F3F4D /* UserContent.swift */; };
 		FA59F1E9204558E9008F3F4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1E8204558E9008F3F4D /* Constants.swift */; };
 		FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59F1EB2045595D008F3F4D /* StringExtension.swift */; };
 		FA728E7A2050159300F45D24 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA728E792050159300F45D24 /* Output.swift */; };
@@ -66,6 +66,8 @@
 		FACFF0D6206BD09600B54461 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0D5206BD09600B54461 /* Reachable.swift */; };
 		FAD5FE32206E80DB0049500C /* TaskPreviewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */; };
 		FAD5FE34207363A20049500C /* UserPreviewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */; };
+		FAD5FE362073667E0049500C /* TaskDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE352073667E0049500C /* TaskDetailProtocol.swift */; };
+		FAD5FE3820736C0B0049500C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE3720736C0B0049500C /* User.swift */; };
 		FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA65892068FCFB0087AD34 /* UserList.swift */; };
 		FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
@@ -140,7 +142,7 @@
 		FA59F1D320455422008F3F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA59F1E02045553B008F3F4D /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		FA59F1E320455787008F3F4D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		FA59F1E520455836008F3F4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA59F1E520455836008F3F4D /* UserContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContent.swift; sourceTree = "<group>"; };
 		FA59F1E8204558E9008F3F4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA59F1EB2045595D008F3F4D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FA728E792050159300F45D24 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
@@ -160,6 +162,8 @@
 		FACFF0D5206BD09600B54461 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
 		FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewCellProtocol.swift; sourceTree = "<group>"; };
 		FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreviewCellProtocol.swift; sourceTree = "<group>"; };
+		FAD5FE352073667E0049500C /* TaskDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailProtocol.swift; sourceTree = "<group>"; };
+		FAD5FE3720736C0B0049500C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAEA65892068FCFB0087AD34 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 				FACFF0D5206BD09600B54461 /* Reachable.swift */,
 				FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */,
 				FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */,
+				FAD5FE352073667E0049500C /* TaskDetailProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -373,10 +378,11 @@
 			isa = PBXGroup;
 			children = (
 				FA59F1E320455787008F3F4D /* Task.swift */,
-				FA59F1E520455836008F3F4D /* User.swift */,
+				FA59F1E520455836008F3F4D /* UserContent.swift */,
 				FA3DE4A82059546800D9DD28 /* TaskList.swift */,
 				FAEA65892068FCFB0087AD34 /* UserList.swift */,
 				FAA2BA57206D0B6E0059DB33 /* LogResponse.swift */,
+				FAD5FE3720736C0B0049500C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -770,11 +776,13 @@
 				FA728E7A2050159300F45D24 /* Output.swift in Sources */,
 				FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */,
 				FAD5FE34207363A20049500C /* UserPreviewCellProtocol.swift in Sources */,
+				FAD5FE3820736C0B0049500C /* User.swift in Sources */,
 				FA2A79EE205A7AA700F8C742 /* DateExtension.swift in Sources */,
 				FACFF0D4206BCF3D00B54461 /* NetworkError.swift in Sources */,
 				FA2A79F2205AB0A700F8C742 /* TaksRouter.swift in Sources */,
 				FAB37536204EA5F3007BE02C /* LoginInteractor.swift in Sources */,
 				FA2A79F4205AB0B100F8C742 /* TaskPresenter.swift in Sources */,
+				FAD5FE362073667E0049500C /* TaskDetailProtocol.swift in Sources */,
 				FA59F1EC2045595D008F3F4D /* StringExtension.swift in Sources */,
 				FA2A79FA205AB72800F8C742 /* RestAPIUser.swift in Sources */,
 				FA3B29DF2057C82C0041B207 /* ProfileInteractor.swift in Sources */,
@@ -789,7 +797,7 @@
 				FA366D33204E9D060019C725 /* HomePresenter.swift in Sources */,
 				FA53D8A0205FC112005C3C82 /* UIImageView.swift in Sources */,
 				FAB37534204EA5E6007BE02C /* LoginPresenter.swift in Sources */,
-				FA59F1E620455836008F3F4D /* User.swift in Sources */,
+				FA59F1E620455836008F3F4D /* UserContent.swift in Sources */,
 				FA3B29DD2057C7AB0041B207 /* ProfilePresenter.swift in Sources */,
 				FA366D31204E9CE10019C725 /* HomeViewController.swift in Sources */,
 				FA3B29E12057C8490041B207 /* ProfileRouter.swift in Sources */,

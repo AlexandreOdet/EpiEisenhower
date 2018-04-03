@@ -29,6 +29,7 @@ final class RestAPITask: RestAPIBase {
                     case .success(let tasks):
                         observer.onNext(tasks); observer.onCompleted()
                     case .failure(let error):
+                        print("Error = \(error)")
                         observer.onError(error)
                     }
                 })

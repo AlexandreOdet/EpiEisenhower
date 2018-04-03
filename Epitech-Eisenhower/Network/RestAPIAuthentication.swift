@@ -19,7 +19,7 @@ final class RestAPIAuthentication: RestAPIBase {
     
     func signIn(email: String, password: String) -> Observable<LogResponse> {
         var paramaters = ["email":email]
-        paramaters["password"] = password
+        paramaters["password"] = password        
         return Observable<LogResponse>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)

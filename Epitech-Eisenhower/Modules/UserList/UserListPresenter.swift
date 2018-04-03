@@ -49,7 +49,7 @@ final class UserListPresenter {
     }
     
     func didSelect(userAt indexPath: IndexPath) {
-        router?.goToUserProfile(withId: userList.users[indexPath.row].id)
+        router?.goToUserProfile(withId: userList.users[indexPath.row].content.id)
     }
     
     func didAddUserToMemberList() {

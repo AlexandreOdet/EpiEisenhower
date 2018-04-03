@@ -77,10 +77,10 @@ extension ProfileDetailViewController: Networkable {
     func displayDataOnResponse(data: User) {
         //To-Do
         if !isCurrentUser {
-            title = data.name
+            title = data.content.name
         }
-        nameTextfield?.text = data.name
-        emailTextfield?.text = data.email
-        descriptionTextView?.text = data.description
+        nameTextfield?.text = data.content.name
+        emailTextfield?.text = data.content.email
+        descriptionTextView?.text = data.content.description
     }
 }
