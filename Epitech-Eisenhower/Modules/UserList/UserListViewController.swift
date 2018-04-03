@@ -18,7 +18,7 @@ final class UserListViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView?
     @IBOutlet weak private var updateButton: UIButton?
     
-    private var users = [User]() {
+    private var users = [UserPreviewCellProtocol]() {
         didSet {
             tableView?.reloadData()
         }
@@ -60,7 +60,7 @@ final class UserListViewController: UIViewController {
     }
     
     @objc func didTapUpdateButton() {
-        let usersIds = users.flatMap({ $0.id })
+        let usersIds = users.compactMap({ $0.id })
         presenter?.updateMembersOfTask(withMembers: usersIds)
     }
 }

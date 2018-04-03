@@ -65,6 +65,7 @@
 		FACFF0D4206BCF3D00B54461 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0D3206BCF3D00B54461 /* NetworkError.swift */; };
 		FACFF0D6206BD09600B54461 /* Reachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFF0D5206BD09600B54461 /* Reachable.swift */; };
 		FAD5FE32206E80DB0049500C /* TaskPreviewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */; };
+		FAD5FE34207363A20049500C /* UserPreviewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */; };
 		FAEA658A2068FCFB0087AD34 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA65892068FCFB0087AD34 /* UserList.swift */; };
 		FAEA658D20691E850087AD34 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */; };
 		FAEBDAB1205BF87300B8953A /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */; };
@@ -158,6 +159,7 @@
 		FACFF0D3206BCF3D00B54461 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FACFF0D5206BD09600B54461 /* Reachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachable.swift; sourceTree = "<group>"; };
 		FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPreviewCellProtocol.swift; sourceTree = "<group>"; };
+		FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreviewCellProtocol.swift; sourceTree = "<group>"; };
 		FAEA65892068FCFB0087AD34 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		FAEA658C20691E850087AD34 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		FAEBDAB0205BF87300B8953A /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				FA8361902068E9AF009EA912 /* Notifiable.swift */,
 				FACFF0D5206BD09600B54461 /* Reachable.swift */,
 				FAD5FE31206E80DB0049500C /* TaskPreviewCellProtocol.swift */,
+				FAD5FE33207363A20049500C /* UserPreviewCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				FA8361912068E9AF009EA912 /* Notifiable.swift in Sources */,
 				FA728E7A2050159300F45D24 /* Output.swift in Sources */,
 				FA366D3B204E9E070019C725 /* Cancelable.swift in Sources */,
+				FAD5FE34207363A20049500C /* UserPreviewCellProtocol.swift in Sources */,
 				FA2A79EE205A7AA700F8C742 /* DateExtension.swift in Sources */,
 				FACFF0D4206BCF3D00B54461 /* NetworkError.swift in Sources */,
 				FA2A79F2205AB0A700F8C742 /* TaksRouter.swift in Sources */,

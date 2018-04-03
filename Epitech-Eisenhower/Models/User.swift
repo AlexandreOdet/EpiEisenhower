@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-final class User: Mappable {
+final class User: Mappable, UserPreviewCellProtocol {
     var id = 0
     var name = ""
     var description = ""
