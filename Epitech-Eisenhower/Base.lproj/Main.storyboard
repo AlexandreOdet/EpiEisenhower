@@ -227,6 +227,9 @@
                         <viewLayoutGuide key="safeArea" id="bhq-hJ-r07"/>
                     </view>
                     <connections>
+                        <outlet property="imageMember1" destination="wWV-m7-crZ" id="An8-hU-9PG"/>
+                        <outlet property="imageMember2" destination="W7Q-aP-Ofy" id="rdJ-wk-H9n"/>
+                        <outlet property="imageMember3" destination="CXd-sF-aZY" id="2pf-L5-7cF"/>
                         <outlet property="showTaskMemberImage" destination="URB-z3-RYJ" id="l4U-ng-kDy"/>
                         <outlet property="taskDescriptionTextView" destination="ET9-Y0-ONu" id="NjN-eg-f88"/>
                         <outlet property="taskDueDateTextField" destination="dRt-y7-3M7" id="6pt-0S-gFf"/>

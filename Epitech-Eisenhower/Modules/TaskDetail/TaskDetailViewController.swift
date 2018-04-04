@@ -20,6 +20,10 @@ final class TaskDetailViewController: UIViewController, Notifiable {
     @IBOutlet weak private var taskDescriptionTextView: UITextView?
     @IBOutlet weak private var taskDueDateTextField: UITextField?
     
+    @IBOutlet weak private var imageMember1: UIImageView?
+    @IBOutlet weak private var imageMember2: UIImageView?
+    @IBOutlet weak private var imageMember3: UIImageView?
+    
     @IBOutlet weak private var taskUpdateOrCreationButton: UIButton?
     
     private let datePicker = UIDatePicker()
@@ -164,6 +168,19 @@ extension TaskDetailViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         textView.centerTextVertically()
     }
+    
+    private func setUpImagesMember(imageToSet img: UIImageView?, withImageName name: String) {
+        switch name {
+        case "monkey":
+            img?.image = R.image.monkey()
+        case "robot":
+            img?.image = R.image.searching()
+        case "ghost":
+            img?.image = R.image.pacman()
+        default:
+            img?.image = R.image.profilePlaceholder()
+        }
+    }
 }
 
 extension TaskDetailViewController: Networkable {
@@ -175,5 +192,10 @@ extension TaskDetailViewController: Networkable {
         taskTitleTextView?.text = data.content.title
         taskDescriptionTextView?.text = data.content.description
         taskDueDateTextField?.text = data.content.dueDate
+        setUpImagesMember(imageToSet: imageMember1, withImageName: data.content.team[0].picture)
+        if data.content.team.count > 2 {
+            setUpImagesMember(imageToSet: imageMember2, withImageName: data.content.team[1].picture)
+            setUpImagesMember(imageToSet: imageMember3, withImageName: data.content.team[2].picture)
+        }
     }
 }

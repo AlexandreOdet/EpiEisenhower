@@ -15,8 +15,9 @@ final class TaskContent: Mappable, TaskPreviewCellProtocol {
     var id = 0
     var title = ""
     var description = ""
-    var status = ""
     var dueDate = ""
+    
+    var team = [UserContent]()
     
     init() {}
     
@@ -27,5 +28,6 @@ final class TaskContent: Mappable, TaskPreviewCellProtocol {
         title <- map["title"]
         description <- map["description"]
         dueDate <- map["type"]
+        team <- map["team"]
     }
 }
