@@ -24,12 +24,12 @@ final class TaskPresenter {
         router?.goToMemberList(ofTask: taskId)
     }
     
-    func didTapCreateButton(with task: Task) {
+    func didTapCreateButton(with task: TaskContent) {
         view?.showSpinner()
         interactor?.willCreate(task: task)
     }
     
-    func didTapUpdateButton(with task: Task) {
+    func didTapUpdateButton(with task: TaskContent) {
         view?.showSpinner()
         interactor?.willUpdate(task: task)
     }

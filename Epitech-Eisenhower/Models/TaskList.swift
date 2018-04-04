@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 final class TaskList: Mappable {
-    var tasks = [Task]()
+    var tasks = [TaskContent]()
     
     required init?(map: Map) {
     }

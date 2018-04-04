@@ -13,7 +13,7 @@ final class TaskDetailViewController: UIViewController, Notifiable {
     var presenter: TaskPresenter?
     var isEditingTask: Bool = false
     
-    private var task = Task()
+    private var task = TaskContent()
     
     @IBOutlet weak private var taskTitleTextView: UITextView?
     @IBOutlet weak private var showTaskMemberImage: UIImageView?
@@ -171,9 +171,9 @@ extension TaskDetailViewController: Networkable {
     
     func displayDataOnResponse(data: Task) {
         //To-Do
-        task = data
-        taskTitleTextView?.text = data.title
-        taskDescriptionTextView?.text = data.description
-        taskDueDateTextField?.text = data.dueDate
+        task = data.content
+        taskTitleTextView?.text = data.content.title
+        taskDescriptionTextView?.text = data.content.description
+        taskDueDateTextField?.text = data.content.dueDate
     }
 }

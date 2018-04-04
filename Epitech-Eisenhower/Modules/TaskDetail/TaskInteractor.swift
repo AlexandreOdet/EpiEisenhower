@@ -20,14 +20,20 @@ final class TaskInteractor {
     }
     
     func fetchData(ofTask taskId: Int) {
+        restApiTask.getData(forTask: taskId).subscribe(onNext: {
+            task in
+            self.output?.didFetch(result: task)
+        }, onError: {
+            error in
+            self.output?.didFail(with: error)
+        })
+    }
+    
+    func willUpdate(task: TaskContent) {
         
     }
     
-    func willUpdate(task: Task) {
-        
-    }
-    
-    func willCreate(task: Task) {
+    func willCreate(task: TaskContent) {
         restApiTask.createTask(withContent: task).subscribe(onNext: { task in
             self.output?.didFetch(result: task)
         }, onError: { error in

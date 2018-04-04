@@ -39,6 +39,7 @@ final class RestAPITask: RestAPIBase {
     }
     
     func getData(forTask taskId: Int) -> Observable<Task> {
+        print(taskId)
         return Observable<Task>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
@@ -52,6 +53,7 @@ final class RestAPITask: RestAPIBase {
                         case .success(let task):
                             observer.onNext(task); observer.onCompleted()
                         case .failure(let error):
+                            print("Error = \(error)")
                             observer.onError(error)
                         }
                     })
@@ -60,7 +62,7 @@ final class RestAPITask: RestAPIBase {
         })
     }
     
-    func createTask(withContent content: Task) -> Observable<Task> {
+    func createTask(withContent content: TaskContent) -> Observable<Task> {
         return Observable<Task>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)

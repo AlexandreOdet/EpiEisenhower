@@ -14,7 +14,7 @@ final class HomePresenter {
     weak var view: HomeViewController?
     var router: HomeRouter?
     
-    private var taskList = [Task]()
+    private var taskList = [TaskContent]()
     
     func viewDidLoad() {
         if UserDefaults.standard.bool(forKey: Constants.keys.isLoggedKey) {
