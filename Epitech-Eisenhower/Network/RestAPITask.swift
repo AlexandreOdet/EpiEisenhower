@@ -39,7 +39,6 @@ final class RestAPITask: RestAPIBase {
     }
     
     func getData(forTask taskId: Int) -> Observable<Task> {
-        print(taskId)
         return Observable<Task>.create({ observer -> Disposable in
             if !self.isNetworkAvailable {
                 observer.onError(Network.unreachable)
@@ -74,6 +73,27 @@ final class RestAPITask: RestAPIBase {
                         case .success(let task):
                             observer.onNext(task); observer.onCompleted()
                         case .failure(let error):
+                            observer.onError(error)
+                        }
+                    })
+            }
+            return Disposables.create(with: { self.cancelRequest() })
+        })
+    }
+    
+    func updateTask(withContent content: TaskContent, forTask taskId: Int) -> Observable<Task> {
+        return Observable<Task>.create({ observer -> Disposable in
+            if !self.isNetworkAvailable {
+                observer.onError(Network.unreachable)
+            } else {
+                self.request = Alamofire.request(RoutesAPI.task.url + "\(taskId)", method: .patch, parameters: content.toJSON(), encoding: JSONEncoding.default, headers: self.headers)
+                    .responseObject(completionHandler: {
+                        (response: DataResponse<Task>) in
+                        switch response.result {
+                        case .success(let task):
+                            observer.onNext(task); observer.onCompleted()
+                        case .failure(let error):
+                            print("Error")
                             observer.onError(error)
                         }
                     })

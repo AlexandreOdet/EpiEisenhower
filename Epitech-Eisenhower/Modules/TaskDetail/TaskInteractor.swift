@@ -26,11 +26,17 @@ final class TaskInteractor {
         }, onError: {
             error in
             self.output?.didFail(with: error)
-        })
+        }).disposed(by: disposeBag)
     }
     
-    func willUpdate(task: TaskContent) {
-        
+    func willUpdate(task: TaskContent, withId id: Int) {
+        restApiTask.updateTask(withContent: task, forTask: id).subscribe(onNext: {
+            task in
+            self.output?.didFetch(result: task)
+        }, onError: {
+            error in
+            self.output?.didFail(with: error)
+        }).disposed(by: disposeBag)
     }
     
     func willCreate(task: TaskContent) {

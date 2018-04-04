@@ -23,11 +23,9 @@ final class TaskContent: Mappable, TaskPreviewCellProtocol {
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-        print("Map", map.JSON)
         id <- map["id"]
         title <- map["title"]
         description <- map["description"]
-        status <- map["type"]
-        dueDate <- map["due_date"]
+        dueDate <- map["type"]
     }
 }

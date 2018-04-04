@@ -31,7 +31,7 @@ final class TaskPresenter {
     
     func didTapUpdateButton(with task: TaskContent) {
         view?.showSpinner()
-        interactor?.willUpdate(task: task)
+        interactor?.willUpdate(task: task, withId: taskId)
     }
 }
 
